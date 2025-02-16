@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -8,14 +9,12 @@
     <title> About Us - CC Studios</title>
 </head>
 
-
 <body>
     <header>
         <figure>
-            <img src="imagenes/logos/CCSTUDIOS.svg" alt="Logo del sitio web" width="5%" height="5%">
-            <figcaption>CC Studios</figcaption> 
+            <img src="../imagenes/logos/CCSTUDIOS.svg" alt="Logo del sitio web" width="5%" height="5%">
+            <figcaption>CC Studios</figcaption>
         </figure>
-
 
         <nav>
             <ul>
@@ -27,49 +26,76 @@
             </ul>
         </nav>
     </header>
+
     <main>
-        <figure>
-            <img src="../imagenes/artistas/fichaJudeline/judeline1.jpg" alt="Judeline" width="30%" height="auto">
-            <img src="../imagenes/flechas/ArrowRight.svg" alt="Flecha izquierda"  width="3%" height="auto">
-            <img src="../imagenes/flechas/ArrowRight.svg" alt="Flecha derecha" width="3%" height="auto">
-            <figcaption>Carrusel de fotos de Judeline</figcaption>
-        </figure>
-        <h2>JUDELINE</h2>
-        <section id="trayectoria">
-            <h3>TRAYECTORIA</h3>
-            <p>
-                Cantante y compositora española, fusiona pop, R&B y electrónica con influencias flamencas.
-                Desde su debut con "De la luz" en 2021, ha crecido en la escena alternativa, colaborando con artistas
-                como Ralphie Choo y consolidando su estilo único.
-            </p>
-        </section>
-        <section id="reproductor">
-            <figure>
-                <img src="../imagenes/artistas/fichaJudeline/cancion.jpg" alt="Carátula de la canción" width="5%" height="5%">
-                
-                <!-- Enlace que abre el audio (esto solo inicia la descarga/reproducción del audio en el navegador) -->
-                <a href="../audio/Sustancia.mp3" download>
-                  <img src="../imagenes/reproductor/Play.svg" alt="Reproducir canción" style="cursor: pointer;" width="2%" height="2%">
+        <!-- Sección de artista -->
+        <section id="artistas">
+            <header>
+                <h1 id="artistas-title">JUDELINE</h1>
+            </header>
+
+            <nav id="cross">
+                <!-- Botón de cerrar -->
+                <a href="../artistas.html">
+                    <button id="cerrar" style="cursor: pointer;">
+                        &#x2715; <!-- Unicode para "X" -->
+                    </button>
                 </a>
-                <img src="../imagenes/reproductor/Speaker.svg" alt="Ajustar volumen" style="cursor: pointer; " width="2%" height="2%">
-                
-                <!-- Nombre de la canción con enlace a Spotify -->
-                <figcaption>
-                  <a href="https://open.spotify.com/intl-es/track/4EF1UDALNWdyJDWindWBqg" target="_blank">Sustancia - Judeline, Mayo </a>
-                </figcaption>
-              </figure>
-        </section>
-        <section id="proximosEventos">
-            <h3>PRÓXIMOS EVENTOS</h3>
-            <ul>
-                <li>9 FEB | Concierto en Wizink Center, Madrid</li>
-                <li>21 MAR | Firma en Nevada Shopping, Granada</li>
-                <li>12 JUN | Festival O Son do Camiño, Santiago</li>
-            </ul>
-            <a href="../eventos.html">Ver más eventos...</a>
+            </nav>
+
+            <!-- Carrusel de fotos -->
+            <figure>
+                <img src="../imagenes/artistas/fichaJudeline/judeline1.jpg" alt="Judeline posando" width="30%"
+                    height="auto">
+                    <nav id="carrusel">
+                        <a href="#" class="anterior">&#8249;</a>
+                        <a href="#" class="siguiente">&#8250;</a>
+                    </nav>
+                <figcaption>Carrusel de fotos de Judeline</figcaption>
+            </figure>
+            <section id="artista-info">
+                <!-- Trayectoria del artista -->
+                <section id="trayectoria">
+                    <h3>TRAYECTORIA</h3>
+                    <p>
+                        Cantante y compositora española, fusiona pop, R&B y electrónica con influencias flamencas.
+                        Desde su debut con "De la luz" en 2021, ha crecido en la escena alternativa, colaborando con
+                        artistas
+                        como Ralphie Choo y consolidando su estilo único.
+                    </p>
+                </section>
+
+                <!-- Canción destacada -->
+                <section id="cancion">
+                    <figure>
+                        <img src="../imagenes/artistas/fichaJudeline/cancion.jpg" alt="Carátula de la canción"
+                            width="5%" height="5%">
+                        <a href="../audio/Sustancia.mp3" download>
+                            <img src="../imagenes/reproductor/Play.svg" alt="Reproducir canción"
+                                style="cursor: pointer;" width="2%" height="2%">
+                        </a>
+                        <img src="../imagenes/reproductor/Speaker.svg" alt="Ajustar volumen" style="cursor: pointer;"
+                            width="2%" height="2%">
+                        <figcaption>
+                            <a href="https://open.spotify.com/intl-es/track/4EF1UDALNWdyJDWindWBqg"
+                                target="_blank">Sustancia - Judeline, Mayo </a>
+                        </figcaption>
+                    </figure>
+                </section>
+
+                <!-- Próximos eventos -->
+                <section id="proximosEventos">
+                    <h3>PRÓXIMOS EVENTOS</h3>
+                    <ul>
+                        <li>9 FEB | Concierto en Wizink Center, Madrid</li>
+                        <li>21 MAR | Firma en Nevada Shopping, Granada</li>
+                        <li>12 JUN | Festival O Son do Camiño, Santiago</li>
+                    </ul>
+                    <a href="../eventos.html">Ver más eventos...</a>
+                </section>
+            </section>
         </section>
     </main>
-
 
     <footer>
         <h2><strong>CC STUDIOS</strong></h2>
@@ -117,9 +143,6 @@
             </li>
         </ul>
     </footer>
-    
 </body>
-
-
 
 </html>

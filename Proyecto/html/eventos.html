@@ -14,7 +14,7 @@
     <header>
         <figure>
             <img src="imagenes/logos/CCSTUDIOS.svg" alt="Logo del sitio web" width="5%" height="5%">
-            <figcaption>CC Studios</figcaption> 
+            <figcaption>CC Studios</figcaption>
         </figure>
 
 
@@ -29,22 +29,26 @@
         </nav>
     </header>
     <main>
-        <h1> Calendario</h1>
+        <!-- Título del calendario -->
+        <h1>Calendario</h1>
+
+        <!-- Sección del calendario -->
         <section id="calendario">
             <table>
                 <caption>
-                    Marzo 2025 
-                    <div class="calendar-controls">
+                    Marzo 2025
+                    <!-- Controles de navegación del calendario -->
+                    <nav aria-label="Controles de calendario">
                         <figure>
-                            <img id="prevMonth" src="imagenes/flechas/ArrowRightCircle.svg" alt="Flecha izquierda" width="3%" height="3%">
-                            <figcaption>Flecha izquierda</figcaption>
+                            <button id="prevMonth" aria-label="Mes anterior">⬅</button>
+                            <figcaption>Mes anterior</figcaption>
                         </figure>
                         <span id="monthName"></span>
                         <figure>
-                            <img id="nextMonth" src="imagenes/flechas/ArrowRightCircle.svg" alt="Flecha derecha" width="3%" height="3%">
-                            <figcaption>Flecha derecha</figcaption>
+                            <button id="nextMonth" aria-label="Mes siguiente">➡</button>
+                            <figcaption>Mes siguiente</figcaption>
                         </figure>
-                    </div>
+                    </nav>
                 </caption>
                 <thead>
                     <tr>
@@ -106,15 +110,19 @@
                 </tbody>
             </table>
         </section>
-        <section id="listaEventos">
+
+        <!-- Sección de filtro de eventos -->
+        <section id="filtro-eventos">
+            <section id="listaEventos"></section>
             <form action="..." method="GET">
                 <fieldset>
                     <legend>Filtro de Eventos</legend>
 
                     <!-- Input para seleccionar mes -->
+                    <label for="mes">Selecciona el mes:</label>
                     <input type="month" id="mes" name="mes" value="2025-02">
 
-                    <!-- Selector de Tipo de Evento -->
+                    <!-- Selector de tipo de evento -->
                     <label for="tipoEvento">Selecciona el tipo de evento:</label>
                     <select id="tipoEvento" name="tipo" multiple>
                         <option value="firma" selected>Firma de discos</option>
@@ -125,30 +133,34 @@
                     <input type="submit" value="Filtrar">
                 </fieldset>
             </form>
-            <section>
+        </section>
+
+        <!-- Lista de eventos -->
+        <section id="lista-eventos">
+            <article>
                 <h3>9 FEB | Concierto <strong>Judeline</strong></h3>
                 <p>Madrid, Wizink Center</p>
-            </section>
-            <section>
+            </article>
+            <article>
                 <h3>17 FEB | Firma <strong>Sen Senra</strong></h3>
                 <p>Santiago, El Corte Inglés</p>
-            </section>
-            <section>
+            </article>
+            <article>
                 <h3>21 FEB | Concierto <strong>Aitana</strong></h3>
                 <p>Barcelona, Palau Sant Jordi</p>
-            </section>
-            <section>
+            </article>
+            <article>
                 <h3>27 FEB | Concierto <strong>Bad Bunny</strong></h3>
                 <p>A Coruña, Coliseum</p>
-            </section>
-            <section>
-                <figure>
-                    <img id="prevMonth" class="arrow" src="imagenes/flechas/Arrowdown.svg" alt="Flecha izquierda" width="3%" height="3%">
-                    <figcaption>Flecha izquierda</figcaption>
+            </article>
+            <article>
+                <figure>  <!-- CAMBIAR CUANDO USEMOS CSS-->
+                    <button class="arrow" aria-label="Desplazar hacia abajo">⬇</button>
                 </figure>
-            </section>
+            </article>
         </section>
     </main>
+
 
 
     <footer>
@@ -201,9 +213,9 @@
                 </figure>
             </li>
         </ul>
-    
+
     </footer>
-    
+
 </body>
 
 
