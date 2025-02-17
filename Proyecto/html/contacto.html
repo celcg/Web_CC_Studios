@@ -30,25 +30,31 @@
 
     <main>
         <h1>Contacto</h1>
-        <section style="display: flex; gap: 20px; align-items: flex-start;">
-            <!--Mapa-->
-            <div style="width: 40%;">
-                <h3>Puedes encontrarnos aquí</h3>
-                <!--Esta linea la proporciona directamente google maps en compartir-->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3038.0559779224855!2d-3.6824743169593845!3d40.40761068257311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42261944bf35cf%3A0xb9d58d328d9e7e22!2sAv.%20del%20Mediterr%C3%A1neo%2C%203%2C%20Retiro%2C%2028007%20Madrid!5e0!3m2!1ses!2ses!4v1739622903594!5m2!1ses!2ses" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <p><strong>Dirección:</strong>Av. del Mediterráneo, 3, Retiro, 28007 Madrid, España</p>
-                <p><strong>Teléfono:</strong> <a href="tel:+34682276155">682 276 155, </a><a href="tel:919234432"> 919 234 432</a></p>
-                <p><strong>Email:</strong> <a href="mailto:contacto@ccstudios.com">contacto@ccstudios.com</a></p>
-            </div>
-
-            <!-- Formulario -->
-            <div style="width: 50%;">
-                <h3>Motivo de la consulta</h3>
-                <form>
+    
+        <section class="contacto" style="display: flex; gap: 20px; align-items: flex-start;">
             
-                    <!-- Campo desplegable -->
-                    <div>
-                        <label for="motivo">Motivo de contacto:</label><br>
+            <!-- Mapa -->
+            <article class="ubicacion" style="width: 40%;">
+                <h3>Puedes encontrarnos aquí</h3>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3038.0559779224855!2d-3.6824743169593845!3d40.40761068257311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42261944bf35cf%3A0xb9d58d328d9e7e22!2sAv.%20del%20Mediterr%C3%A1neo%2C%203%2C%20Retiro%2C%2028007%20Madrid!5e0!3m2!1ses!2ses!4v1739622903594!5m2!1ses!2ses" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+    
+                <p><strong>Dirección:</strong> Av. del Mediterráneo, 3, Retiro, 28007 Madrid, España</p>
+                <p><strong>Teléfono:</strong> <a href="tel:+34682276155">682 276 155</a>, <a href="tel:919234432">919 234 432</a></p>
+                <p><strong>Email:</strong> <a href="mailto:contacto@ccstudios.com">contacto@ccstudios.com</a>
+                </p>
+            </article>
+    
+            <!-- Formulario -->
+            <section class="formulario" style="width: 50%;">
+                <h2>Motivo de la consulta</h2>
+                <form>
+
+                    <article>
+                        <label for="motivo">Motivo de contacto:</label>
+                    </article>
+                    <article>
                         <select id="motivo" name="motivo">
                             <option value="colaboracion">Quiero trabajar con vosotros</option>
                             <option value="musica">Quiero enviar mi música</option>
@@ -56,40 +62,47 @@
                             <option value="problema">Ha surgido un problema</option>
                             <option value="otro">Otro</option>
                         </select>
-                    </div>
-            
-                    <!-- Campos de entrada, los obligatorios marcados con required -->
-                    <div>
-                        <label for="nombre">Nombre y apellidos</label><br>
+                    </article>
+
+                    <article>
+                        <label for="nombre">Nombre y apellidos</label>
+                    </article>
+                    <article>
                         <input type="text" id="nombre" name="nombre" required>
-                    </div>
-            
-                    <!-- Tipo email para que exija un arroba -->
-                    <div>
-                        <label for="email">Email</label><br>
+                    </article>
+
+                    <article>
+                        <label for="email">Email</label>
+                    </article>
+                    <article>
                         <input type="email" id="email" name="email" required>
-                    </div>
-            
-                    <div>
-                        <label for="telefono">Teléfono de contacto</label><br>
+                    </article>
+
+                    <article>
+                        <label for="telefono">Teléfono de contacto</label>
+                    </article>
+                    <article>
                         <input type="tel" id="telefono" name="telefono" required>
-                    </div>
-            
-                    <!-- Área de texto para mensaje -->
-                    <div>
-                        <label for="mensaje">Mensaje:</label><br>
+                    </article>
+
+                    <article>
+                        <label for="mensaje">Mensaje:</label>
+                    </article>
+                    <article>
                         <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-                    </div>
-            
-                    <!-- Botón de envío -->
-                    <div>
+                    </article>
+
+                    <article>
                         <input type="submit" value="Enviar">
-                    </div>
-            
+                    </article>
+
                 </form>
-            </div>
+            </section>
+
+            
         </section>
     </main>
+    
 
 
     <footer>
