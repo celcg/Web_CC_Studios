@@ -80,11 +80,18 @@ button:hover {
 }
 
 /* Cabecera */
+/* Estilos del header */
 header {
-    background-color: var(--color-fondo);
-    padding: 20px;
-    text-align: center;
-}
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+    text-transform: uppercase;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+  }
 
 header nav ul {
     list-style: none;
