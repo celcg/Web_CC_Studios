@@ -10,16 +10,16 @@
 :root {
     --color-negro: #00010B;
     --color-gris: #3A3A3A;
-    --color-primario: #3E9ADE;
-    --color-acento: #97D3FF;
-    --color-secundario: #5431C1;
-    --color-texto: #FFFFFF;
+    --color-azul1: #3E9ADE;
+    --color-azul2: #97D3FF;
+    --color-morado: #5431C1;
+    --color-blanco: #FFFFFF;
 }
 
 /* Configuración del cuerpo */
 body {
-    background: linear-gradient(135deg, var(--color-fondo), var(--color-secundario));
-    color: var(--color-texto);
+    background: linear-gradient(135deg, var(--color-gris), var(--color-gris));
+    color: var(--color-blanco);
     line-height: 1.6;
 }
 
@@ -31,10 +31,15 @@ body {
 }
 
 /* Tipografía */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Archivo', sans-serif;
     font-weight: bold;
-    color: var(--color-primario);
+    color: var(--color-blanco);
 }
 
 p {
@@ -44,18 +49,18 @@ p {
 /* Enlaces */
 a {
     text-decoration: none;
-    color: var(--color-acento);
+    color: var(--color-azul);
     transition: color 0.3s ease-in-out;
 }
 
 a:hover {
-    color: var(--color-secundario);
+    color: var(--color-azul);
 }
 
 /* Botones */
 button {
-    background-color: var(--color-acento);
-    color: var(--color-texto);
+    background-color: var(--color-azul);
+    color: var(--color-azul);
     border: none;
     padding: 10px 20px;
     font-size: 1rem;
@@ -64,7 +69,7 @@ button {
 }
 
 button:hover {
-    background-color: var(--color-secundario);
+    background-color: var(--color-azul);
 }
 
 /* Posicionamiento y diseño basado en 12 columnas */
@@ -91,7 +96,10 @@ header {
     align-items: center;
     position: relative;
     box-sizing: border-box;
-  }
+    border-bottom: 2px solid white;
+    /* Barra blanca abajo */
+
+}
 
 header nav ul {
     list-style: none;
@@ -105,12 +113,60 @@ header nav ul li {
 }
 
 /* Footer */
+/* Estilos para el footer */
 footer {
-    background-color: var(--color-fondo);
+    background-color: var(--color-negro);
     text-align: center;
     padding: 20px;
     margin-top: 40px;
 }
+
+/* Estilos para el título y subtítulo */
+footer h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: var(--color-texto);
+}
+
+footer p {
+    font-size: 16px;
+    color: var(--color-texto);
+    margin-bottom: 10px;
+}
+
+/* Estilos para la lista de redes sociales */
+footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaciado entre los elementos */
+}
+
+footer ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos para las imágenes de redes sociales */
+footer ul li img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+footer ul li img:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
+}
+
+/* Estilos para las etiquetas debajo de los íconos */
+footer ul li figcaption {
+    font-size: 14px;
+    color: var(--color-texto);
+    margin-top: 5px;
+}
+
 
 /* Sección de Artistas */
 .artistas-grid {
@@ -150,7 +206,7 @@ footer {
 }
 
 .noticia h3 {
-    color: var(--color-secundario);
+    color: var(--color-blanco);
 }
 
 /* Formulario de Contacto */
@@ -176,10 +232,10 @@ footer {
 .contacto-container select,
 .contacto-container textarea {
     padding: 10px;
-    border: 1px solid var(--color-secundario);
+    border: 1px solid var(--color-blanco);
     border-radius: 5px;
     background: var(--color-fondo);
-    color: var(--color-texto);
+    color: var(--color-blanco);
 }
 
 .contacto-container button {
@@ -223,6 +279,7 @@ footer {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -230,4 +287,19 @@ footer {
 
 .fade-in {
     animation: fadeIn 1s ease-in-out;
+}
+
+nav ul li a {
+    font-family: 'Archivo', Verdana, Arial, sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    color: #97D3FF; 
+    font-weight: bold;
+}
+footer nav h2 {
+    font-size: 32px;
 }
