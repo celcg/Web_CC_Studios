@@ -1,0 +1,226 @@
+/* Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Variables de colores */
+:root {
+    --color-negro: #00010B;
+    --color-gris: #3A3A3A;
+    --color-primario: #3E9ADE;
+    --color-acento: #97D3FF;
+    --color-secundario: #5431C1;
+    --color-texto: #FFFFFF;
+}
+
+/* Configuración del cuerpo */
+body {
+    background: linear-gradient(135deg, var(--color-fondo), var(--color-secundario));
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+/* Contenedor principal */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Tipografía */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Archivo', sans-serif;
+    font-weight: bold;
+    color: var(--color-primario);
+}
+
+p {
+    font-size: 14px;
+}
+
+/* Enlaces */
+a {
+    text-decoration: none;
+    color: var(--color-acento);
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: var(--color-secundario);
+}
+
+/* Botones */
+button {
+    background-color: var(--color-acento);
+    color: var(--color-texto);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--color-secundario);
+}
+
+/* Posicionamiento y diseño basado en 12 columnas */
+.grid {
+    display: grid;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+/* Cabecera */
+header {
+    background-color: var(--color-fondo);
+    padding: 20px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-fondo);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Sección de Artistas */
+.artistas-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.artista-card {
+    background-color: var(--color-gris);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.artista-card img {
+    width: 100%;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.artista-card img:hover {
+    transform: scale(1.1);
+}
+
+/* Noticias */
+.noticias-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.noticia {
+    background-color: var(--color-gris);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.noticia h3 {
+    color: var(--color-secundario);
+}
+
+/* Formulario de Contacto */
+.contacto-container {
+    display: grid;
+    grid-template-columns: 4fr 5fr;
+    gap: 20px;
+}
+
+.contacto-container .mapa {
+    background-color: var(--color-gris);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.contacto-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contacto-container input,
+.contacto-container select,
+.contacto-container textarea {
+    padding: 10px;
+    border: 1px solid var(--color-secundario);
+    border-radius: 5px;
+    background: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+.contacto-container button {
+    width: 100%;
+}
+
+/* Eventos */
+.eventos-container {
+    display: grid;
+    grid-template-columns: 6fr 3fr;
+    gap: 20px;
+}
+
+.eventos-container .calendario {
+    background-color: var(--color-gris);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Tarjeta de artista */
+.ficha-artista {
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    gap: 20px;
+}
+
+.ficha-artista .imagen {
+    background-color: var(--color-gris);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.ficha-artista .info {
+    background-color: var(--color-gris);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
