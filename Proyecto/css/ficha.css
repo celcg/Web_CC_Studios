@@ -1,0 +1,157 @@
+/* Contenedor del artista */
+#ficha {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3.125rem; /* 50px to rem */
+    padding: 3.125rem; /* 50px to rem */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0.9375rem; /* 15px to rem */
+    width: 85%;
+    margin: 3.125rem auto; /* 50px to rem */
+    backdrop-filter: blur(0.75rem); /* 12px to rem */
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.3); /* 4px 10px to rem */
+}
+
+/* Imagen del artista y carrusel */
+figure {
+    position: relative;
+    max-width: 45%;
+    align-self: flex-start;
+}
+
+figure img {
+    width: 100%;
+    border-radius: 0.9375rem; /* 15px to rem */
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.3); /* 4px 10px to rem */
+}
+
+#carrusel {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.anterior, .siguiente {
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.625rem; /* 10px to rem */
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.anterior:hover, .siguiente:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Información del artista */
+#artista-info {
+    max-width: 50%;
+    color: var(--color-blanco);
+}
+
+#artistas-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    border-bottom: 0.1875rem solid white; /* 3px to rem */
+    padding-bottom: 0.625rem; /* 10px to rem */
+    margin-bottom: 1.25rem; /* 20px to rem */
+}
+
+/* Canción */
+#cancion {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin: 2rem 0;
+    background: var(--color-azul2);
+    padding: 1rem;
+    border-radius: 0.625rem;
+}
+
+#portada {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.625rem; /* 10px to rem */
+    box-shadow: 0.125rem 0.125rem 0.625rem rgba(0, 0, 0, 0.2); /* 2px 2px 10px to rem */
+}
+
+#cancion figure {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+    flex-direction: row;
+}
+
+#cancion figcaption {
+    font-size: 1.1rem;
+    font-weight: bold;
+    white-space: nowrap;
+    order: -1;
+}
+
+#cancion a img,
+#icono {
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+#cancion a img:hover,
+#icono:hover {
+    transform: scale(1.1);
+}
+
+#cancion figcaption a {
+    text-decoration: none;
+    color: var(--color-blanco);
+    transition: color 0.3s ease-in-out;
+}
+
+#cancion figcaption a:hover {
+    color: #ff4500;
+}
+
+/* Hace que "Ver eventos" se vea como un enlace azul */
+#ver-mas {
+    color: var(--color-azul2)e;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#ver-mas:hover {
+    color: var(--color-azul1);
+}
+
+/* Próximos eventos */
+#proximosEventos {
+    margin-top: 1.5625rem; /* 25px to rem */
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.25rem; /* 20px to rem */
+    border-radius: 0.625rem; /* 10px to rem */
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.2); /* 2px 5px to rem */
+}
+
+#proximosEventos ul {
+    list-style: none;
+    padding: 0;
+}
+
+#proximosEventos li {
+    padding: 0.5rem 0; /* 8px to rem */
+    font-size: 1rem;
+    border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.2); /* 1px to rem */
+}
+
+#proximosEventos li:last-child {
+    border-bottom: none;
+}

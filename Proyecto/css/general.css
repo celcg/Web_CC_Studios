@@ -10,70 +10,87 @@
 :root {
     --color-negro: #00010B;
     --color-gris: #3A3A3A;
-    --color-primario: #3E9ADE;
-    --color-acento: #97D3FF;
-    --color-secundario: #5431C1;
-    --color-texto: #FFFFFF;
+    --color-azul1: #3E9ADE;
+    --color-azul2: #97D3FF;
+    --color-morado: #5431C1;
+    --color-blanco: #FFFFFF;
 }
-
 /* Configuración del cuerpo */
 body {
-    background: linear-gradient(135deg, var(--color-fondo), var(--color-secundario));
-    color: var(--color-texto);
+    background-color: var(--color-negro);
+    background-image: 
+        radial-gradient(circle at 50% 10%, rgba(62, 154, 222, 0.25), transparent 30%), /* --color-azul1 */
+        radial-gradient(circle at 30% 20%, rgba(84, 49, 193, 0.02), transparent 60%), /* --color-morado */
+        radial-gradient(circle at 60% 10%, rgba(62, 154, 222, 0.05), transparent 60%), /* --color-azul1 */
+        radial-gradient(circle at 80% 50%, rgba(84, 49, 193, 0.1), transparent 40%), /* --color-morado */
+        radial-gradient(circle at 50% 50%, rgba(62, 154, 222, 0.02), transparent 60%), /* --color-azul1 */
+        radial-gradient(circle at 15% 60%, rgba(62, 154, 222, 0.05), transparent 60%), /* --color-azul1 */
+        radial-gradient(circle at 85% 40%, rgba(84, 49, 193, 0.08), transparent 60%), /* --color-morado */
+        radial-gradient(circle at 75% 10%, rgba(84, 49, 193, 0.05), transparent 30%), /* --color-morado */
+        radial-gradient(circle at 50% 90%, rgba(62, 154, 222, 0.05), transparent 60%), /* --color-azul1 */
+        radial-gradient(circle at 80% 90%, rgba(62, 154, 222, 0.25), transparent 30%), /* --color-morado */
+        radial-gradient(circle at 20% 90%, rgba(62, 154, 222, 0.25), transparent 30%); /* --color-morado */
+
+    color: var(--color-blanco);
     line-height: 1.6;
 }
 
 /* Contenedor principal */
 .container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 75rem; /* 1200px to rem */
     margin: 0 auto;
 }
 
 /* Tipografía */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Archivo', sans-serif;
     font-weight: bold;
-    color: var(--color-primario);
+    color: var(--color-blanco);
+    text-align: center;
 }
 
 p {
-    font-size: 14px;
+    font-size: 0.875rem; /* 14px to rem */
 }
 
 /* Enlaces */
 a {
     text-decoration: none;
-    color: var(--color-acento);
+    color: var(--color-azul);
     transition: color 0.3s ease-in-out;
 }
 
 a:hover {
-    color: var(--color-secundario);
+    color: var(--color-azul);
 }
 
 /* Botones */
 button {
-    background-color: var(--color-acento);
-    color: var(--color-texto);
+    background-color: var(--color-azul);
+    color: var(--color-azul);
     border: none;
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem; /* 10px 20px to rem */
     font-size: 1rem;
     cursor: pointer;
-    transition: background 0.3s ease-in-out;
 }
 
 button:hover {
-    background-color: var(--color-secundario);
+    background-color: var(--color-azul);
 }
 
 /* Posicionamiento y diseño basado en 12 columnas */
 .grid {
     display: grid;
-    gap: 20px;
+    gap: 1.25rem; /* 20px to rem */
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) { /* 768px to rem */
     .grid {
         grid-template-columns: repeat(12, 1fr);
     }
@@ -85,19 +102,23 @@ header {
     background-color: var(--color-negro);
     color: var(--color-blanco);
     text-transform: uppercase;
-    padding: 10px 0;
+    padding: 0.625rem 0; /* 10px to rem */
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
     box-sizing: border-box;
-  }
+    border-bottom: 0.1rem solid white;
+    padding-right: 1.25rem; /* 20px to rem */
+    padding-left: 1.25rem; /* 20px to rem */
+    /* Barra blanca abajo */
+}
 
 header nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 1.25rem; /* 20px to rem */
 }
 
 header nav ul li {
@@ -105,24 +126,71 @@ header nav ul li {
 }
 
 /* Footer */
+/* Estilos para el footer */
 footer {
-    background-color: var(--color-fondo);
+    background-color: var(--color-negro);
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+    padding: 1.25rem; /* 20px to rem */
+    margin-top: 2.5rem; /* 40px to rem */
+}
+
+/* Estilos para el título y subtítulo */
+footer h2 {
+    margin-bottom: 0.625rem; /* 10px to rem */
+    font-size: 1.5rem; /* 24px to rem */
+    color: var(--color-texto);
+}
+
+footer p {
+    font-size: 1rem; /* 16px to rem */
+    color: var(--color-texto);
+    margin-bottom: 0.625rem; /* 10px to rem */
+}
+
+/* Estilos para la lista de redes sociales */
+footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem; /* 20px to rem */
+}
+
+footer ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos para las imágenes de redes sociales */
+footer ul li img {
+    width: 1.875rem; /* 30px to rem */
+    height: 1.875rem; /* 30px to rem */
+    transition: transform 0.3s ease-in-out;
+}
+
+footer ul li img:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
+}
+
+/* Estilos para las etiquetas debajo de los íconos */
+footer ul li figcaption {
+    font-size: 0.875rem; /* 14px to rem */
+    color: var(--color-texto);
+    margin-top: 0.3125rem; /* 5px to rem */
 }
 
 /* Sección de Artistas */
 .artistas-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 1.875rem; /* 30px to rem */
 }
 
 .artista-card {
     background-color: var(--color-gris);
-    border-radius: 10px;
-    padding: 20px;
+    border-radius: 0.625rem; /* 10px to rem */
+    padding: 1.25rem; /* 20px to rem */
     text-align: center;
 }
 
@@ -140,46 +208,46 @@ footer {
 .noticias-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 1.875rem; /* 30px to rem */
 }
 
 .noticia {
     background-color: var(--color-gris);
-    padding: 15px;
-    border-radius: 8px;
+    padding: 0.9375rem; /* 15px to rem */
+    border-radius: 0.5rem; /* 8px to rem */
 }
 
 .noticia h3 {
-    color: var(--color-secundario);
+    color: var(--color-blanco);
 }
 
 /* Formulario de Contacto */
 .contacto-container {
     display: grid;
     grid-template-columns: 4fr 5fr;
-    gap: 20px;
+    gap: 1.25rem; /* 20px to rem */
 }
 
 .contacto-container .mapa {
     background-color: var(--color-gris);
-    padding: 10px;
-    border-radius: 10px;
+    padding: 0.625rem; /* 10px to rem */
+    border-radius: 0.625rem; /* 10px to rem */
 }
 
 .contacto-container form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.625rem; /* 10px to rem */
 }
 
 .contacto-container input,
 .contacto-container select,
 .contacto-container textarea {
-    padding: 10px;
-    border: 1px solid var(--color-secundario);
-    border-radius: 5px;
+    padding: 0.625rem; /* 10px to rem */
+    border: 0.0625rem solid var(--color-blanco); /* 1px to rem */
+    border-radius: 0.3125rem; /* 5px to rem */
     background: var(--color-fondo);
-    color: var(--color-texto);
+    color: var(--color-blanco);
 }
 
 .contacto-container button {
@@ -190,39 +258,23 @@ footer {
 .eventos-container {
     display: grid;
     grid-template-columns: 6fr 3fr;
-    gap: 20px;
+    gap: 1.25rem; /* 20px to rem */
 }
 
 .eventos-container .calendario {
     background-color: var(--color-gris);
-    padding: 20px;
-    border-radius: 10px;
+    padding: 1.25rem; /* 20px to rem */
+    border-radius: 0.625rem; /* 10px to rem */
 }
 
-/* Tarjeta de artista */
-.ficha-artista {
-    display: grid;
-    grid-template-columns: 4fr 6fr;
-    gap: 20px;
-}
 
-.ficha-artista .imagen {
-    background-color: var(--color-gris);
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.ficha-artista .info {
-    background-color: var(--color-gris);
-    padding: 15px;
-    border-radius: 10px;
-}
 
 /* Animaciones */
 @keyframes fadeIn {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -230,4 +282,21 @@ footer {
 
 .fade-in {
     animation: fadeIn 1s ease-in-out;
+}
+
+nav ul li a {
+    font-family: 'Archivo', Verdana, Arial, sans-serif;
+    font-size: 1.25rem; /* 20px to rem */
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #97D3FF; 
+    font-weight: bold;
+}
+
+footer nav h2 {
+    font-size: 2rem; /* 32px to rem */
 }
