@@ -6,6 +6,12 @@
     font-family: 'Roboto', sans-serif;
 }
 
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 /* Variables de colores */
 :root {
     --color-negro: #00010B;
@@ -15,6 +21,7 @@
     --color-morado: #5431C1;
     --color-blanco: #FFFFFF;
 }
+
 /* Configuración del cuerpo */
 body {
     background-color: var(--color-negro);
@@ -33,6 +40,9 @@ body {
 
     color: var(--color-blanco);
     line-height: 1.6;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Contenedor principal */
@@ -40,6 +50,7 @@ body {
     width: 90%;
     max-width: 75rem; /* 1200px to rem */
     margin: 0 auto;
+    flex: 1; /* Allow the container to grow and fill the available space */
 }
 
 /* Tipografía */
@@ -131,14 +142,10 @@ footer {
     background-color: var(--color-negro);
     text-align: center;
     padding: 1.25rem; /* 20px to rem */
-    margin-top: 2.5rem; /* 40px to rem */
-}
-
-/* Estilos para el título y subtítulo */
-footer h2 {
-    margin-bottom: 0.625rem; /* 10px to rem */
-    font-size: 1.5rem; /* 24px to rem */
-    color: var(--color-texto);
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Ensure the footer occupies the full width */
 }
 
 footer p {
@@ -176,7 +183,7 @@ footer ul li img:hover {
 /* Estilos para las etiquetas debajo de los íconos */
 footer ul li figcaption {
     font-size: 0.875rem; /* 14px to rem */
-    color: var(--color-texto);
+    color: var (--color-texto);
     margin-top: 0.3125rem; /* 5px to rem */
 }
 
@@ -266,8 +273,6 @@ footer ul li figcaption {
     padding: 1.25rem; /* 20px to rem */
     border-radius: 0.625rem; /* 10px to rem */
 }
-
-
 
 /* Animaciones */
 @keyframes fadeIn {

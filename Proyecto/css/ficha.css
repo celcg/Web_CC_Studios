@@ -1,29 +1,50 @@
 /* Contenedor del artista */
 #ficha {
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 3.125rem; /* 50px to rem */
-    padding: 3.125rem; /* 50px to rem */
+    align-items: stretch; /* Stretch items vertically */
+    justify-content: flex-start; /* Align items to the start */
+    gap: 0; /* Remove gap */
+    padding: 0; /* Remove padding */
     background: rgba(255, 255, 255, 0.1);
     border-radius: 0.9375rem; /* 15px to rem */
-    width: 85%;
+    width: 80%; /* Percentage-based width */
+    max-width: 1000px; /* Maximum width */
+    height: 500px; /* Fixed height */
     margin: 3.125rem auto; /* 50px to rem */
     backdrop-filter: blur(0.75rem); /* 12px to rem */
     box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.3); /* 4px 10px to rem */
+    position: relative; /* Para la posición de la 'X' */
+    overflow: hidden; /* Prevent content overflow */
 }
 
-/* Imagen del artista y carrusel */
-figure {
+/* Botón de cierre (X) en la esquina superior derecha */
+#cross {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--color-blanco);
+    background: transparent;
+    border: none;
+}
+
+/* Carrusel de fotos */
+#ficha > figure {
     position: relative;
-    max-width: 45%;
-    align-self: flex-start;
+    width: 40%; /* Adjust width as needed */
+    height: 100%; /* Make the figure fill the height of the container */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    flex-shrink: 0; /* Prevent shrinking */
 }
 
-figure img {
+#ficha > figure img {
     width: 100%;
-    border-radius: 0.9375rem; /* 15px to rem */
-    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.3); /* 4px 10px to rem */
+    height: 100%;
+    object-fit: cover; /* Crop the image to fill the figure */
+    border-radius: 0.9375rem; 
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.3); 
 }
 
 #carrusel {
@@ -36,7 +57,7 @@ figure img {
 }
 
 .anterior, .siguiente {
-    color: white;
+    color: var(--color-blanco);
     font-size: 2rem;
     text-decoration: none;
     font-weight: bold;
@@ -52,16 +73,34 @@ figure img {
 
 /* Información del artista */
 #artista-info {
-    max-width: 50%;
+    flex: 1; /* Take the remaining space */
     color: var(--color-blanco);
+    padding: 3.125rem; /* 50px to rem */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    max-width: 60%; /* Ensure it doesn't exceed the container's width */
+    overflow: hidden; /* Prevent content overflow */
+}
+
+#artista-info header {
+    background: transparent !important; /* Ensure total transparency */
 }
 
 #artistas-title {
     font-size: 2.2rem;
-    font-weight: bold;
-    border-bottom: 0.1875rem solid white; /* 3px to rem */
-    padding-bottom: 0.625rem; /* 10px to rem */
+    font-weight: normal; /* Remove bold */
+    text-transform: uppercase; /* Make text uppercase */
+    padding-bottom: 0; /* Remove padding */
     margin-bottom: 1.25rem; /* 20px to rem */
+    background: transparent !important; /* Ensure total transparency */
+    border-bottom: none; /* Remove horizontal line */
+}
+
+/* Trayectoria and Próximos eventos titles */
+#trayectoria h3,
+#proximosEventos h3 {
+    text-align: left; /* Align titles to the left */
 }
 
 /* Canción */
@@ -123,7 +162,7 @@ figure img {
 
 /* Hace que "Ver eventos" se vea como un enlace azul */
 #ver-mas {
-    color: var(--color-azul2)e;
+    color: var(--color-azul1);
     text-decoration: underline;
     font-weight: bold;
 }
@@ -154,4 +193,11 @@ figure img {
 
 #proximosEventos li:last-child {
     border-bottom: none;
+}
+
+/* Centering h1 and adding margin */
+h1 {
+    text-align: center;
+    margin-top: 2rem; /* Adjust as needed */
+    text-transform: uppercase; /* Make text uppercase */
 }
