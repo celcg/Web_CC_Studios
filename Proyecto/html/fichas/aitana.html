@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Carolina Alba García, Celtia Castelo Gajino">
     <meta name="description" content="Empresa CC Studios: su historia, logros musicales y equipo.">
     <meta name="keywords" content="CC Studios, música, artistas, conciertos, discográfica">
@@ -15,11 +16,9 @@
 <body>
     <header>
         <figure>
-            <img src="../imagenes/logos/logoblanco.svg" alt="Logo del sitio web" width="50%" height="50%">
-             
+            <img src="../imagenes/logos/logoblanco.svg" alt="Logo del sitio web">
         </figure>
-
-        <nav>
+        <nav id="NavPrincipal">
             <ul>
                 <li><a href="../index.html">ABOUT US</a></li>
                 <li><a href="../contacto.html">CONTACTO</a></li>
@@ -32,7 +31,7 @@
 
     <main>
         <!-- Sección de artista -->
-        <h1>ARTISTAS</h1>
+        <h1>Artistas</h1>
         <article id="ficha">
 
             <!-- Carrusel de fotos -->
@@ -73,21 +72,24 @@
                 </section>
 
                 <!-- Canción destacada -->
+                <!-- Canción destacada -->
                 <section id="cancion">
                     <figure>
-                        <img src="../imagenes/artistas/fichaAitana/cancion.jpg" alt="Carátula de la canción" width="5%"
-                            height="5%">
-                        <a href="../audio/segundointento.mp3" download>
-                            <img src="../imagenes/reproductor/Play.svg" alt="Reproducir canción"
-                                style="cursor: pointer;" width="2%" height="2%">
-                        </a>
-                        <img src="../imagenes/reproductor/Speaker.svg" alt="Ajustar volumen" style="cursor: pointer;"
-                            width="2%" height="2%">
-                        <figcaption>
-                            <a href="https://open.spotify.com/intl-es/track/7KmRozNJiNX1WUwrmNYKbJ"
-                                target="_blank">SEGUNDO INTENTO - Aitana</a>
-                        </figcaption>
+                        <img id="portada" src="../imagenes/artistas/fichaAitana/cancion.jpg"
+                            alt="Carátula de la canción">
                     </figure>
+
+                    <a href="https://open.spotify.com/intl-es/track/7KmRozNJiNX1WUwrmNYKbJ" target="_blank">SEGUNDO
+                        INTENTO - Aitana</a>
+
+                    <section id="reproductor">
+                        <a href="../audio/segundointento.mp3" download>
+                            <img id="icono" src="../imagenes/reproductor/Play.svg" alt="Reproducir canción"
+                                style="cursor: pointer;">
+                        </a>
+                        <img id="icono" src="../imagenes/reproductor/Speaker.svg" alt="Ajustar volumen"
+                            style="cursor: pointer;">
+                    </section>
                 </section>
 
                 <!-- Próximos eventos -->
@@ -104,51 +106,53 @@
         </article>
     </main>
 
-    <footer>
-        <h2><strong>CC STUDIOS</strong></h2>
-        <p><strong>Síguenos:</strong></p>
-        <ul>
-            <li>
-                <figure>
-                    <a href="https://www.spotify.com" target="_blank">
-                        <img src="../imagenes/logos/Spotify.svg" alt="Spotify" width="30" height="30">
-                    </a>
-                    <figcaption>Spotify</figcaption>
-                </figure>
-            </li>
-            <li>
-                <figure>
-                    <a href="https://www.facebook.com" target="_blank">
-                        <img src="../imagenes/logos/Facebook.svg" alt="Facebook" width="30" height="30">
-                    </a>
-                    <figcaption>Facebook</figcaption>
-                </figure>
-            </li>
-            <li>
-                <figure>
-                    <a href="https://www.instagram.com" target="_blank">
-                        <img src="../imagenes/logos/Instagram.svg" alt="Instagram" width="30" height="30">
-                    </a>
-                    <figcaption>Instagram</figcaption>
-                </figure>
-            </li>
-            <li>
-                <figure>
-                    <a href="https://www.twitter.com" target="_blank">
-                        <img src="../imagenes/logos/Twitter.svg" alt="Twitter" width="30" height="30">
-                    </a>
-                    <figcaption>Twitter</figcaption>
-                </figure>
-            </li>
-            <li>
-                <figure>
-                    <a href="https://www.youtube.com" target="_blank">
-                        <img src="../imagenes/logos/Youtube.svg" alt="YouTube" width="30" height="30">
-                    </a>
-                    <figcaption>YouTube</figcaption>
-                </figure>
-            </li>
-        </ul>
+    <footer id="footerPrincipal">
+        <h2 id="footer-title">CC STUDIOS</h2>
+        <div id="footer-follow">
+            <p>Síguenos:</p>
+            <ul>
+                <!-- Logo 1 (Spotify) -->
+                <li>
+                    <figure>
+                        <a href="https://www.spotify.com" target="_blank">
+                            <img src="../imagenes/logos/Spotify.svg" alt="Spotify">
+                        </a>
+                    </figure>
+                </li>
+                <!-- Logo 2 (Facebook) -->
+                <li>
+                    <figure>
+                        <a href="https://www.facebook.com" target="_blank">
+                            <img src="../imagenes/logos/Facebook.svg" alt="Facebook">
+                        </a>
+                    </figure>
+                </li>
+                <!-- Logo 3 (Instagram) -->
+                <li>
+                    <figure>
+                        <a href="https://www.instagram.com" target="_blank">
+                            <img src="../imagenes/logos/Instagram.svg" alt="Instagram">
+                        </a>
+                    </figure>
+                </li>
+                <!-- Logo 4 (Twitter) -->
+                <li>
+                    <figure>
+                        <a href="https://www.twitter.com" target="_blank">
+                            <img src="../imagenes/logos/Twitter.svg" alt="Twitter">
+                        </a>
+                    </figure>
+                </li>
+                <!-- Logo 5 (YouTube) -->
+                <li>
+                    <figure>
+                        <a href="https://www.youtube.com" target="_blank">
+                            <img src="../imagenes/logos/Youtube.svg" alt="YouTube">
+                        </a>
+                    </figure>
+                </li>
+            </ul>
+        </div>
     </footer>
 </body>
 

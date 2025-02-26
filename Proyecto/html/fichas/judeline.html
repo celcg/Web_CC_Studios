@@ -3,25 +3,23 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Carolina Alba García, Celtia Castelo Gajino">
     <meta name="description" content="Empresa CC Studios: su historia, logros musicales y equipo.">
     <meta name="keywords" content="CC Studios, música, artistas, conciertos, discográfica">
     <title> About Us - CC Studios</title>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/general.css">
     <link rel="stylesheet" href="../../css/ficha.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap" rel="stylesheet">
-    
 </head>
 
 <body>
     <header>
-        <figure id="logo">
-            <img src="../imagenes/logos/logoblanco.svg" alt="Logo del sitio web" width="50%" height="50%">
-             
+        <figure>
+            <img src="../imagenes/logos/logoblanco.svg" alt="Logo del sitio web">
         </figure>
-
-        <nav>
+        <nav id="NavPrincipal">
             <ul>
                 <li><a href="../index.html">ABOUT US</a></li>
                 <li><a href="../contacto.html">CONTACTO</a></li>
@@ -33,11 +31,11 @@
     </header>
 
     <main>
-        <h1 >ARTISTAS</h1>
+        <h1>Artistas</h1>
 
         <!-- Sección de artista -->
         <article id="ficha">
-          
+
 
             <nav id="cross">
                 <!-- Botón de cerrar -->
@@ -50,16 +48,16 @@
             <figure id="carrusel ">
                 <img src="../imagenes/artistas/fichaJudeline/judeline1.jpg" alt="Judeline posando" width="30%"
                     height="auto">
-                    <nav id="carrusel">
-                        <a href="#" class="anterior">&#8249;</a>
-                        <a href="#" class="siguiente">&#8250;</a>
-                    </nav>
+                <nav id="carrusel">
+                    <a href="#" class="anterior">&#8249;</a>
+                    <a href="#" class="siguiente">&#8250;</a>
+                </nav>
             </figure>
             <section id="artista-info">
                 <header>
                     <h2 id="artistas-title">JUDELINE</h2>
                 </header>
-                
+
                 <!-- Trayectoria del artista -->
                 <section id="trayectoria">
                     <h3>TRAYECTORIA</h3>
@@ -74,19 +72,21 @@
                 <!-- Canción destacada -->
                 <section id="cancion">
                     <figure>
-                        <img id="portada" src="../imagenes/artistas/fichaJudeline/cancion.jpg" alt="Carátula de la canción"
-                            width="5%" height="5%">
+                        <img id="portada" src="../imagenes/artistas/fichaJudeline/cancion.jpg"
+                            alt="Carátula de la canción">
+                    </figure>
+
+                    <a href="https://open.spotify.com/intl-es/track/4EF1UDALNWdyJDWindWBqg" target="_blank">Sustancia -
+                        Judeline, Mayo </a>
+
+                    <section id="reproductor">
                         <a href="../audio/Sustancia.mp3" download>
                             <img id="icono" src="../imagenes/reproductor/Play.svg" alt="Reproducir canción"
-                                style="cursor: pointer;" width="2%" height="2%">
+                                style="cursor: pointer;">
                         </a>
-                        <img id="icono" src="../imagenes/reproductor/Speaker.svg" alt="Ajustar volumen" style="cursor: pointer;"
-                            width="2%" height="2%">
-                        <figcaption>
-                            <a href="https://open.spotify.com/intl-es/track/4EF1UDALNWdyJDWindWBqg"
-                                target="_blank">Sustancia - Judeline, Mayo </a>
-                        </figcaption>
-                    </figure>
+                        <img id="icono" src="../imagenes/reproductor/Speaker.svg" alt="Ajustar volumen"
+                            style="cursor: pointer;">
+                    </section>
                 </section>
 
                 <!-- Próximos eventos -->
@@ -102,52 +102,53 @@
             </section>
         </article>
     </main>
-
-    <footer>
-        <h2><strong>CC STUDIOS</strong></h2>
-        <p><strong>Síguenos:</strong></p>
-        <ul>
-            <li>
-                <figure>
-                    <a href="https://www.spotify.com" target="_blank">
-                        <img src="../imagenes/logos/Spotify.svg" alt="Spotify" width="30" height="30">
-                    </a>
-                    <figcaption>Spotify</figcaption>
-                </figure>
-            </li>
-            <li>
-                <figure>
-                    <a href="https://www.facebook.com" target="_blank">
-                        <img src="../imagenes/logos/Facebook.svg" alt="Facebook" width="30" height="30">
-                    </a>
-                    <figcaption>Facebook</figcaption>
-                </figure>
-            </li>
-            <li>
-                <figure>
-                    <a href="https://www.instagram.com" target="_blank">
-                        <img src="../imagenes/logos/Instagram.svg" alt="Instagram" width="30" height="30">
-                    </a>
-                    <figcaption>Instagram</figcaption>
-                </figure>
-            </li>
-            <li>
-                <figure>
-                    <a href="https://www.twitter.com" target="_blank">
-                        <img src="../imagenes/logos/Twitter.svg" alt="Twitter" width="30" height="30">
-                    </a>
-                    <figcaption>Twitter</figcaption>
-                </figure>
-            </li>
-            <li>
-                <figure>
-                    <a href="https://www.youtube.com" target="_blank">
-                        <img src="../imagenes/logos/Youtube.svg" alt="YouTube" width="30" height="30">
-                    </a>
-                    <figcaption>YouTube</figcaption>
-                </figure>
-            </li>
-        </ul>
+    <footer id="footerPrincipal">
+        <h2 id="footer-title">CC STUDIOS</h2>
+        <div id="footer-follow">
+            <p>Síguenos:</p>
+            <ul>
+                <!-- Logo 1 (Spotify) -->
+                <li>
+                    <figure>
+                        <a href="https://www.spotify.com" target="_blank">
+                            <img src="../imagenes/logos/Spotify.svg" alt="Spotify">
+                        </a>
+                    </figure>
+                </li>
+                <!-- Logo 2 (Facebook) -->
+                <li>
+                    <figure>
+                        <a href="https://www.facebook.com" target="_blank">
+                            <img src="../imagenes/logos/Facebook.svg" alt="Facebook">
+                        </a>
+                    </figure>
+                </li>
+                <!-- Logo 3 (Instagram) -->
+                <li>
+                    <figure>
+                        <a href="https://www.instagram.com" target="_blank">
+                            <img src="../imagenes/logos/Instagram.svg" alt="Instagram">
+                        </a>
+                    </figure>
+                </li>
+                <!-- Logo 4 (Twitter) -->
+                <li>
+                    <figure>
+                        <a href="https://www.twitter.com" target="_blank">
+                            <img src="../imagenes/logos/Twitter.svg" alt="Twitter">
+                        </a>
+                    </figure>
+                </li>
+                <!-- Logo 5 (YouTube) -->
+                <li>
+                    <figure>
+                        <a href="https://www.youtube.com" target="_blank">
+                            <img src="../imagenes/logos/Youtube.svg" alt="YouTube">
+                        </a>
+                    </figure>
+                </li>
+            </ul>
+        </div>
     </footer>
 </body>
 
