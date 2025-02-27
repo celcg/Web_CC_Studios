@@ -84,7 +84,7 @@ header nav ul li {
 
 header nav ul li a {
     font-family: 'Archivo', Verdana, Arial, sans-serif;
-    font-size: 1.50rem; /* 20px to rem */
+    font-size: 1.50rem; 
     text-transform: uppercase;
     color: var(--color-blanco);
     text-decoration: none;
@@ -99,8 +99,8 @@ header nav ul li a:hover {
 footer {
     background-color: var(--color-negro);
     text-align: center;
-    padding: 1.25rem 4rem; /* 20px to rem */
-    margin-top: 2.5rem; /* 40px to rem */
+    padding: 1.25rem 4rem; 
+    margin-top: 2.5rem; 
     display: flex; /* Utiliza flexbox para los elementos dentro del footer */
     justify-content: space-between; /* Distribuye los elementos a los extremos */
     align-items: center; /* Centra los elementos en el eje vertical */
@@ -155,12 +155,12 @@ footer ul li img:hover {
 }
 
 footer ul li figcaption {
-    font-size: 0.875rem; /* 14px to rem */
+    font-size: 0.875rem;
     color: var(--color-blanco);
-    margin-top: 0.3125rem; /* 5px to rem */
+    margin-top: 0.3125rem; 
 }
 
-/* Responsive Styles for Mobile Viewports */
+/* Responsive Styles */
 @media (max-width: 768px) {
     header {
         flex-direction: column; /* Cambia la dirección del flex a columna */
@@ -282,93 +282,6 @@ button:hover {
     .grid {
         grid-template-columns: repeat(12, 1fr);
     }
-}
-
-/* Sección de Artistas */
-.artistas-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.875rem; /* 30px to rem */
-}
-
-.artista-card {
-    background-color: var(--color-gris);
-    border-radius: 0.625rem; /* 10px to rem */
-    padding: 1.25rem; /* 20px to rem */
-    text-align: center;
-}
-
-.artista-card img {
-    width: 100%;
-    border-radius: 50%;
-    transition: transform 0.3s ease-in-out;
-}
-
-.artista-card img:hover {
-    transform: scale(1.1);
-}
-
-/* Noticias */
-.noticias-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.875rem; /* 30px to rem */
-}
-
-.noticia {
-    background-color: var(--color-gris);
-    padding: 0.9375rem; /* 15px to rem */
-    border-radius: 0.5rem; /* 8px to rem */
-}
-
-.noticia h3 {
-    color: var(--color-blanco);
-}
-
-/* Formulario de Contacto */
-.contacto-container {
-    display: grid;
-    grid-template-columns: 4fr 5fr;
-    gap: 1.25rem; /* 20px to rem */
-}
-
-.contacto-container .mapa {
-    background-color: var(--color-gris);
-    padding: 0.625rem; /* 10px to rem */
-    border-radius: 0.625rem; /* 10px to rem */
-}
-
-.contacto-container form {
-    display: flex;
-    flex-direction: column;
-    gap: 0.625rem; /* 10px to rem */
-}
-
-.contacto-container input,
-.contacto-container select,
-.contacto-container textarea {
-    padding: 0.625rem; /* 10px to rem */
-    border: 0.0625rem solid var(--color-blanco); /* 1px to rem */
-    border-radius: 0.3125rem; /* 5px to rem */
-    background: var(--color-gris);
-    color: var(--color-blanco);
-}
-
-.contacto-container button {
-    width: 100%;
-}
-
-/* Eventos */
-.eventos-container {
-    display: grid;
-    grid-template-columns: 6fr 3fr;
-    gap: 1.25rem; /* 20px to rem */
-}
-
-.eventos-container .calendario {
-    background-color: var(--color-gris);
-    padding: 1.25rem; /* 20px to rem */
-    border-radius: 0.625rem; /* 10px to rem */
 }
 
 /* Animaciones */
