@@ -7,9 +7,10 @@
     <meta name="description" content="Empresa CC Studios: formulario de contacto">
     <meta name="keywords" content="CC Studios, música, artistas, conciertos, discográfica, contacto">
     <title> Contacto - CC Studios</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/general.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 
@@ -31,79 +32,72 @@
         </nav>
     </header>
 
-    <main>
-        <h1>Contacto</h1>
-    
-        <section class="contacto" style="display: flex; gap: 20px; align-items: flex-start;">
-            
-            <!-- Mapa -->
-            <article class="ubicacion" style="width: 40%;">
-                <h3>Puedes encontrarnos aquí</h3>
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3038.0559779224855!2d-3.6824743169593845!3d40.40761068257311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42261944bf35cf%3A0xb9d58d328d9e7e22!2sAv.%20del%20Mediterr%C3%A1neo%2C%203%2C%20Retiro%2C%2028007%20Madrid!5e0!3m2!1ses!2ses!4v1739622903594!5m2!1ses!2ses" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-    
-                <p><strong>Dirección:</strong> Av. del Mediterráneo, 3, Retiro, 28007 Madrid, España</p>
-                <p><strong>Teléfono:</strong> <a href="tel:+34682276155">682 276 155</a>, <a href="tel:919234432">919 234 432</a></p>
-                <p><strong>Email:</strong> <a href="mailto:contacto@ccstudios.com">contacto@ccstudios.com</a>
-                </p>
-            </article>
-    
-            <!-- Formulario -->
-            <section class="formulario" style="width: 50%;">
-                <h2>Motivo de la consulta</h2>
-                <form>
+    <main class="container mt-5">
+        <h1 class="text-center mb-4">Contacto</h1>
 
-                    <article>
-                        <label for="motivo">Motivo de contacto:</label>
-                    </article>
-                    <article>
-                        <select id="motivo" name="motivo">
+        <div class="container">
+            <div class="row">            
+                <!-- Mapa -->
+                <!--Usamos contenedor md para que asi a partir de pantallas medianas (>=768px) haya 2 columnas de seis -->
+                <!--Con order, lo que hacemos es seleccionar en que posicion va.
+                En este caso, con 2 coumnas va a la izquierda (1) y con pantallas pequeñas a la abajo (2)-->
+                <div class="col-12 col-md-6 mb-4 order-2 order-md-1">
+                    <h3>Puedes encontrarnos aquí</h3>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3038.0559779224855!2d-3.6824743169593845!3d40.40761068257311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42261944bf35cf%3A0xb9d58d328d9e7e22!2sAv.%20del%20Mediterr%C3%A1neo%2C%203%2C%20Retiro%2C%2028007%20Madrid!5e0!3m2!1ses!2ses!4v1739622903594!5m2!1ses!2ses" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+        
+                    <p><strong>Dirección:</strong> Av. del Mediterráneo, 3, Retiro, 28007 Madrid, España</p>
+                    <p><strong>Teléfono:</strong> <a href="tel:+34682276155">682 276 155</a>, <a href="tel:919234432">919 234 432</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:contacto@ccstudios.com">contacto@ccstudios.com</a>
+                    </p>
+                </div>
+        
+                <!-- Formulario -->
+                 <!--Con order, lo que hacemos es seleccionar en que posicion va.
+                En este caso, con 2 coumnas va a la derecha (2) y con pantallas pequeñas va arriba (1)-->
+                <div class="col-12 col-md-6 mb-4 order-1 order-md-2">
+                    <h2>Motivo de la consulta</h2>
+                    <form>
+                        <div class="mb-3">
+                            <label for="motivo" class="form-label">Motivo de contacto:</label>
+                            <select class="form-select" >
+                            <!--<label for="motivo">Motivo de contacto:</label>-->
+                            <option selected>Selecciona el motivo de contacto</option>
                             <option value="colaboracion">Quiero trabajar con vosotros</option>
-                            <option value="musica">Quiero enviar mi música</option>
-                            <option value="info">Quiero obtener más información</option>
-                            <option value="problema">Ha surgido un problema</option>
-                            <option value="otro">Otro</option>
+                                <option value="musica">Quiero enviar mi música</option>
+                                <option value="info">Quiero obtener más información</option>
+                                <option value="problema">Ha surgido un problema</option>
+                                <option value="otro">Otro</option>
                         </select>
-                    </article>
+                        </div>
 
-                    <article>
-                        <label for="nombre">Nombre y apellidos</label>
-                    </article>
-                    <article>
-                        <input type="text" id="nombre" name="nombre" required>
-                    </article>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre y apellidos</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="" required>
+                        </div>
 
-                    <article>
-                        <label for="email">Email</label>
-                    </article>
-                    <article>
-                        <input type="email" id="email" name="email" required>
-                    </article>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="email@ejemplo.com" required>
+                        </div>
 
-                    <article>
-                        <label for="telefono">Teléfono de contacto</label>
-                    </article>
-                    <article>
-                        <input type="tel" id="telefono" name="telefono" required>
-                    </article>
+                        <div class="mb-3">
+                            <label for="telefono" class="form-label">Teléfono de contacto</label>
+                            <input type="tel" class="form-control" id="telefono" placeholder="" required>
+                        </div>
 
-                    <article>
-                        <label for="mensaje">Mensaje:</label>
-                    </article>
-                    <article>
-                        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-                    </article>
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Mensaje: </label>
+                            <textarea class="form-control" id="mensaje" rows="5" required></textarea>
+                        </div>
 
-                    <article>
-                        <input type="submit" value="Enviar">
-                    </article>
+                        <button type="submit" class="btn btn-primary w-100">Enviar</button>
 
-                </form>
-            </section>
-
-            
-        </section>
+                    </form>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer id="footerPrincipal">
