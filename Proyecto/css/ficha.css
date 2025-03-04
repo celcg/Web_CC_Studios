@@ -1,109 +1,102 @@
-/* Contenedor del artista */
+/* ------------------------------ Contenedor del artista ------------------------------ */
 #ficha {
     display: flex;
-    align-items: center; /* Center items vertically */
-    justify-content: flex-start; /* Align items to the start */
-    gap: 0; /* Remove gap */
-    padding: 0; /* Remove padding */
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0;
+    padding: 0;
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 0.9375rem; /* 15px to rem */
-    width: 83.33%; /* Percentage-based width */
-    height: auto; /* Adjust height automatically */
-    margin-left: 8.33%; /* 1/12 of the width */
-    margin-right: 8.33%; /* 1/12 of the width */
-    margin-top:3%;
-    backdrop-filter: blur(0.75rem); /* 12px to rem */
-    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.3); /* 4px 10px to rem */
-    position: relative; /* Make the position relative to contain absolutely positioned children */
+    border-radius: 0.9375rem;
+    width: 83.33%;
+    height: auto;
+    margin-left: 8.33%;
+    margin-right: 8.33%;
+    margin-top: 3%;
+    backdrop-filter: blur(0.75rem);
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.3);
+    position: relative;
+    min-width: 300px;
 }
 
-
-/* Centering h1 and adding margin */
-h1 {
-    text-align: center;
-    text-transform: capitalize; /* Make text uppercase */
-    font-weight: normal;
-}
-
-/* Botón de cierre (X) en la esquina superior derecha */
-#cross {
-    position:  absolute;
-    top: 1rem;
-    right: 1rem;
-    font-size: 1.5rem;
-    cursor: pointer;
-    border: none;
-    background: none; /* Ensure no background */
-    padding: 0; /* Remove padding */
-}
-
-#cross a {
-    text-decoration: none;
-    color: var(--color-blanco);
-}
-
-#cross:hover a {
-    color: var(--color-morado);
-}
-
-/* Carrusel de fotos */
+/* ------------------------------ Carrusel de fotos ------------------------------ */
 #ficha > figure {
     position: relative;
-    width: 40%; 
-    height: 100%; 
-    margin: 0; /* Remove margin */
-    padding: 0; /* Remove padding */
+    width: 40%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0 1.5rem;
 }
 
 #ficha > figure img {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Mantiene las dimensiones de la imagen aunque cambie */
-    object-position: center; /* Centra la imagen dentro del contenedor */
-    border-radius: 0.9375rem; 
-    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.3); 
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.9375rem;
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.3);
 }
 
-#carrusel {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
+/* ------------------------------ Media Queries para imágenes ------------------------------ */
+@media (min-width: 1200px) {
+    #ficha > figure {
+        width: 500px;
+        height: 500px;
+    }
 }
 
-.anterior, .siguiente {
-    color: var(--color-blanco);
-    font-size: 2rem;
-    font-weight: bold;
-    padding: 0.625rem; /* 10px to rem */
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    text-decoration: none; /* Remove underline */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 3rem; /* Ajusta el ancho */
-    height: 3rem; /* Ajusta el alto */
+@media (max-width: 1199px) {
+    #ficha > figure{
+        margin-top:20px;
+        width: 300px;
+        height: 300px;
+    }
 }
 
-.anterior:hover, .siguiente:hover {
-    background: var(--color-morado);
+/* ------------------------------ Ajustes en pantallas pequeñas ------------------------------ */
+@media (max-width: 1000px) {
+    #ficha {
+        flex-direction: column; /* Pone la imagen encima del texto */
+        align-items: center; /* Centra los elementos horizontalmente */
+        width: 100%; /* Asegura que ocupe el 100% del ancho disponible */
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 8.33%;
+        padding-right: 8.33%;
+    }
+
+    #artista-info {
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center; /* Centra el texto cuando la imagen esté arriba */
+    }
+
+    #ficha > figure {
+        margin-bottom: 1rem; /* Agrega un pequeño espacio entre la imagen y el texto */
+    }
 }
 
-
-/* Información del artista */
+/* ------------------------------ Información del artista ------------------------------ */
 #artista-info {
     position: relative;
-    flex: 1; /* Take the remaining space */
+    flex: 1;
     color: var(--color-blanco);
-    padding: 3.125rem; /* 50px to rem */
+    padding: 3.125rem;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center content vertically */
+    justify-content: center;
     padding-left: 10%;
     padding-right: 10%;
+    overflow: hidden; /* Evita el desbordamiento del texto */
+    word-wrap: break-word; /* Asegura que las palabras largas se rompan correctamente */
+}
+
+/* ------------------------------ Títulos y estilo de encabezados ------------------------------ */
+h1 {
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: normal;
 }
 
 #artista-info header {
@@ -111,29 +104,29 @@ h1 {
     margin-top: 0rem;
     padding-top: 0rem;
     border-bottom: 0.05em solid var(--color-blanco); /* Añade un borde inferior de 1px (0.1rem) de color blanco */
-
 }
 
 #artistas-title {
-    font-weight: normal; /* Remove bold */
-    text-transform: uppercase; /* Make text uppercase */
-    padding-bottom: 0; /* Remove padding */
-    margin-bottom: 0rem; /* 20px to rem */
+    font-weight: normal; /* Remueve el negrita */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    padding-bottom: 0;
+    margin-bottom: 0rem;
 }
 
 #trayectoria {
     margin-top: 1rem;
 }
-/* Trayectoria and Próximos eventos titles */
+
+/* ------------------------------ Trayectoria y Próximos Eventos ------------------------------ */
 #trayectoria h3,
 #proximosEventos h3 {
     color: var(--color-azul1);
-    text-align: left; /* Align titles to the left */
-    font-size: 1.25rem; /* 24px to rem */
+    text-align: left; /* Alinea los títulos a la izquierda */
+    font-size: 1.25rem; /* 24px a rem */
     font-weight: regular;
 }
 
-/* Canción */
+/* ------------------------------ Canción ------------------------------ */
 #cancion {
     display: flex;
     align-items: center;
@@ -146,15 +139,13 @@ h1 {
     border-radius: 0.625rem;
 }
 
-
 #portada {
     width: 4rem;
     height: 4rem;
-    border-radius: 0.625rem; /* 10px to rem */
-    box-shadow: 0.125rem 0.125rem 0.625rem rgba(0, 0, 0, 0.2); /* 2px 2px 10px to rem */
+    border-radius: 0.625rem; /* 10px a rem */
+    box-shadow: 0.125rem 0.125rem 0.625rem rgba(0, 0, 0, 0.2); /* 2px 2px 10px a rem */
     flex-shrink: 0;
 }
-
 
 #cancion a img,
 #icono {
@@ -164,10 +155,11 @@ h1 {
     transition: transform 0.2s ease-in-out;
 }
 
+/* ------------------------------ Reproductor ------------------------------ */
 #reproductor {
     display: flex;
     align-items: center;
-    gap: 1rem; /* Ajusta el valor del gap según sea necesario */
+    gap: 1rem;
     margin-bottom: 0rem;
 }
 
@@ -183,31 +175,83 @@ h1 {
 #icono:hover {
     transform: scale(1.1);
 }
- 
-#cancion a{
+
+#cancion a {
     text-decoration: none;
     font-size: 1.1rem;
     font-family: 'Archivo', Arial, Helvetica, sans-serif;
     color: var(--color-blanco);
 }
-#cancion a:hover{
+
+#cancion a:hover {
     text-decoration: none;
     color: var(--color-morado);
 }
 
+/* ------------------------------ Próximos Eventos ------------------------------ */
 #proximosEventos ul {
     list-style: disc inside; /* Cambia el estilo de la lista a puntos y coloca los puntos dentro del contenedor */
-    padding-left: 1.5rem; /* Ajusta la sangría según sea necesario */
+    padding-left: 1.5rem;
 }
 
 #proximosEventos li {
-    padding: 0.5rem 0; /* 8px to rem */
+    padding: 0.5rem 0;
     font-size: 1rem;
-    border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.2); /* 1px to rem */
+    border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.2); /* 1px a rem */
 }
 
 #proximosEventos li:last-child {
     border-bottom: none;
 }
 
+/* ------------------------------ Botón de cierre ------------------------------ */
+#cross {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+    z-index: 1000;
+}
 
+#cross a {
+    text-decoration: none;
+    color: var(--color-blanco);
+}
+
+#cross:hover a {
+    color: var(--color-morado);
+}
+
+/* ------------------------------ Carrusel ------------------------------ */
+#flechasCarrusel {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    padding: 10%;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+/* ------------------------------ Botones de Carrusel ------------------------------ */
+.anterior, .siguiente {
+    color: var(--color-blanco);
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0.625rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+}
+
+.anterior:hover, .siguiente:hover {
+    background: var(--color-morado);
+}

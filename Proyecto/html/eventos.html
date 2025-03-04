@@ -1,28 +1,24 @@
 <!DOCTYPE html>
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Carolina Alba García, Celtia Castelo Gajino">
-    <meta name="description"
-        content="Eventos musicales de CC Studios: calendario con conciertos y firmas de disco de los artistas de la discográfica.">
-    <meta name="keywords" content="CC Studios, eventos, artistas, conciertos, firmas de disco">
-    <title> About Us - CC Studios</title>
+    <title>Eventos - CC Studios</title>
     <link rel="stylesheet" href="../css/general.css">
-
+    <link rel="stylesheet" href="../css/eventos.css">
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
-
 <body>
-    <header>
+    <header id="headerPrincipal">
         <figure>
             <img src="imagenes/logos/logoblanco.svg" alt="Logo del sitio web">
-             
+
         </figure>
 
         <nav id="NavPrincipal">
-            <ul >
+            <ul>
                 <li><a href="index.html">ABOUT US</a></li>
                 <li><a href="contacto.html">CONTACTO</a></li>
                 <li><a href="artistas.html">ARTISTAS</a></li>
@@ -32,134 +28,56 @@
         </nav>
     </header>
     <main>
-        <!-- Título del calendario -->
-        <h1>Calendario</h1>
+        <header>
+            <h1>Eventos</h1>
+        </header>
+        <section class="calendario">
+            <nav class="calendar-header">
+                <a id="prevMonth">&lt;</a>
+                <span id="monthName">Febrero 2025</span>
+                <a id="nextMonth">&gt;</a>
+            </nav>
+            <section class="calendar-grid">
+                <span>LUN</span><span>MAR</span><span>MIE</span><span>JUE</span><span>VIE</span><span>SAB</span><span>DOM</span>
 
-        <!-- Calendario -->
-        <table>
-            <caption>
-                Marzo 2025
-                <!-- Controles de navegación del calendario -->
-                <nav aria-label="Controles de calendario">
-                    <figure>
-                        <button id="prevMonth" aria-label="Mes anterior">⬅</button>
-                        <figcaption>Mes anterior</figcaption>
-                    </figure>
-                    <span id="monthName"></span>
-                    <figure>
-                        <button id="nextMonth" aria-label="Mes siguiente">➡</button>
-                        <figcaption>Mes siguiente</figcaption>
-                    </figure>
-                </nav>
-            </caption>
-            <thead>
-                <tr>
-                    <th>LUN</th>
-                    <th>MAR</th>
-                    <th>MIE</th>
-                    <th>JUE</th>
-                    <th>VIE</th>
-                    <th>SAB</th>
-                    <th>DOM</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                    <td>8</td>
-                    <td>9</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td>11</td>
-                    <td>12</td>
-                    <td>13</td>
-                    <td>14</td>
-                    <td>15</td>
-                    <td>16</td>
-                    <td>17</td>
-                </tr>
-                <tr>
-                    <td>18</td>
-                    <td>19</td>
-                    <td>20</td>
-                    <td>21</td>
-                    <td>22</td>
-                    <td>23</td>
-                    <td>24</td>
-                </tr>
-                <tr>
-                    <td>25</td>
-                    <td>26</td>
-                    <td>27</td>
-                    <td>28</td>
-                    <td>29</td>
-                    <td>30</td>
-                    <td>31</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <!-- Filtro de eventos -->
-        <form action="..." method="GET">
-            <fieldset>
-                <legend>Filtro de Eventos</legend>
-
-                <!-- Input para seleccionar mes -->
-                <label for="mes">Selecciona el mes:</label>
-                <input type="month" id="mes" name="mes" value="2025-02">
-
-                <!-- Selector de tipo de evento -->
-                <label for="tipoEvento">Selecciona el tipo de evento:</label>
-                <select id="tipoEvento" name="tipo" multiple>
-                    <option value="firma" selected>Firma de discos</option>
-                    <option value="concierto" selected>Concierto</option>
-                </select>
-
-                <!-- Botón de envío -->
-                <input type="submit" value="Filtrar">
-            </fieldset>
-        </form>
-
-        <!-- Lista de eventos -->
-        <section id="lista-eventos">
-            <article>
+                <span></span><span></span><span></span><span></span><span>1</span><span>2</span><span>3</span>
+                <span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span
+                    class="evento evento-1">9</span><span>10</span>
+                <span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span
+                    class="evento evento-2">17</span>
+                <span>18</span><span>19</span><span>20</span><span
+                    class="evento evento-3">21</span><span>22</span><span>23</span><span>24</span>
+                <span>25</span><span>26</span><span class="evento evento-4">27</span><span>28</span>
+            </section>
+        </section>
+        <section class="filtro">
+            <label for="filtroEventos">Filtra los eventos</label>
+            <select id="filtroEventos">
+                <option value="">Selecciona...</option>
+                <option value="concierto">Concierto</option>
+                <option value="firma">Firma de discos</option>
+            </select>
+        </section>
+        <section class="eventos-lista">
+            <article class="evento-card evento-1">
                 <h3>9 FEB | Concierto <strong>Judeline</strong></h3>
                 <p>Madrid, Wizink Center</p>
             </article>
-            <article>
+            <article class="evento-card evento-2">
                 <h3>17 FEB | Firma <strong>Sen Senra</strong></h3>
                 <p>Santiago, El Corte Inglés</p>
             </article>
-            <article>
+            <article class="evento-card evento-3">
                 <h3>21 FEB | Concierto <strong>Aitana</strong></h3>
                 <p>Barcelona, Palau Sant Jordi</p>
             </article>
-            <article>
+            <article class="evento-card evento-4">
                 <h3>27 FEB | Concierto <strong>Bad Bunny</strong></h3>
                 <p>A Coruña, Coliseum</p>
             </article>
-            <article>
-                <figure> <!-- CAMBIAR CUANDO USEMOS CSS-->
-                    <button class="arrow">&#10217;</button>
-                </figure>
-            </article>
+
         </section>
     </main>
-
-
     <footer id="footerPrincipal">
         <h2 id="footer-title">CC STUDIOS</h2>
         <div id="footer-follow">
@@ -169,7 +87,7 @@
                 <li>
                     <figure>
                         <a href="https://www.spotify.com" target="_blank">
-                            <img src="imagenes/logos/Spotify.svg" alt="Spotify" >
+                            <img src="imagenes/logos/Spotify.svg" alt="Spotify">
                         </a>
                     </figure>
                 </li>
@@ -177,7 +95,7 @@
                 <li>
                     <figure>
                         <a href="https://www.facebook.com" target="_blank">
-                            <img src="imagenes/logos/Facebook.svg" alt="Facebook" >
+                            <img src="imagenes/logos/Facebook.svg" alt="Facebook">
                         </a>
                     </figure>
                 </li>
@@ -185,7 +103,7 @@
                 <li>
                     <figure>
                         <a href="https://www.instagram.com" target="_blank">
-                            <img src="imagenes/logos/Instagram.svg" alt="Instagram" >
+                            <img src="imagenes/logos/Instagram.svg" alt="Instagram">
                         </a>
                     </figure>
                 </li>
@@ -193,7 +111,7 @@
                 <li>
                     <figure>
                         <a href="https://www.twitter.com" target="_blank">
-                            <img src="imagenes/logos/Twitter.svg" alt="Twitter" >
+                            <img src="imagenes/logos/Twitter.svg" alt="Twitter">
                         </a>
                     </figure>
                 </li>
@@ -201,15 +119,14 @@
                 <li>
                     <figure>
                         <a href="https://www.youtube.com" target="_blank">
-                            <img src="imagenes/logos/Youtube.svg" alt="YouTube" >
+                            <img src="imagenes/logos/Youtube.svg" alt="YouTube">
                         </a>
                     </figure>
                 </li>
             </ul>
         </div>
     </footer>
+
 </body>
-
-
 
 </html>

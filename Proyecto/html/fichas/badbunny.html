@@ -7,14 +7,14 @@
     <meta name="author" content="Carolina Alba García, Celtia Castelo Gajino">
     <meta name="description" content="Empresa CC Studios: su historia, logros musicales y equipo.">
     <meta name="keywords" content="CC Studios, música, artistas, conciertos, discográfica">
-    <title> About Us - CC Studios</title>
+    <title>About Us - CC Studios</title>
     <link rel="stylesheet" href="../../css/general.css">
-
+    <link rel="stylesheet" href="../../css/ficha.css">
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>
+    <header id="headerPrincipal">
         <figure>
             <img src="../imagenes/logos/logoblanco.svg" alt="Logo del sitio web">
         </figure>
@@ -30,11 +30,11 @@
     </header>
 
     <main>
-        <!-- Sección de artista -->
+        <header>
         <h1>Artistas</h1>
-
+    </header>
+        <!-- Sección de artista -->
         <article id="ficha">
-
 
             <nav id="cross">
                 <!-- Botón de cerrar -->
@@ -44,18 +44,18 @@
             </nav>
 
             <!-- Carrusel de fotos -->
-            <figure>
-                <img src="../imagenes/artistas/fichaBadBunny/badbunny1.jpg" alt="Bad Bunny" width="30%" height="auto">
-                <nav id="carrusel">
+            <figure id="carrusel ">
+                <img src="../imagenes/artistas/fichaBadBunny/badbunny1.jpg" alt="Badbunny posando" >
+                <nav id="flechasCarrusel">
                     <a href="#" class="anterior">&#8249;</a>
                     <a href="#" class="siguiente">&#8250;</a>
                 </nav>
-                <figcaption>Carrusel de fotos de Bad Bunny</figcaption>
             </figure>
             <section id="artista-info">
                 <header>
                     <h2 id="artistas-title">BAD BUNNY</h2>
                 </header>
+
                 <!-- Trayectoria del artista -->
                 <section id="trayectoria">
                     <h3>TRAYECTORIA</h3>
@@ -70,23 +70,18 @@
                 </section>
 
                 <!-- Canción destacada -->
-                <!-- Canción destacada -->
                 <section id="cancion">
                     <figure>
-                        <img id="portada" src="../imagenes/artistas/fichaBadBunny/cancion.jpg"
-                            alt="Carátula de la canción">
+                        <img id="portada" src="../imagenes/artistas/fichaBadBunny/cancion.jpg" alt="Carátula de la canción">
                     </figure>
 
-                    <a href="https://open.spotify.com/intl-es/album/5K79FLRUCSysQnVESLcTdb" target="_blank">DtMF - Bad
-                        Bunny</a>
+                    <a href="https://open.spotify.com/intl-es/album/5K79FLRUCSysQnVESLcTdb" target="_blank">DtMF - Bad Bunny</a>
 
                     <section id="reproductor">
                         <a href="../audio/dtmf.mp3" download>
-                            <img id="icono" src="../imagenes/reproductor/Play.svg" alt="Reproducir canción"
-                                style="cursor: pointer;">
+                            <img id="icono" src="../imagenes/reproductor/Play.svg" alt="Reproducir canción" style="cursor: pointer;">
                         </a>
-                        <img id="icono" src="../imagenes/reproductor/Speaker.svg" alt="Ajustar volumen"
-                            style="cursor: pointer;">
+                        <img id="icono" src="../imagenes/reproductor/Speaker.svg" alt="Ajustar volumen" style="cursor: pointer;">
                     </section>
                 </section>
 
@@ -97,12 +92,11 @@
                         <li>27 FEB | Coliseum, A Coruña</li>
                         <li>29 MAR | Festival Coachella, California</li>
                     </ul>
-                    <a href="../eventos.html">Ver más eventos...</a>
+                    <a id="ver-mas" href="../eventos.html">Ver más eventos...</a>
                 </section>
             </section>
         </article>
     </main>
-
     <footer id="footerPrincipal">
         <h2 id="footer-title">CC STUDIOS</h2>
         <div id="footer-follow">

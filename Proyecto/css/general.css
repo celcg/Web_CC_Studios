@@ -37,7 +37,7 @@ body {
 }
 
 /* Header */
-header {
+#headerPrincipal {
     background-color: rgba(36, 36, 48, 0.5); /* Establece el color de fondo del header con 50% de transparencia */
     color: var(--color-blanco); /* Establece el color del texto dentro del header */
     text-transform: uppercase; /* Convierte el texto a mayúsculas */
@@ -50,39 +50,39 @@ header {
     box-sizing: border-box; /* Incluye el padding y el borde en el ancho total del header */
 }
 
-header figure {
+#headerPrincipal figure {
     flex-basis: 5%; /* La imagen ocupa menos espacio (aproximadamente 1/20 del ancho total del header) */
     padding: 0.2rem; /* Añade padding alrededor de la imagen */
 }
 
-header figure img {
+#headerPrincipal figure img {
     width: 100%; /* La imagen ocupa el 100% del ancho de su contenedor (figure) */
     height: auto; /* Mantiene la proporción original de la imagen */
     transition: transform 1s linear; /* Transición suave */
 }
 
-header figure img:hover {
+#headerPrincipal figure img:hover {
   transform: rotate(360deg); /* Gira 360 grados al pasar el cursor */
 }
 
-header nav {
+#headerPrincipal nav {
     flex-grow: 1; /* Hace que el nav ocupe el espacio restante disponible en el header */
     display: flex;
     justify-content: flex-end; /* Alinea los elementos de la lista a la derecha */
     align-items: center; /* Centra los elementos verticalmente con respecto al header */
 }
 
-header nav ul {
+#headerPrincipal nav ul {
     list-style: none; /* Elimina los puntos de la lista */
     display: flex; /* Convierte la lista en un contenedor flexible */
     gap: 6vw; /* Aumenta más la separación entre los elementos de la lista */
 }
 
-header nav ul li {
+#headerPrincipal nav ul li {
     display: inline; /* Asegura que los elementos de la lista estén en línea */
 }
 
-header nav ul li a {
+#headerPrincipal nav ul li a {
     font-family: 'Archivo', Verdana, Arial, sans-serif;
     font-size: 1.50rem; 
     text-transform: uppercase;
@@ -90,7 +90,7 @@ header nav ul li a {
     text-decoration: none;
 }
 
-header nav ul li a:hover {
+#headerPrincipal nav ul li a:hover {
     color: var(--color-azul2); 
     font-weight: bold;
 }
@@ -162,14 +162,14 @@ footer ul li figcaption {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    header {
+    #headerPrincipal {
         flex-direction: column; /* Cambia la dirección del flex a columna */
         align-items: center; /* Centra los elementos en el eje horizontal */
         padding: 1rem; /* Ajusta el padding para dispositivos móviles */
         width: 100%; /* Asegura que el header ocupe todo el ancho de la pantalla */
     }
 
-    header nav ul {
+    #headerPrincipal nav ul {
         flex-direction: column; /* Cambia la dirección del flex a columna */
         gap: 3vw; /* Ajusta el espacio entre los elementos de la lista */
         align-items: center; /* Centra los elementos en el eje horizontal */
@@ -272,17 +272,6 @@ button:hover {
     background-color: var(--color-azul2);
 }
 
-/* Posicionamiento y diseño basado en 12 columnas */
-.grid {
-    display: grid;
-    gap: 1.25rem; /* 20px to rem */
-}
-
-@media (min-width: 48rem) { /* 768px to rem */
-    .grid {
-        grid-template-columns: repeat(12, 1fr);
-    }
-}
 
 /* Animaciones */
 @keyframes fadeIn {

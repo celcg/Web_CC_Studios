@@ -8,13 +8,13 @@
     <meta name="description" content="Empresa CC Studios: su historia, logros musicales y equipo.">
     <meta name="keywords" content="CC Studios, música, artistas, conciertos, discográfica">
     <title> About Us - CC Studios</title>
-    <link rel="stylesheet" href="../../css/general.css">
-
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/general.css">
+    <link rel="stylesheet" href="../../css/ficha.css">
 </head>
 
 <body>
-    <header>
+    <header id="headerPrincipal">
         <figure>
             <img src="../imagenes/logos/logoblanco.svg" alt="Logo del sitio web">
         </figure>
@@ -30,21 +30,11 @@
     </header>
 
     <main>
+        <header>
+            <h1>Artistas</h1>
+        </header>
         <!-- Sección de artista -->
-        <h1>Artistas</h1>
         <article id="ficha">
-
-            <!-- Carrusel de fotos -->
-            <figure>
-                <img src="../imagenes/artistas/fichaAitana/aitana1.jpg" alt="Aitana" width="30%" height="auto">
-                <nav id="carrusel">
-                    <a href="#" class="anterior">&#8249;</a>
-                    <a href="#" class="siguiente">&#8250;</a>
-                </nav>
-                <figcaption>Carrusel de fotos de Aitana</figcaption>
-            </figure>
-
-
 
             <nav id="cross">
                 <!-- Botón de cerrar -->
@@ -53,25 +43,32 @@
                 </a>
             </nav>
 
-
+            <!-- Carrusel de fotos -->
+            <figure id="carrusel ">
+                <img src="../imagenes/artistas/fichaAitana/aitana1.jpg" alt="Badbunny posando">
+                <nav id="flechasCarrusel">
+                    <a href="#" class="anterior">&#8249;</a>
+                    <a href="#" class="siguiente">&#8250;</a>
+                </nav>
+            </figure>
             <section id="artista-info">
                 <header>
                     <h2 id="artistas-title">AITANA</h2>
                 </header>
+
                 <!-- Trayectoria del artista -->
                 <section id="trayectoria">
                     <h3>TRAYECTORIA</h3>
                     <p>
                         Aitana es una cantante y actriz española conocida por su participación en la primera temporada
-                        de
-                        "Operación Triunfo" en 2017. Con su talento y carisma, ha logrado posicionarse como una de las
+                        de "Operación Triunfo" en 2017. Con su talento y carisma, ha logrado posicionarse como una de
+                        las
                         artistas más destacadas del pop español.
                         Desde su debut, ha lanzado varios discos de éxito, con canciones que combinan pop moderno con
                         toques de balada.
                     </p>
                 </section>
 
-                <!-- Canción destacada -->
                 <!-- Canción destacada -->
                 <section id="cancion">
                     <figure>
@@ -100,12 +97,11 @@
                         <li>5 MAR | Firma en El Corte Inglés, Madrid</li>
                         <li>22 JUN | Festival Primavera Sound, Barcelona</li>
                     </ul>
-                    <a href="../eventos.html">Ver más eventos...</a>
+                    <a id="ver-mas" href="../eventos.html">Ver más eventos...</a>
                 </section>
             </section>
         </article>
     </main>
-
     <footer id="footerPrincipal">
         <h2 id="footer-title">CC STUDIOS</h2>
         <div id="footer-follow">

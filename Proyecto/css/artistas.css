@@ -1,0 +1,77 @@
+/* -------------------------------------------
+   Estilos para el catálogo de Artistas
+------------------------------------------- */
+article img {
+    width: 10rem; /* Ajusta el ancho según sea necesario */
+    height: 10rem; /* Ajusta la altura según sea necesario */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    box-shadow: 0.125rem 0.125rem 0.625rem rgba(0, 0, 0, 0.2); /* Opcional: añade sombra */
+}
+
+#fichas {
+    width: 100%;
+    overflow: hidden; /* Clear floats */
+    margin-top: 2rem;
+}
+
+article {
+    float: left;
+    width: 25%;
+    padding: 1rem; /* Añade un padding para el espacio entre artículos */
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
+    text-align: center; 
+}
+
+
+/* Ajuste específico para la imagen de Pitbull */
+article img[alt="Pitbull"] {
+    object-position: center top; /* Ajusta la posición de la imagen dentro del contenedor */
+}
+article:hover {
+    transform: scale(1.1); /* Escala la imagen al pasar el ratón */
+}
+
+/* Estilo para los enlaces dentro de #artista */
+#artista a {
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+
+/* Estilo para el figcaption */
+#artista figcaption {
+    font-size: 1.75rem;
+    color: var(--color-blanco);
+    font-weight: 300; /* Establece el peso de la fuente a delgado */
+    text-transform: uppercase; 
+    margin-top: 0.5rem; /* Añade un margen superior para separar el texto de la imagen */
+}
+
+/*Asegura que #fichas expanda su altura para incluir los elementos flotantes en su interior, evitando que colapse el diseño.*/
+#fichas::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* -------------------------------------------
+   Estilos para Pantallas Pequeñas (Responsividad)
+------------------------------------------- */
+@media (max-width: 1200px) {
+    article {
+        width: 33.33%; 
+    }
+}
+
+@media (max-width: 768px) {
+    article {
+        width: 50%; 
+    }
+}
+
+@media (max-width: 480px) {
+    article {
+        width: 100%; /* Ajusta el ancho para pantallas muy pequeñas */
+    }
+}

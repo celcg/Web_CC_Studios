@@ -1,0 +1,193 @@
+/* -------------------------------------------
+   Estilo General para el contenedor principal
+------------------------------------------- */
+main {  
+    display: grid;
+    grid-template-columns: 6fr 3fr; /* 6fr para el calendario, 3fr para la lista de eventos */
+    grid-template-rows: auto 1fr; /* 1 fila para el título y el contenido principal */
+    grid-template-areas: 
+        "titulo filtro"
+        "calendario eventos"; /* Áreas definidas para título, filtro, calendario y lista de eventos */
+    row-gap: 20px; /* Espacio entre los elementos */
+    padding: 4% 8%; /* Espaciado alrededor del contenedor */
+    column-gap: 8%; /* Ajusta solo el espacio entre columnas */
+}
+
+/* -------------------------------------------
+   Estilos para Pantallas Pequeñas (Responsividad)
+------------------------------------------- */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: minmax(300px, 1fr);; /* Una sola columna en pantallas pequeñas */
+        grid-template-rows: auto 1fr auto 1fr; /* Asegura que cada elemento tenga su propio espacio */
+        grid-template-areas: 
+            "titulo"
+            "calendario"
+            "filtro"
+            "eventos"; /* Disposición de los elementos en columna */
+    }
+
+
+    /* Espaciado en el filtro para evitar que se pegue al calendario */
+    .filtro {
+        margin-top: 20px;
+    }
+}
+
+/* -------------------------------------------
+   Estilos para el Título
+------------------------------------------- */
+h1 {
+    grid-area: titulo;
+    padding-bottom: 10px; /* Espaciado debajo del título */
+}
+
+/* -------------------------------------------
+   Estilos para el Filtro de Eventos
+------------------------------------------- */
+.filtro {
+    grid-area: filtro; 
+    text-align: left;
+    font-size: 0.9rem; 
+    color: var(--color-azul1); 
+}
+
+/* Estilos para el input/select del filtro */
+#filtroEventos {
+    grid-area: filtro;
+    place-items: left;
+    border-radius: 3px;
+    padding: 5px;
+    border: 1px solid var(--color-blanco);
+    background-color: rgba(105, 105, 105, 0.4);
+    color: var(--color-azul2);
+    font-size: 0.8rem;
+    width: 100%;
+}
+
+/* Estilos para las etiquetas del filtro */
+label[for="filtroEventos"] {
+    display: block; /* Hace que la etiqueta sea un bloque */
+    margin-bottom: 5px; /* Espacio entre la etiqueta y el select */
+    font-size: 1rem;
+    text-align: left;
+}
+
+/* -------------------------------------------
+   Estilos para el Calendario
+------------------------------------------- */
+.calendario {
+    grid-area: calendario; /* El calendario ocupa el área "calendario" */
+    padding: 5%;
+    border-radius: 5px;
+    box-shadow: 0 2% 10% rgba(0, 0, 0, 0.1);
+    background-color: var(--color-blanco);
+    min-width: 200px;
+}
+
+/* -------------------------------------------
+   Estilos para la Lista de Eventos
+------------------------------------------- */
+.eventos-lista {
+    grid-area: eventos; 
+    display: grid; /* Usamos grid para la lista de eventos */
+    grid-template-rows: repeat(4, auto); /* Definimos 4 filas para los eventos */
+    gap: 5%; /* Espacio entre las filas de los eventos */
+    max-height: 800px;
+    overflow-y: auto; /* Habilita el desplazamiento vertical si el contenido excede el tamaño */
+    box-shadow: 0 2% 10% rgba(0, 0, 0, 0.1);
+    scrollbar-width: thin; /* Definir el grosor del scrollbar */
+    scrollbar-color: #888 rgba(105, 105, 105, 0.4); /* Colores para el scrollbar */
+}
+
+/* Estilos para cada tarjeta de evento */
+.evento-card {
+    background: rgba(105, 105, 105, 0.4);
+    padding: 2% 5%;
+    border-radius: 10px;
+    border: 2px solid #ff6b6b;
+}
+
+.evento-card h3, .evento-card p {
+    text-align: left; 
+}
+
+.evento-card p {
+    padding-left: 2%; 
+}
+
+/* -------------------------------------------
+   Estilos para el Calendario (Cabecera y Grilla)
+------------------------------------------- */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: black;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columnas para los días de la semana */
+    column-gap: 1%; /* Ajusta el espacio entre las columnas con rem */
+    row-gap: 2rem; /* Ajusta el espacio entre las filas  */
+    text-align: center;
+    color: black;
+}
+
+/* Estilos para los eventos dentro del calendario */
+.calendar-grid .evento {
+    font-weight: bold;
+    cursor: pointer; /* Cambiar el cursor cuando se pasa sobre un evento */
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-grid span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem; /* Tamaño del contenedor de cada día */
+    height: 2rem;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.calendar-grid span:nth-child(-n+7) {
+    color: gray; /* Cambiar el color de los primeros 7 elementos (días de la semana) a gris */
+}
+
+/* -------------------------------------------
+   Colores para cada tipo de evento en el calendario
+------------------------------------------- */
+.calendar-grid .evento.evento-1, .evento-1 {
+    border-color: #ff6347; /* Tomate */
+}
+.calendar-grid .evento.evento-2, .evento-2 {
+    border-color: #4682b4; /* Azul acero */
+}
+.calendar-grid .evento.evento-3, .evento-3 {
+    border-color: #32cd32; /* Verde lima */
+}
+.calendar-grid .evento.evento-4, .evento-4 {
+    border-color: #ff1493; /* Rosa profundo */
+}
+.calendario nav a {
+    text-decoration: none;
+    color: black;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 50%; /* Hace que el borde sea un círculo */
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendario nav a:hover {
+    cursor: pointer;
+    color:var(--color-morado);
+    background: rgba(0, 0, 0, 0.45);
+}
