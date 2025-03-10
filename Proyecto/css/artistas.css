@@ -2,8 +2,8 @@
    Estilos para el catálogo de Artistas
 ------------------------------------------- */
 article img {
-    width: 10rem; /* Ajusta el ancho según sea necesario */
-    height: 10rem; /* Ajusta la altura según sea necesario */
+    width: 10rem;
+    height: 10rem;
     object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
     border-radius: 50%; /* Hace que la imagen sea circular */
     box-shadow: 0.125rem 0.125rem 0.625rem rgba(0, 0, 0, 0.2); /* Opcional: añade sombra */
@@ -32,14 +32,11 @@ article:hover {
     transform: scale(1.1); /* Escala la imagen al pasar el ratón */
 }
 
-/* Estilo para los enlaces dentro de #artista */
-#artista a {
-    text-decoration: none; /* Elimina el subrayado */
-}
+
 
 
 /* Estilo para el figcaption */
-#artista figcaption {
+.artista figcaption {
     font-size: 1.75rem;
     color: var(--color-blanco);
     font-weight: 300; /* Establece el peso de la fuente a delgado */

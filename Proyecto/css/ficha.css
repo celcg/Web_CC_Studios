@@ -32,11 +32,12 @@
 
 #ficha > figure img {
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    height: 100%;  /* Limita la altura al 100% del contenedor */
+    object-fit: cover;  /* Mantiene el recorte sin deformar */
     border-radius: 0.9375rem;
     box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.3);
 }
+
 
 /* ------------------------------ Media Queries para imágenes ------------------------------ */
 @media (min-width: 1200px) {
@@ -123,7 +124,7 @@ h1 {
     color: var(--color-azul1);
     text-align: left; /* Alinea los títulos a la izquierda */
     font-size: 1.25rem; /* 24px a rem */
-    font-weight: regular;
+    font-weight: normal;
 }
 
 /* ------------------------------ Canción ------------------------------ */

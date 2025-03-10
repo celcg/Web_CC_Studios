@@ -4,7 +4,7 @@
 main {  
     display: grid;
     grid-template-columns: 6fr 3fr; /* 6fr para el calendario, 3fr para la lista de eventos */
-    grid-template-rows: auto 1fr; /* 1 fila para el título y el contenido principal */
+    grid-template-rows: auto 1fr; /* 1 fila para el título y filtro*/
     grid-template-areas: 
         "titulo filtro"
         "calendario eventos"; /* Áreas definidas para título, filtro, calendario y lista de eventos */
@@ -55,7 +55,6 @@ h1 {
 /* Estilos para el input/select del filtro */
 #filtroEventos {
     grid-area: filtro;
-    place-items: left;
     border-radius: 3px;
     padding: 5px;
     border: 1px solid var(--color-blanco);
@@ -80,7 +79,7 @@ label[for="filtroEventos"] {
     grid-area: calendario; /* El calendario ocupa el área "calendario" */
     padding: 5%;
     border-radius: 5px;
-    box-shadow: 0 2% 10% rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2rem 10rem rgba(0, 0, 0, 0.1);
     background-color: var(--color-blanco);
     min-width: 200px;
 }
@@ -95,7 +94,7 @@ label[for="filtroEventos"] {
     gap: 5%; /* Espacio entre las filas de los eventos */
     max-height: 800px;
     overflow-y: auto; /* Habilita el desplazamiento vertical si el contenido excede el tamaño */
-    box-shadow: 0 2% 10% rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2rem 10rem rgba(0, 0, 0, 0.9);
     scrollbar-width: thin; /* Definir el grosor del scrollbar */
     scrollbar-color: #888 rgba(105, 105, 105, 0.4); /* Colores para el scrollbar */
 }
@@ -105,7 +104,7 @@ label[for="filtroEventos"] {
     background: rgba(105, 105, 105, 0.4);
     padding: 2% 5%;
     border-radius: 10px;
-    border: 2px solid #ff6b6b;
+    border: 2px solid ;
 }
 
 .evento-card h3, .evento-card p {
@@ -151,7 +150,6 @@ label[for="filtroEventos"] {
     align-items: center;
     width: 2rem; /* Tamaño del contenedor de cada día */
     height: 2rem;
-    border-radius: 5px;
     background: #fff;
 }
 
@@ -162,16 +160,19 @@ label[for="filtroEventos"] {
 /* -------------------------------------------
    Colores para cada tipo de evento en el calendario
 ------------------------------------------- */
-.calendar-grid .evento.evento-1, .evento-1 {
+.evento{
+    border: 2px solid;
+}
+.evento-1 {
     border-color: #ff6347; /* Tomate */
 }
-.calendar-grid .evento.evento-2, .evento-2 {
+.evento-2 {
     border-color: #4682b4; /* Azul acero */
 }
-.calendar-grid .evento.evento-3, .evento-3 {
+.evento-3 {
     border-color: #32cd32; /* Verde lima */
 }
-.calendar-grid .evento.evento-4, .evento-4 {
+.evento-4 {
     border-color: #ff1493; /* Rosa profundo */
 }
 .calendario nav a {
