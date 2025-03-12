@@ -1,0 +1,69 @@
+/* Configuración general */
+body {
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    text-align: justify;
+}
+
+/* Encabezado */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--color-azul2);
+    margin-bottom: 1rem;
+}
+
+/* Imagen destacada */
+main img {
+    display: block;
+    max-width: 100%;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Categoría */
+.categoria {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--color-morado);
+    margin-bottom: 20px;
+}
+
+/* Contenido en varias columnas */
+.contenido-multicolumna {
+    column-count: 2;
+    column-gap: 40px;
+    text-align: justify;
+}
+
+.contenido-multicolumna p {
+    margin-bottom: 1rem;
+}
+
+/* Botón volver */
+.volver {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: var(--color-azul1);
+    color: var(--color-blanco);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.volver:hover {
+    background-color: var(--color-morado);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .contenido-multicolumna {
+        column-count: 1; /* En móviles, solo 1 columna */
+    }
+}
