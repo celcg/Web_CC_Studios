@@ -77,6 +77,7 @@ label[for="filtroEventos"] {
 ------------------------------------------- */
 .calendario {
     grid-area: calendario; /* El calendario ocupa el área "calendario" */
+    align-self: center; /* Centra solo en la dirección vertical */
     padding: 5%;
     border-radius: 5px;
     box-shadow: 0 2rem 10rem rgba(0, 0, 0, 0.1);
@@ -118,52 +119,79 @@ label[for="filtroEventos"] {
 /* -------------------------------------------
    Estilos para el Calendario (Cabecera y Grilla)
 ------------------------------------------- */
-.calendar-header {
-    display: flex;
-    justify-content: space-between;
+/* Encabezado del calendario */
+.calendar-month {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Divide en 3 columnas para los controles y el título */
     align-items: center;
     font-weight: bold;
     font-size: 1.2rem;
     color: black;
+
 }
 
-.calendar-grid {
+#prevMonth {
+    justify-self: start; /* Alinea el enlace a la izquierda */
+}
+
+#nextMonth {
+    justify-self: end; /* Alinea el enlace a la derecha */
+}
+
+#monthName{
+    justify-self: center;
+}
+
+
+
+/* Días de la semana */
+.weekdays {
     display: grid;
-    grid-template-columns: repeat(7, 1fr); /* 7 columnas para los días de la semana */
-    column-gap: 1%; /* Ajusta el espacio entre las columnas con rem */
-    row-gap: 2rem; /* Ajusta el espacio entre las filas  */
+    grid-template-columns: repeat(7, 1fr);
     text-align: center;
-    color: black;
-}
-
-/* Estilos para los eventos dentro del calendario */
-.calendar-grid .evento {
     font-weight: bold;
-    cursor: pointer; /* Cambiar el cursor cuando se pasa sobre un evento */
-    border-radius: 20px;
+    padding: 0;
+    list-style: none;
+    color: gray;
+}
+
+/* Días del mes */
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: 1fr;
+    row-gap: 1.5rem; /* Aumenta solo el espacio entre filas */
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+/* Cada día */
+.days li {
+    display: grid;
+    place-items: center; /* Centra el contenido dentro del día */
+    color: black;
+    width: 100%;
+    height: auto;
+    min-height: 3rem;
+}
+
+/* Eventos */
+.evento {
+    font-weight: bold;
+    border-radius: 100%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    border: 2px solid black;
 }
 
-.calendar-grid span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 2rem; /* Tamaño del contenedor de cada día */
-    height: 2rem;
-    background: #fff;
-}
 
-.calendar-grid span:nth-child(-n+7) {
-    color: gray; /* Cambiar el color de los primeros 7 elementos (días de la semana) a gris */
-}
 
 /* -------------------------------------------
    Colores para cada tipo de evento en el calendario
 ------------------------------------------- */
+
 .evento{
-    border: 2px solid;
-}
-.evento-1 {
     border-color: #ff6347; /* Tomate */
 }
 .evento-2 {
