@@ -74,9 +74,26 @@ section label {
 }
 
 .noticias img {
-    width: 100%;
+    width: 85%;  /* Ocupa el 100% del contenedor */
+    height: 250px; /* Tamaño fijo para todas las imágenes */
+    object-fit: cover; /* Recorta la imagen manteniendo su proporción */
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+}
+
+.noticias figure figcaption {
+    display: inline-block; /* Para que el fondo solo cubra el texto */
+    padding: 6px 12px; /* Espaciado interno */
+    font-size: 0.9rem; /* Tamaño de texto más compacto */
+    font-weight: bold; /* Hace el texto más visible */
+    color: var(--color-blanco); /* Texto en blanco */
+    background-color: var(--color-azul1); /* Fondo azul */
+    border-radius: 15px; /* Bordes redondeados */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    margin-top: 10px; /* Espacio con la imagen */
+    text-align: center; /* Asegura que el texto se vea centrado */
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2); /* Sombra ligera */
 }
 
 /* Texto de la noticia */
