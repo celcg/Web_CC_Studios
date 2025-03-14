@@ -107,11 +107,13 @@ section label {
     color: var(--color-blanco);
     text-decoration: none;
     border-radius: 5px;
-    transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    font-weight: bold; /* Hace que el texto resalte */
 }
 
 .leer-mas:hover {
     background-color: var(--color-morado);
+    color: var(--color-blanco) !important; /* Fuerza el color blanco en hover */
 }
 
 /* Responsividad */
@@ -120,6 +122,7 @@ section label {
         flex: 1 1 100%; /* Ocupa el 100% en pantallas medianas */
     }
 }
+
 
 @media (max-width: 768px) {
     .noticias-container {
