@@ -161,6 +161,8 @@ p{
     align-items: center;
     gap: 1rem;
     margin-bottom: 0rem;
+    align-items: stretch; /* Hace que los elementos tengan la misma altura */
+
 }
 
 #reproductor a img,

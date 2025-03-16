@@ -48,24 +48,28 @@ h1 {
 .filtro {
     grid-area: filtro; 
     text-align: left;
-    font-size: 0.9rem; 
     color: var(--color-azul1); 
 }
 
 /* Estilos para el input/select del filtro */
-#filtroEventos {
-    grid-area: filtro;
-    border-radius: 3px;
+#selectEventos {
+    border-radius: 5px;
     padding: 5px;
     border: 1px solid var(--color-blanco);
-    background-color: rgba(105, 105, 105, 0.4);
-    color: var(--color-azul2);
-    font-size: 0.8rem;
+    background-color: var(--color-gris);
+    color: var(--color-blanco);
+    font-size: 1.1rem;
     width: 100%;
+    transition: all 0.3s ease;
 }
 
+#selectEventos:focus {
+    outline: none;
+    border-color: var(--color-azul1);
+    box-shadow: 0 0 5px var(--color-azul1);
+}
 /* Estilos para las etiquetas del filtro */
-label[for="filtroEventos"] {
+label[for="selectEventos"] {
     display: block; /* Hace que la etiqueta sea un bloque */
     margin-bottom: 5px; /* Espacio entre la etiqueta y el select */
     font-size: 1rem;
@@ -103,9 +107,15 @@ label[for="filtroEventos"] {
 /* Estilos para cada tarjeta de evento */
 .evento-card {
     background: rgba(105, 105, 105, 0.4);
-    padding: 2% 5%;
+    padding: 5% 8%;
     border-radius: 10px;
-    border: 2px solid ;
+    border: 2px solid transparent; /* Se puede definir un color por defecto */
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.evento-card:hover {
+    background: rgba(105, 105, 105, 0.6); /* Cambio de color de fondo al pasar el ratón */
+    border-color: rgba(105, 105, 105, 0.8); /* Cambio de borde al pasar el ratón */
 }
 
 .evento-card h3, .evento-card p {
@@ -125,8 +135,8 @@ label[for="filtroEventos"] {
     grid-template-columns: 1fr 1fr 1fr; /* Divide en 3 columnas para los controles y el título */
     align-items: center;
     font-weight: bold;
-    font-size: 1.2rem;
     color: black;
+    margin-bottom: 1rem;
 
 }
 
@@ -140,6 +150,7 @@ label[for="filtroEventos"] {
 
 #monthName{
     justify-self: center;
+    font-size: 1.5rem;
 }
 
 
@@ -191,7 +202,7 @@ label[for="filtroEventos"] {
    Colores para cada tipo de evento en el calendario
 ------------------------------------------- */
 
-.evento{
+.evento-1{
     border-color: #ff6347; /* Tomate */
 }
 .evento-2 {

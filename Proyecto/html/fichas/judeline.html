@@ -80,14 +80,19 @@
                     <a href="https://open.spotify.com/intl-es/track/4EF1UDALNWdyJDWindWBqg" target="_blank">Sustancia -
                         Judeline, Mayo </a>
 
-                    <div id="reproductor">
-                        <a href="../audio/Sustancia.mp3" download>
-                            <img class="icono" src="../imagenes/reproductor/Play.svg" alt="Reproducir canción"
-                                style="cursor: pointer;">
-                        </a>
-                        <img class="icono" src="../imagenes/reproductor/Speaker.svg" alt="Ajustar volumen"
-                            style="cursor: pointer;">
-                    </div>
+                        <div id="reproductor">
+                            <!-- Icono de Play para reproducir la canción -->
+                            <img id="playIcon" class="icono" src="../imagenes/reproductor/Play.svg" alt="Reproducir canción" style="cursor: pointer; width: 30px;">
+                            
+                            <!-- Icono de altavoz para controlar el volumen -->
+                            <img class="icono" src="../imagenes/reproductor/Speaker.svg" alt="Ajustar volumen" style="cursor: pointer;">
+                        
+                            <!-- Elemento de audio que se reproducirá al hacer clic en el ícono de Play -->
+                            <audio id="audio" src="../audio/Sustancia.mp3" preload="auto"></audio>
+                        </div>
+                        
+                        <!-- Enlaza el archivo JS externo al final del body -->
+                        <script src="../../js/reproductor.js"></script>                        
                 </section>
 
                 <!-- Próximos eventos -->
