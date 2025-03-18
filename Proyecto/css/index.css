@@ -134,13 +134,13 @@
     text-align: center;
     min-width: 300px;
     max-width: 350px; /* Ajusta el tamaño para evitar que sea muy ancha */
+    height: auto; /* Hace que todas las tarjetas tengan la misma altura */
     display: flex;
     flex-direction: column; /* Asegura que los elementos estén en columna */
     align-items: center;
     justify-content: space-between; /* Asegura que los elementos se distribuyan equitativamente */
     box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
     white-space: normal; /* Permite que el texto se ajuste dentro */
-    height: 100%; /* Hace que todas las tarjetas tengan la misma altura */
 }
 
 /* Bloque interno que contiene el contenido textual */
