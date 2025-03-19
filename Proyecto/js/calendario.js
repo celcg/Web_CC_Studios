@@ -105,19 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const dayLi = document.createElement("li");
             dayLi.textContent = day;
 
-            // Si el día tiene eventos, asignamos los colores correspondientes
-            if (eventosPorDia.has(day)) {
-                const colores = eventosPorDia.get(day);
-                dayLi.classList.add("evento");
-
-                if (colores.length > 1) {
-                     // Crear un degradado para el borde con box-shadow
-                     dayLi.style.boxShadow = `0 0 0 3px ${colores[0]}, 0 0 0 6px ${colores.slice(1).join(", ")}`;
-                } else {
-                    dayLi.style.borderColor = colores[0];
-                }
-            }
-
+            // Agregar clase especial si es el día actual
             if (year === today.getFullYear() && month === today.getMonth() && day === today.getDate()) {
                 dayLi.classList.add("hoy");
             }
