@@ -7,6 +7,7 @@
     <meta name="description" content="Empresa CC Studios: su historia, logros musicales y equipo.">
     <meta name="keywords" content="CC Studios, música, artistas, premios, discográfica">
     <title> About Us - CC Studios</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/general.css">
     <link rel="stylesheet" href="../css/index.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">   
@@ -40,6 +41,7 @@
             </h3>
         </section>  
 
+        <!--
         <section id="historia">
         <h2>HISTORIA</h2>
             <p>
@@ -63,8 +65,73 @@
             <img src="imagenes/index/estudio.jpg" alt="Historia de CC Studios">
 
         </section>
+        -->
 
-        <!--ESTO QUIZAS HAY Q CAMBIARLO PORQUE DIJO Q SOLO PUSIESEMOS TABLAS PARA HORARIOS CALENDARIOS ETC.. -->
+        <!-- Sección Historia con Carrusel -->
+        <section id="historia" class="container mt-5">
+            <h2 class="text-center mb-4">NUESTRA HISTORIA</h2>
+
+            <div id="historiaCarousel" class="carousel slide" data-bs-ride="carousel">
+                <!-- Indicadores -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#historiaCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#historiaCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#historiaCarousel" data-bs-slide-to="2"></button>
+                </div>
+
+                <!-- Contenido del Carrusel -->
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <img src="imagenes/index/estudio.jpg" class="d-block w-100 rounded" alt="Inicio de CC Studios">
+                            </div>
+                            <div class="col-md-6 text-center p-4">
+                                <h3>Los Inicios</h3>
+                                <p>CC Studios nació en 2003 como un pequeño estudio en Madrid con el sueño de dar voz a los artistas emergentes. Lo que comenzó como un espacio modesto pronto se convirtió en un punto de referencia para la producción musical en España.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="row align-items-center">
+                            <div class="col-md-6 order-md-2">
+                                <img src="imagenes/index/expansion.jpg" class="d-block w-100 rounded" alt="Expansión del estudio">
+                            </div>
+                            <div class="col-md-6 text-center p-4 order-md-1">
+                                <h3>Expansión Internacional</h3>
+                                <p>En 2017, CC Studios amplió sus instalaciones y comenzó a trabajar con artistas internacionales. Con tecnología de vanguardia y un equipo de profesionales, el estudio logró consolidarse como una de las mejores productoras musicales.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="carousel-item">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <img src="imagenes/index/actualidad.jpg" class="d-block w-100 rounded" alt="CC Studios en la actualidad">
+                            </div>
+                            <div class="col-md-6 text-center p-4">
+                                <h3>El Presente y el Futuro</h3>
+                                <p>Actualmente, CC Studios sigue innovando y explorando nuevos horizontes, con planes de abrir un nuevo estudio en Los Ángeles. Con más de 20 años de historia, seguimos evolucionando y ayudando a los artistas a hacer historia.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controles del Carrusel -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#historiaCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#historiaCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </section>
+
+
         <section class="stats-grid">
             <div class="stat-card">
                 <i class="fas fa-play-circle"></i>
@@ -201,7 +268,10 @@
         </section>   
 
         <!-- Enlaza el script para que funcione -->
-        <script src="../js/index.js"></script>  
+        <script src="../js/index.js"></script> 
+        <!-- Bootstrap JS (necesario para el carrusel) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+ 
         
     </main>
 
