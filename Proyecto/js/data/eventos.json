@@ -58,5 +58,11 @@
         "artista": "Aitana",
         "dia": "2025-05-01",
         "lugar": "Granada, Palacio de Deportes"
+    },
+    {
+        "tipo": "Concierto",
+        "artista": "Tini",
+        "dia": "2025-05-01",
+        "lugar": "A Coruña, Coliseum"
     }
 ]
