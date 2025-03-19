@@ -32,12 +32,14 @@
             <h1>Eventos</h1>
         </header>
         <section class="calendario">
+            <!-- Controles para cambiar de mes -->
             <nav class="calendar-month">
                 <a id="prevMonth">&lt;</a>
-                <p id="monthName">Febrero 2025</p>
+                <p id="monthName"></p>
                 <a id="nextMonth">&gt;</a>
             </nav>
- 
+        
+            <!-- Días de la semana -->
             <ul class="weekdays">
                 <li>Lun</li>
                 <li>Mar</li>
@@ -47,43 +49,14 @@
                 <li>Sáb</li>
                 <li>Dom</li>
             </ul>
-
-            <ul class="days">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
-                <li>7</li>
-                <li>8</li>
-                <li class="evento evento-1">9</li> <!-- Clase evento-1 -->
-                <li>10</li>
-                <li>11</li>
-                <li>12</li>
-                <li>13</li>
-                <li>14</li>
-                <li>15</li>
-                <li>16</li>
-                <li class="evento evento-2">17</li> <!-- Clase evento-2 -->
-                <li>18</li>
-                <li>19</li>
-                <li>20</li>
-                <li class="evento evento-3">21</li> <!-- Clase evento-3 -->
-                <li>22</li>
-                <li>23</li>
-                <li>24</li>
-                <li>25</li>
-                <li>26</li>
-                <li class="evento evento-4">27</li> <!-- Clase evento-4 -->
-                <li>28</li>
-            </ul>
-            
+        
+            <!-- Días del mes (serán generados dinámicamente) -->
+            <ul class="days"></ul>
         </section>
+        
+        <!-- Enlaza el script para que funcione la generación del calendario -->
+        <script src="../js/calendario.js"></script>
+        
         <section class="filtro">
             <label for="selectEventos">Filtra los eventos</label>
             <select id="selectEventos">
