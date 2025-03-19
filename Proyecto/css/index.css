@@ -61,22 +61,54 @@
     object-fit: cover;
 }
 
-/* Tabla de estadísticas en grid */
+/* Tabla de estadísticas */
+/* Sección de estadísticas mejorada */
 .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    display: grid; /*Usamos CSS grid*/
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    grid-template-rows: repeat(2, auto);  /* 2 filas */
     gap: 20px;
     padding: 40px;
     text-align: center;
 }
 
-.stats-grid div {
+/* Tarjetas de estadísticas */
+.stat-card {
     background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    font-size: 1.5rem;
-    color: var(--color-azul2);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
+/* Efecto hover */
+.stat-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Íconos */
+.stat-card i {
+    font-size: 2.5rem;
+    color: var(--color-azul1);
+    margin-bottom: 10px;
+}
+
+/* Contadores */
+.counter {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--color-blanco);
+    display: block;
+}
+
+/* Descripción */
+.stat-text {
+    font-size: 1.2rem;
+    color: var(--color-azul2);
+    margin-top: 5px;
+}
+
 
 /* Visión y valores */
 /* Estilos para la sección de Visión y Valores */
@@ -237,4 +269,22 @@
     border-radius: 10px;
     font-size: 1.5rem;
     color: var(--color-azul2);
+}
+
+
+/* 🌐 Responsividad */
+/* En pantallas medianas (máx 1024px), 2 columnas y 4 filas */
+@media (max-width: 1024px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+        grid-template-rows: repeat(4, auto); /* 4 filas */
+    }
+}
+
+/* En móviles (máx 768px), 1 columna y 8 filas */
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr; /* 1 columna */
+        grid-template-rows: repeat(8, auto); /* 8 filas */
+    }
 }

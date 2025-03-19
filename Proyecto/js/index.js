@@ -1,3 +1,5 @@
+
+//REVISAR QUE NO USE ES6
 document.addEventListener("DOMContentLoaded", function () {
     const contenedorEquipo = document.querySelector(".team-container");
     const botonMostrarMas = document.getElementById("mostrarMas");
@@ -80,3 +82,48 @@ document.addEventListener("DOMContentLoaded", function () {
     // Ocultar "Mostrar Menos" al inicio, ya que no hay miembros extra al cargar la página
     botonMostrarMenos.style.display = "none";
 });
+
+
+
+//Para animar el contador de estadisticas
+document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".counter");
+    const speed = 200; // Velocidad de la animación
+
+    // Función para animar los contadores
+    const animateCounter = (counter) => {
+        const target = +counter.getAttribute("data-target");
+        const increment = target / speed;
+        let count = 0;
+
+        const updateCounter = () => {
+            count += increment;
+            if (count < target) {
+                counter.innerText = Math.floor(count);
+                requestAnimationFrame(updateCounter);
+            } else {
+                counter.innerText = target;
+            }
+        };
+
+        updateCounter();
+    };
+
+    // Función para reiniciar contador al hacer hover
+    const restartCounter = (event) => {
+        const counter = event.currentTarget.querySelector(".counter");
+        counter.innerText = "0"; // Resetea a 0
+        animateCounter(counter);
+    };
+
+    // Añadir efecto al cargar la página
+    counters.forEach(counter => animateCounter(counter));
+
+    // Añadir evento "mouseenter" para reiniciar cada vez que pase el cursor
+    document.querySelectorAll(".stat-card").forEach(card => {
+        card.addEventListener("mouseenter", restartCounter);
+    });
+});
+
+
+
