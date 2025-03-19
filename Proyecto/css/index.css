@@ -200,33 +200,28 @@
     margin-top: auto; /* Empuja este párrafo al final */
 }
 
-
-/* Premios con contador */
-/*
-.premios-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 40px;
+.team-controls {
     text-align: center;
+    margin-top: 1rem;
 }
 
-.premios-grid div {
-    font-size: 2rem;
-    color: var(--color-azul1);
-    font-weight: bold;
+.team-controls button {
+    margin: 5px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-azul1);
+    color: var(--color-blanco);
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
 }
 
-@keyframes countUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+.team-controls button:hover {
+    background-color: var(--color-morado);
 }
 
-.premios-grid div span {
-    display: inline-block;
-    animation: countUp 2s ease-out;
-}
-*/
+
 /* Tabla de estadísticas en grid */
 .premios-grid {
     display: grid;
