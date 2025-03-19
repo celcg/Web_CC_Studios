@@ -193,27 +193,17 @@ label[for="selectEventos"] {
     border-radius: 100%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    border: 2px solid black;
+    border: 2px solid;
 }
 
+.days li.hoy {
+    font-weight: bold;
+    border-radius: 100%;
+    color:var(--color-azul1);
+    box-shadow: 0 2px 5px rgba(97, 143, 184, 0.5);
+}
 
-
-/* -------------------------------------------
-   Colores para cada tipo de evento en el calendario
-------------------------------------------- */
-
-.evento-1{
-    border-color: #ff6347; /* Tomate */
-}
-.evento-2 {
-    border-color: #4682b4; /* Azul acero */
-}
-.evento-3 {
-    border-color: #32cd32; /* Verde lima */
-}
-.evento-4 {
-    border-color: #ff1493; /* Rosa profundo */
-}
+/* Estilos para los enlaces de navegación del calendario */
 .calendario nav a {
     text-decoration: none;
     color: black;

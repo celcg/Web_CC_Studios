@@ -1,0 +1,62 @@
+[
+    {
+        "tipo": "Concierto",
+        "artista": "Judeline",
+        "dia": "2025-04-09",
+        "lugar": "Madrid, Wizink Center"
+    },
+    {
+        "tipo": "Firma",
+        "artista": "Sen Senra",
+        "dia": "2025-03-17",
+        "lugar": "Santiago, El Corte Inglés"
+    },
+    {
+        "tipo": "Concierto",
+        "artista": "Aitana",
+        "dia": "2025-03-21",
+        "lugar": "Barcelona, Palau Sant Jordi"
+    },
+    {
+        "tipo": "Concierto",
+        "artista": "Bad Bunny",
+        "dia": "2025-03-27",
+        "lugar": "A Coruña, Coliseum"
+    },
+    {
+        "tipo": "Firma",
+        "artista": "Tini",
+        "dia": "2025-03-29",
+        "lugar": "Madrid, Fnac Callao"
+    },
+    {
+        "tipo": "Concierto",
+        "artista": "C. Tangana",
+        "dia": "2025-04-15",
+        "lugar": "Sevilla, Estadio Olímpico"
+    },
+    {
+        "tipo": "Concierto",
+        "artista": "Pitbull",
+        "dia": "2025-05-05",
+        "lugar": "Valencia, Plaza de Toros"
+    },
+    {
+        "tipo": "Firma",
+        "artista": "Natalia Lacunza",
+        "dia": "2025-04-22",
+        "lugar": "Bilbao, El Corte Inglés"
+    },
+    {
+        "tipo": "Concierto",
+        "artista": "Bad Bunny",
+        "dia": "2025-05-10",
+        "lugar": "Madrid, WiZink Center"
+    },
+    {
+        "tipo": "Concierto",
+        "artista": "Aitana",
+        "dia": "2025-05-01",
+        "lugar": "Granada, Palacio de Deportes"
+    }
+]
