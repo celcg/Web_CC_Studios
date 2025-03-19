@@ -1,4 +1,4 @@
-//Para filtrar por tipo de evento
+//Para filtrar por tipo de evento CON LET ESTOY USANDO ES6, HAY QUE CAMBIAR
 document.addEventListener("DOMContentLoaded", function () {
     // Obtener elementos del DOM
     const filtroNoticias = document.getElementById("filtroNoticias");
