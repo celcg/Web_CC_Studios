@@ -133,6 +133,19 @@ section label {
     color: var(--color-blanco) !important; /* Fuerza el color blanco en hover */
 }
 
+#mensajeSinNoticias {
+    text-align: center;
+    color: var(--color-azul1);
+    font-size: 1.5rem;
+    margin-top: 5rem;
+    display: none; /* Oculto por defecto */
+    min-height: 200px; /* Espacio suficiente para evitar que el footer suba */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 /* Responsividad */
 @media (max-width: 1024px) {
     .noticias {

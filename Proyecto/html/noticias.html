@@ -35,8 +35,8 @@
         <header>
         <h1>Noticias</h1>
     </header>
-        <!-- Filtro de Noticias -->
-        <!-- El filtro no funciona -->
+        <!-- Enlaza el script para que funcione el filtro -->
+        <script src="../js/noticias.js"></script>
         <section>
             <label for="filtroNoticias">Filtra las noticias</label>
             <select id="filtroNoticias" name="categoria">
@@ -81,6 +81,9 @@
                     <a href="noticias/noticia_aitana.html" class="leer-mas">Leer Más</a>
                 </div>
             </article>
+
+            <p id="mensajeSinNoticias" class="ocult">No hay noticias de ese tipo disponible. Pruebe con otro filtro.</p>
+
         </section>
         
     </main>
