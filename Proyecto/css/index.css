@@ -43,6 +43,7 @@
 }
 
 #historia .carousel-item p {
+    text-align: justify  !important;
     font-size: 1.2rem;
     line-height: 1.8;
 }
