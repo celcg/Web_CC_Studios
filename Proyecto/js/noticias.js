@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        // Si no hay resultados, añadimos el atributo 'hidden', si hay, lo eliminamos
+        // Si no hay resultados, añadimos el atributo "display: none;", si hay, añadimos los atributos de la frase
         if (hayResultados) {
             mensajeSinNoticias.setAttribute("style", "display: none;");
         } else {

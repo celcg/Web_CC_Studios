@@ -153,3 +153,30 @@ document.addEventListener("DOMContentLoaded", () => {
     // Cargar eventos y generar el calendario inicialmente
     cargarEventosDesdeJSON(currentMonth, currentYear);
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const daysContainer = document.querySelector(".days");
+    const eventosContainer = document.querySelector(".eventos-lista");
+
+    function agregarEventosHover() {
+        document.querySelectorAll(".days li.evento").forEach(dia => {
+            dia.addEventListener("mouseover", () => {
+                const diaNumero = dia.textContent.trim();
+                document.querySelectorAll(".evento-card").forEach(evento => {
+                    if (evento.innerHTML.includes(`>${diaNumero} `)) {
+                        evento.classList.add("resaltado");
+                    }
+                });
+            });
+
+            dia.addEventListener("mouseout", () => {
+                document.querySelectorAll(".evento-card").forEach(evento => {
+                    evento.classList.remove("resaltado");
+                });
+            });
+        });
+    }
+
+    // Llamar a la función después de cargar los eventos
+    setTimeout(agregarEventosHover, 1000);
+});
