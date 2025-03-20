@@ -105,3 +105,19 @@ textarea.form-control {
         flex-direction: column-reverse; /* Hace que el formulario esté primero */
     }
 }
+
+
+dl, ol, ul {
+    margin-bottom: 0 !important;
+    padding: 0 !important;
+}
+#headerPrincipal figure {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    padding: 0.2rem !important;
+}
+#headerPrincipal figure img{
+    width: 100%; /* La imagen ocupa el 100% del ancho de su contenedor (figure) */
+    height: auto; /* Mantiene la proporción original de la imagen */
+}
+

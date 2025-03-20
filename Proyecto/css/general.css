@@ -56,13 +56,22 @@ body {
 #headerPrincipal figure {
     flex-basis: 5%; /* La imagen ocupa menos espacio (aproximadamente 1/20 del ancho total del header) */
     padding: 0.2rem; /* Añade padding alrededor de la imagen */
+    width: 100%; /* La figura ocupa el 100% del ancho de su contenedor */
+    aspect-ratio: 1 / 1; /* Mantiene la relación de aspecto 1:1 (cuadrada) */
+    position: relative; /* Necesario para que la imagen se ajuste dentro del contenedor */
 }
 
 #headerPrincipal figure img {
-    width: 100%; /* La imagen ocupa el 100% del ancho de su contenedor (figure) */
-    height: auto; /* Mantiene la proporción original de la imagen */
+    position: absolute; /* Coloca la imagen dentro del contenedor */
+    top: 0;
+    left: 0;
+    width: 100%; /* La imagen ocupa el 100% del ancho de su contenedor */
+    height: 100%; /* La altura se ajusta para mantener la relación de aspecto 1:1 */
+    object-fit: cover; /* Ajusta la imagen dentro del contenedor sin deformarla */
     transition: transform 1s linear; /* Transición suave */
+    padding: 0.2rem; /* Añade padding alrededor de la imagen */
 }
+
 
 #headerPrincipal figure img:hover {
   transform: rotate(360deg); /* Gira 360 grados al pasar el cursor */
