@@ -19,8 +19,11 @@ document.addEventListener("DOMContentLoaded", () => {
     speakerIcon.addEventListener("click", () => {
         if (volumeControl.style.display === "none") {
             volumeControl.style.display = "block";
+            tituloCancion.hidden = true; // Ocultar el título cuando el volumen esté visible
         } else {
             volumeControl.style.display = "none";
+            tituloCancion.hidden = false; // Ocultar el título cuando el volumen esté visible
+
         }
     });
 

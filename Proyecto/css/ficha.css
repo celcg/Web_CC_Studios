@@ -17,47 +17,37 @@
 }
 
 /* ------------------------------ Carrusel de fotos ------------------------------ */
-#ficha > figure {
+#ficha>figure {
     position: relative;
     height: auto;
     display: flex;
-    width:40%;
+    width: 40%;
     justify-content: center;
     margin: 0;
     padding: 0 1.5rem;
 }
 
-#ficha > figure img {
+#ficha>figure img {
     width: 100%;
-    height: 100%;  /* Limita la altura al 100% del contenedor */
-    object-fit: cover;  /* Mantiene el recorte sin deformar */
+    height: 100%;
+    /* Limita la altura al 100% del contenedor */
+    object-fit: cover;
+    /* Mantiene el recorte sin deformar */
     border-radius: 0.9375rem;
     box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.3);
 }
 
 
-/* ------------------------------ Media Queries para imágenes ------------------------------ */
-@media (min-width: 1200px) {
-    #ficha > figure {
-        width: 500px;
-        height: 500px;
-    }
-}
-
-@media (max-width: 1199px) {
-    #ficha > figure{
-        margin-top:20px;
-        width: 300px;
-        height: 300px;
-    }
-}
 
 /* ------------------------------ Ajustes en pantallas pequeñas ------------------------------ */
 @media (max-width: 1000px) {
     #ficha {
-        flex-direction: column; /* Pone la imagen encima del texto */
-        align-items: center; /* Centra los elementos horizontalmente */
-        width: 100%; /* Asegura que ocupe el 100% del ancho disponible */
+        flex-direction: column;
+        /* Pone la imagen encima del texto */
+        align-items: center;
+        /* Centra los elementos horizontalmente */
+        width: 100%;
+        /* Asegura que ocupe el 100% del ancho disponible */
         margin-left: 0;
         margin-right: 0;
         padding-left: 8.33%;
@@ -67,11 +57,16 @@
     #artista-info {
         padding-left: 0;
         padding-right: 0;
-        text-align: center; /* Centra el texto cuando la imagen esté arriba */
+        text-align: center;
+        /* Centra el texto cuando la imagen esté arriba */
     }
 
-    #ficha > figure {
-        margin-bottom: 1rem; /* Agrega un pequeño espacio entre la imagen y el texto */
+    #ficha>figure {
+        margin-bottom: 1rem;
+        /* Agrega un pequeño espacio entre la imagen y el texto */
+        margin-top: 20px;
+        width: 300px;
+        height: 300px;
     }
 }
 
@@ -85,8 +80,10 @@
     justify-content: center;
     padding-left: 10%;
     padding-right: 10%;
-    overflow: hidden; /* Evita el desbordamiento del texto */
-    word-wrap: break-word; /* Asegura que las palabras largas se rompan correctamente */
+    overflow: hidden;
+    /* Evita el desbordamiento del texto */
+    word-wrap: break-word;
+    /* Asegura que las palabras largas se rompan correctamente */
 }
 
 /* ------------------------------ Títulos y estilo de encabezados ------------------------------ */
@@ -95,7 +92,8 @@ h1 {
     text-transform: capitalize;
     font-weight: normal;
 }
-p{
+
+p {
     text-align: justify;
 }
 
@@ -103,12 +101,15 @@ p{
     background: transparent;
     margin-top: 0rem;
     padding-top: 0rem;
-    border-bottom: 0.05em solid var(--color-blanco); /* Añade un borde inferior de 1px (0.1rem) de color blanco */
+    border-bottom: 0.05em solid var(--color-blanco);
+    /* Añade un borde inferior de 1px (0.1rem) de color blanco */
 }
 
 #artistas-title {
-    font-weight: normal; /* Remueve el negrita */
-    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    font-weight: normal;
+    /* Remueve el negrita */
+    text-transform: uppercase;
+    /* Convierte el texto a mayúsculas */
     padding-bottom: 0;
     margin-bottom: 0rem;
 }
@@ -121,8 +122,10 @@ p{
 #trayectoria h3,
 #proximosEventos h3 {
     color: var(--color-azul1);
-    text-align: left; /* Alinea los títulos a la izquierda */
-    font-size: 1.25rem; /* 24px a rem */
+    text-align: left;
+    /* Alinea los títulos a la izquierda */
+    font-size: 1.25rem;
+    /* 24px a rem */
     font-weight: normal;
 }
 
@@ -142,8 +145,10 @@ p{
 #portada {
     width: 4rem;
     height: 4rem;
-    border-radius: 0.625rem; /* 10px a rem */
-    box-shadow: 0.125rem 0.125rem 0.625rem rgba(0, 0, 0, 0.2); /* 2px 2px 10px a rem */
+    border-radius: 0.625rem;
+    /* 10px a rem */
+    box-shadow: 0.125rem 0.125rem 0.625rem rgba(0, 0, 0, 0.2);
+    /* 2px 2px 10px a rem */
     flex-shrink: 0;
 }
 
@@ -161,7 +166,8 @@ p{
     align-items: center;
     gap: 1rem;
     margin-bottom: 0rem;
-    align-items: stretch; /* Hace que los elementos tengan la misma altura */
+    align-items: stretch;
+    /* Hace que los elementos tengan la misma altura */
 
 }
 
@@ -188,16 +194,22 @@ p{
     color: var(--color-morado);
 }
 
+#volumeControl {
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    max-width: 200px; /* Limita el ancho máximo a 200px */
+}
 /* ------------------------------ Próximos Eventos ------------------------------ */
 #proximosEventos ul {
-    list-style: disc inside; /* Cambia el estilo de la lista a puntos y coloca los puntos dentro del contenedor */
+    list-style: disc inside;
+    /* Cambia el estilo de la lista a puntos y coloca los puntos dentro del contenedor */
     padding-left: 1.5rem;
 }
 
 #proximosEventos li {
     padding: 0.5rem 0;
     font-size: 1rem;
-    border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.2); /* 1px a rem */
+    border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.2);
+    /* 1px a rem */
 }
 
 #proximosEventos li:last-child {
@@ -237,7 +249,8 @@ p{
 }
 
 /* ------------------------------ Botones de Carrusel ------------------------------ */
-.anterior, .siguiente {
+.anterior,
+.siguiente {
     color: var(--color-blanco);
     font-size: 2rem;
     font-weight: bold;
@@ -252,6 +265,7 @@ p{
     height: 3rem;
 }
 
-.anterior:hover, .siguiente:hover {
+.anterior:hover,
+.siguiente:hover {
     background: var(--color-morado);
 }
