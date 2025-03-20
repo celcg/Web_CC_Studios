@@ -95,7 +95,6 @@ body {
 
 #headerPrincipal nav ul li a:hover {
     color: var(--color-azul2); 
-    font-weight: bold;
 }
 
 /* Footer */

@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 if (colores.length > 1) {
                      // Crear un degradado para el borde con box-shadow
-             dayLi.style.boxShadow = `0 0 0 3px ${colores[0]}, 0 0 0 6px ${colores.slice(1).join(", ")}`;
+             dayLi.style.boxShadow = `0 0 0 2px ${colores[0]}, 0 0 0 4px ${colores.slice(1).join(", ")}`;
                 } else {
                     dayLi.style.borderColor = colores[0];
                 }
