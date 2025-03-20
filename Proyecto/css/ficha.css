@@ -134,7 +134,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 1vw;
     margin: 1rem 0;
     background: var(--color-azul1);
     padding: 0.2rem;
@@ -164,7 +164,7 @@ p {
 #reproductor {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1vw;
     margin-bottom: 0rem;
     align-items: stretch;
     /* Hace que los elementos tengan la misma altura */
