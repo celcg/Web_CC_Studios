@@ -83,8 +83,6 @@ document.addEventListener("DOMContentLoaded", function () {
     botonMostrarMenos.style.display = "none";
 });
 
-
-
 //Para animar el contador de estadisticas
 document.addEventListener("DOMContentLoaded", () => {
     const counters = document.querySelectorAll(".counter");
