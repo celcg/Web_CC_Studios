@@ -20,29 +20,24 @@ document.addEventListener("DOMContentLoaded", () => {
         "Sen Senra": "#4682b4", // Azul acero
         "Aitana": "#32cd32", // Verde lima
         "Bad Bunny": "#8a2be2", // Azul violeta
-        "Natalia Lacunza": "#006400", //Verde oscuro
+        "Natalia Lacunza": "#006400", // Verde oscuro
         "Pitbull": "#00bfff", // Azul profundo
         "C. Tangana": "#8b0000", // Rojo oscuro
         "Tini": "#ff69b4" // Rosa brillante
     };
 
-    let eventosPorMes = new Map();
-
     function cargarEventosDesdeJSON(month, year, tipoFiltro = "") {
         return fetch("../js/data/eventos.json")
             .then(response => response.json())
             .then(eventos => {
-                // Filtrar eventos para el mes y año actuales, y aplicar el filtro de tipo
                 const eventosFiltrados = eventos.filter(evento => {
                     const fecha = new Date(evento.dia);
                     const tipoCoincide = tipoFiltro ? evento.tipo.toLowerCase() === tipoFiltro.toLowerCase() : true;
                     return fecha.getMonth() === month && fecha.getFullYear() === year && tipoCoincide;
                 });
 
-                // Limpiar eventos previos
                 eventosContainer.innerHTML = "";
 
-                // Si no hay eventos, mostramos un mensaje
                 if (eventosFiltrados.length === 0) {
                     const noEventCard = document.createElement("article");
                     noEventCard.classList.add("evento-card", "sin-eventos");
@@ -53,11 +48,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     eventosContainer.appendChild(noEventCard);
                 }
 
-                // Asignar eventos a días
                 const eventosPorDia = new Map();
                 eventosFiltrados.forEach(evento => {
                     const diaEvento = new Date(evento.dia).getDate();
-                    const colorArtista = coloresArtistas[evento.artista] || "#cccccc"; // Gris por defecto si no hay color asignado
+                    const colorArtista = coloresArtistas[evento.artista] || "#cccccc";
 
                     if (!eventosPorDia.has(diaEvento)) {
                         eventosPorDia.set(diaEvento, []);
@@ -65,17 +59,12 @@ document.addEventListener("DOMContentLoaded", () => {
                     eventosPorDia.get(diaEvento).push(colorArtista);
                 });
 
-                // Ahora que tenemos los eventos, generamos el calendario
                 generateCalendar(month, year, eventosPorDia);
 
-                // Mostrar los eventos en la lista
                 eventosFiltrados.forEach(evento => {
                     const eventCard = document.createElement("article");
                     eventCard.classList.add("evento-card");
-
-                    const colorArtista = coloresArtistas[evento.artista] || "#cccccc"; // Gris por defecto si no hay color asignado
-                    eventCard.style.borderColor = colorArtista;
-
+                    eventCard.style.borderColor = coloresArtistas[evento.artista] || "#cccccc";
                     eventCard.innerHTML = ` 
                         <h3>${new Date(evento.dia).getDate()} ${monthNames[month].substring(0, 3).toUpperCase()} | ${evento.tipo} <strong>${evento.artista}</strong></h3>
                         <p>${evento.lugar}</p>
@@ -83,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     eventosContainer.appendChild(eventCard);
                 });
 
-                return eventosPorDia;
+                agregarEventosHover();
             })
             .catch(error => console.error("Error al cargar eventos:", error));
     }
@@ -97,24 +86,19 @@ document.addEventListener("DOMContentLoaded", () => {
         const dayOffset = firstDay === 0 ? 6 : firstDay - 1;
 
         for (let i = 0; i < dayOffset; i++) {
-            const emptyLi = document.createElement("li");
-            daysContainer.appendChild(emptyLi);
+            daysContainer.appendChild(document.createElement("li"));
         }
 
         for (let day = 1; day <= lastDate; day++) {
             const dayLi = document.createElement("li");
             dayLi.textContent = day;
 
-            // Si el día tiene eventos, asignamos los colores correspondientes
             if (eventosPorDia.has(day)) {
                 const colores = eventosPorDia.get(day);
                 dayLi.classList.add("evento");
-
+                dayLi.style.borderColor = colores.length > 1 ? "transparent" : colores[0];
                 if (colores.length > 1) {
-                     // Crear un degradado para el borde con box-shadow
-             dayLi.style.boxShadow = `0 0 0 2px ${colores[0]}, 0 0 0 4px ${colores.slice(1).join(", ")}`;
-                } else {
-                    dayLi.style.borderColor = colores[0];
+                    dayLi.style.boxShadow = `0 0 0 2px ${colores[0]}, 0 0 0 4px ${colores.slice(1).join(", ")}`;
                 }
             }
 
@@ -126,38 +110,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    prevMonthBtn.addEventListener("click", () => {
-        if (currentMonth === 0) {
-            currentMonth = 11;
-            currentYear--;
-        } else {
-            currentMonth--;
-        }
-        cargarEventosDesdeJSON(currentMonth, currentYear, selectEventos.value);
-    });
-
-    nextMonthBtn.addEventListener("click", () => {
-        if (currentMonth === 11) {
-            currentMonth = 0;
-            currentYear++;
-        } else {
-            currentMonth++;
-        }
-        cargarEventosDesdeJSON(currentMonth, currentYear, selectEventos.value);
-    });
-
-    selectEventos.addEventListener("change", () => {
-        cargarEventosDesdeJSON(currentMonth, currentYear, selectEventos.value);
-    });
-
-    // Cargar eventos y generar el calendario inicialmente
-    cargarEventosDesdeJSON(currentMonth, currentYear);
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-    const daysContainer = document.querySelector(".days");
-    const eventosContainer = document.querySelector(".eventos-lista");
-
     function agregarEventosHover() {
         document.querySelectorAll(".days li.evento").forEach(dia => {
             dia.addEventListener("mouseover", () => {
@@ -168,7 +120,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 });
             });
-
             dia.addEventListener("mouseout", () => {
                 document.querySelectorAll(".evento-card").forEach(evento => {
                     evento.classList.remove("resaltado");
@@ -177,6 +128,21 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Llamar a la función después de cargar los eventos
-    setTimeout(agregarEventosHover, 1000);
+    prevMonthBtn.addEventListener("click", () => {
+        currentMonth = currentMonth === 0 ? 11 : currentMonth - 1;
+        currentYear = currentMonth === 11 ? currentYear - 1 : currentYear;
+        cargarEventosDesdeJSON(currentMonth, currentYear, selectEventos.value);
+    });
+
+    nextMonthBtn.addEventListener("click", () => {
+        currentMonth = currentMonth === 11 ? 0 : currentMonth + 1;
+        currentYear = currentMonth === 0 ? currentYear + 1 : currentYear;
+        cargarEventosDesdeJSON(currentMonth, currentYear, selectEventos.value);
+    });
+
+    selectEventos.addEventListener("change", () => {
+        cargarEventosDesdeJSON(currentMonth, currentYear, selectEventos.value);
+    });
+
+    cargarEventosDesdeJSON(currentMonth, currentYear);
 });
