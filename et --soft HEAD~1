@@ -1,0 +1,411 @@
+[33mcommit 10f34b4692f33fa611e14c275986e057b4999d90[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32msinjes6[m[33m, [m[1;31morigin/sinjes6[m[33m)[m
+Author: Celtia <celtiacastelo@gmail.com>
+Date:   Thu Mar 20 16:52:43 2025 +0100
+
+    fucking bootstra`p header
+
+[33mcommit a7a873d8cabc83a2d21e26cec1ac27e8ba7bad94[m
+Author: Celtia <celtiacastelo@gmail.com>
+Date:   Thu Mar 20 16:13:13 2025 +0100
+
+    jquery
+
+[33mcommit c0e39b0f0cbb07152c24217c31bbc265a1b59614[m
+Author: Celtia <celtiacastelo@gmail.com>
+Date:   Thu Mar 20 15:56:23 2025 +0100
+
+    he quitado jes6 de calnedario
+
+[33mcommit 3f82e711148fdcc05a118f527c19ddbcd4da035c[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m
+Author: Celtia <celtiacastelo@gmail.com>
+Date:   Thu Mar 20 15:52:00 2025 +0100
+
+    version antes deshacer, con reproductor
+
+[33mcommit 017de0fc8f9ea15b07a38b22607e1b35c5f69389[m
+Merge: 6cbcb77 d0b3596
+Author: Celtia <celtiacastelo@gmail.com>
+Date:   Thu Mar 20 15:03:55 2025 +0100
+
+    Merge branch 'main' of https://github.com/celcg/Web_CC_Studios
+
+[33mcommit d0b3596b1d71e6fd15d94233a55b3129980271a9[m
+Merge: 2b8d5d2 35ef905
+Author: Carolina Alba García <carolina.alba@rai.usc.es>
+Date:   Thu Mar 20 16:03:10 2025 +0100
+
+    Merge branch 'main' of https://github.com/celcg/Web_CC_Studios
+
+[33mcommit 2b8d5d2efc8681a44384161439b759e6bdf323e0[m
+Author: Carolina Alba García <carolina.alba@rai.usc.es>
+Date:   Thu Mar 20 16:02:56 2025 +0100
+
+    deshagoel cambio
+
+[33mcommit f4bd8e1eb22588fa6b7f49d2903ba47e508c4c75[m
+Author: Carolina Alba García <carolina.alba@rai.usc.es>
+Date:   Thu Mar 20 15:41:59 2025 +0100
+
+    listener de eventos
+
+[33mcommit 6cbcb7749bab5e7ee5e2f3dcb22966c5ec36fd5e[m
+Author: Celtia <celtiacastelo@gmail.com>
+Date:   Thu Mar 20 15:03:51 2025 +0100
+
+    añadido mouseout event
+
+[33mcommit 35ef9055cb6c3956c16b664caa24c28f450ad3b1[m
+Merge: 4bff3db f4bd8e1
+Author: Celtia <celtiacastelo@gmail.com>
+Date:   Thu Mar 20 14:52:30 2025 +0100
+
+    Merge branch 'main' of https://github.com/celcg/Web_CC_Studios
+
+[33mcommit 4bff3dbf4d0966031aa6202398fb3a808d6d62fb[m
+Author: Celtia <celtiacastelo@gmail.com>
+Date:   Thu Mar 20 14:52:28 2025 +0100
+
+    20+2
+
+[33mcommit 7a422190715bb23a0cdf9bca765e8a5963ceb35d[m
+Author: Carolina Alba García <carolina.alba@rai.usc.es>
+Date:   Wed Mar 19 20:11:20 2025 +0100
+
+    index version final bootstrap
+
+[33mcommit 8c713c80cb879de6b9072caadd52181b8f9e9759[m
+Merge: c902502 16657fa
+Author: Celtia <celtiacastelo@gmail.com>
+Date:   Wed Mar 19 18:49:59 2025 +0100
+
+    Merge branch 'main' of https://github.com/celcg/Web_CC_Studios
+
+[33mcommit 16657faf00c989fd60ca86d720cb2d8685769d70[m
+Merge: 910d0e3 2f7bbf2
+Author: Carolina Alba García <carolina.alba@rai.usc.es>
+Date:   Wed Mar 19 19:49:24 2025 +0100
+
+    Merge branch 'main' of https://github.com/celcg/Web_CC_Studios
+
+[33mcommit 910d0e37d4e9a7f19cd73cba0504d5cdc1cff822[m
+Author: Carolina Alba García <carolina.alba@rai.usc.es>
+Date:   Wed Mar 19 19:49:21 2025 +0100
+
+    Contacto + index
+    
+    Contacto: mensaje formulario enviado
+    Index: carrousel con bootstrap
+
+[33mcommit 6f2f9ff5bdec9958d1c39e7c5bf407ad8a531587[m
+Author: Carolina Alba García <carolina.alba@rai.usc.es>
+Date:   Wed Mar 19 19:13:28 2025 +0100
+
+    contadores de index
+
+[33mcommit c9025026791df8832647a26093c9b7b6ecad80ec[m
+Author: Celtia <celtiacastelo@gmail.com>
+Date:   Wed Mar 19 18:49:56 2025 +0100
+
+    merge2
+
+[33mcommit 2f7bbf2d48ce1b8dce2f5c08e9cdffda455ecb7b[m
+Author: Celtia <celtiacastelo@gmail.com>
+Date:   Wed Mar 19 18:45:47 2025 +0100
+
+    merge
+
+[33mcommit f56eefa0b10917ce206b2bb6f4b160b4eb435862[m
+Author: Carolina Alba García <carolina.alba@rai.usc.es>
+Date:   Wed Mar 19 18:46:17 2025 +0100
+
+    Index
+    
+    appendChild y  removeChild en el carrousel de miembros de equipo
+
+[33mcommit 12bb6ea774cb975f1c87de932fd7c16e43c6b47b[m
+Merge: d87f544 6f2f9ff
+Author: Celtia <celtiacastelo@gmail.com>
+Date:   Wed Mar 19 18:41:38 2025 +0100
+
+    no he cambiado nada ns porque pone que si
+
+[33mcommit d87f544f89437228e67918a602dbad0b8d37bbfe[m
+Author: Celtia <celtiacastelo@gmail.com>
+Date:   Wed Mar 19 18:40:37 2025 +0100
+
+    calendario js
+
+[33mcommit 08881cd127292f0de7403c13518e9e76db35a9ed[m
+Author: Celtia <celtiacastelo@gmail.com>
+Date:   Wed Mar 19 18:35:19 2025 +0100
+
+    js calendario
+
+[33mcommit 5a6c133abf026aa790e5ddb2382d4283d2586ecc[m
+Author: Carolina Alba García <carolina.alba@rai.usc.es>
+Date:   Wed Mar 19 17:55:43 2025 +0100
+
+    Filtro noticias
+
+[33mcommit 85aad8991d87f2e382b25df4dfe07b55771b4a7a[m
+Merge: 9bce037 093aba1
+Author: Carolina Alba García <carolina.alba@rai.usc.es>
+Date:   Wed Mar 19 15:28:15 2025 +0100
+
+    Merge branch 'main' of https://github.com/celcg/Web_CC_Studios
+
+[33mcommit 093aba18520e5a25c0c4fa4f6d9715b1537d2e62[m
+Author: Celtia <celtiacastelo@gmail.com>
+Date:   Wed Mar 19 08:18:09 2025 +0100
+
+    Calendariov1
+
+[33mcommit 9bce03763ed1d386beede2fe2c007ac412569f02[m
+Author: Carolina Alba García <carolina.alba@rai.usc.es>
+Date:   Tue Mar 18 13:31:55 2025 +0100
+
+    Update index.css
+
+[33mcommit 1b1158ea8d04f7ab2be7459935e2f3fce479fd98[m
+Author: Carolina Alba García <carolina.alba@rai.usc.es>
+Date:   Tue Mar 18 13:15:46 2025 +0100
+
+    pequeño cambio en el index
+
+[33mcommit e0e57d6ee88027d83ab1a9b13c867100d3472f28[m
+Author: Carolina Alba García <carolina.alba@rai.usc.es>
+Date:   Tue Mar 18 12:00:48 2025 +0100
+
+    Update index.html
+
+[33mcommit 9ce59e2173ce3d23aa7498bb124e6b5b75046ceb[m
+Author: Celtia <celtiacastelo@gmail.com>
+Date:   Sun Mar 16 22:52:23 2025 +0100
+
+    empece js, mejore eventos
+
+[33mcommit 1271c701490aec507d966fa09d46e2165cb3dcc1[m
+Author: Carolina Alba García <carolina.alba@rai.usc.es>
+Date:   Fri Mar 14 12:52:12 2025 +0100
+
+    index cutre
+
+[33mcommit 0de3f03d45e00dc315e0d08fe6daeb547eda6cf6[m
+Author: Carolina Alba García <carolina.alba@rai.usc.es>
+Date:   Fri Mar 14 11:45:27 2025 +0100
+
+    Noticias detalle acabado
+
+[33mcommit 31cedf47198c8d2f009d2926498fa25617e9b1db[m
+Author: Carolina Alba García <carolina.alba@rai.usc.es>
+Date:   Fri Mar 14 11:03:05 2025 +0100
+
+    noticias_detalle version 1
+
+[33mcommit 6bb579fbdf2de4d7a346c70df40c5e8ac3ecb036[m
+Author: Celtia <celtiacastelo@gmail.com>
+Date:   Thu Mar 13 17:28:58 2025 +0100
+
+    eventos corregido calnedario
+
+[33mcommit 3820b9a8639755e58b4675f4e17abf84030e1a39[m
+Author: Celtia <celtiacastelo@gmail.com>
+Date:   Wed Mar 12 22:04:46 2025 +0100
+
+    fichas
+
+[33mcommit bcbf5a915524f839ca8f9f8e74467a0b85a231a8[m
+Author: Carolina Alba García <carolina.alba@rai.usc.es>
+Date:   Wed Mar 12 19:05:09 2025 +0100
+
+    contacto + noticias a medias
+
+[33mcommit 373b0ea202277ecbc7ca5cbcfe582ac58dc4b25e[m
+Author: Celtia <celtiacastelo@gmail.com>
+Date:   Mon Mar 10 22:19:59 2025 +0100
+
+    corregido css
+
+[33mcommit 18c60d4f512f082519a9fbdf3ae669ddb8e78cb0[m
+Author: Celtia <celtiacastelo@gmail.com>
+Date:   Mon Mar 10 09:36:16 2025 +0100
+
+    pequeños cambios fichas html
+
+[33mcommit 6d2e9935896f092d83f8ca6af31a1101b5596892[m
+Merge: 754df05 752c9bf
+Author: Celtia <celtiacastelo@gmail.com>
+Date:   Tue Mar 4 11:55:11 2025 +0100
+
+    Merge branch 'main' of https://github.com/celcg/Web_CC_Studios
+
+[33mcommit 754df0521b1a793bfdabde07a9e6b181ad906bdc[m
+Author: Celtia <celtiacastelo@gmail.com>
+Date:   Tue Mar 4 11:53:42 2025 +0100
+
+    css parte de celtia
+
+[33mcommit 752c9bfeb5810e2cc11ce295d8bfa183cf723fed[m
+Merge: 6b01e60 4e73bf3
+Author: Carolina Alba García <carolina.alba@rai.usc.es>
+Date:   Thu Feb 27 17:37:02 2025 +0100
+
+    Merge branch 'main' of https://github.com/celcg/Web_CC_Studios
+
+[33mcommit 6b01e60234a60eb0c543a692e214a1365c1a9091[m
+Author: Carolina Alba García <carolina.alba@rai.usc.es>
+Date:   Thu Feb 27 17:36:51 2025 +0100
+
+    contacto ccs
+
+[33mcommit 4e73bf30ffde4d870925439bce2856e5f8f87920[m
+Author: Celtia <celtiacastelo@gmail.com>
+Date:   Thu Feb 27 15:20:01 2025 +0100
+
+    general mejor!
+
+[33mcommit ba615d1d5409ffc4ef4493a8a63bdddb3a9a61c6[m
+Author: Celtia <celtiacastelo@gmail.com>
+Date:   Wed Feb 26 22:51:47 2025 +0100
+
+    css pa header footer y judline
+
+[33mcommit 5d0cc7fd1a46b94a7f85ed2a6f53348f57d4c6a7[m
+Author: Celtia <celtiacastelo@gmail.com>
+Date:   Sun Feb 23 21:21:11 2025 +0100
+
+    ficha2
+
+[33mcommit 627a9fdac41ee7a4e9a5bc4cb5f2c28c20df2c88[m
+Merge: c42c113 26a72c7
+Author: Celtia <celtiacastelo@gmail.com>
+Date:   Sat Feb 22 00:03:39 2025 +0100
+
+    gradiente y empece ficha css
+
+[33mcommit c42c1133e59d2e27424d00dfb9a073fb25de44d1[m
+Author: Celtia <celtiacastelo@gmail.com>
+Date:   Fri Feb 21 22:51:40 2025 +0100
+
+    no se por que me dice q hay cambios
+
+[33mcommit 26a72c7e297ca42e817ee2ca660bc82739645018[m
+Author: Carolina Alba García <carolina.alba@rai.usc.es>
+Date:   Thu Feb 20 18:29:32 2025 +0100
+
+    clase 20/2 (inicio css)
+
+[33mcommit da88511b84182a1ed357ed2450d3ef8a198bbded[m
+Author: Celtia <celtiacastelo@gmail.com>
+Date:   Thu Feb 20 17:58:41 2025 +0100
+
+    logo blanco
+
+[33mcommit a5464c59a4dc940c3b29d0faf163b1e968f70f65[m
+Author: Carolina Alba García <carolina.alba@rai.usc.es>
+Date:   Thu Feb 20 17:42:12 2025 +0100
+
+    css created
+
+[33mcommit aa6a4814f946dedfc19a366410461140d30fb9ab[m
+Author: Celtia <celtiacastelo@gmail.com>
+Date:   Mon Feb 17 23:07:23 2025 +0100
+
+    etiquetas de celtia puestass
+
+[33mcommit 64f86f379ec48d0d513cb666d6d41a8402ffe87a[m
+Author: Carolina Alba García <carolina.alba@rai.usc.es>
+Date:   Mon Feb 17 12:51:52 2025 +0100
+
+    x2
+
+[33mcommit 4d9839d96940715b732105e74682883181430743[m
+Author: Carolina Alba García <carolina.alba@rai.usc.es>
+Date:   Mon Feb 17 12:49:59 2025 +0100
+
+    Actualizacion <head>
+
+[33mcommit 05727602e7bbc7ba8498ed9fb404f4b17cc2b135[m
+Author: Carolina Alba García <carolina.alba@rai.usc.es>
+Date:   Mon Feb 17 12:23:12 2025 +0100
+
+    About us + correccion contact (no div)
+
+[33mcommit a6e89aa9a59944f5aee30b019a93d59d89f95202[m
+Author: Celtia <celtiacastelo@gmail.com>
+Date:   Sun Feb 16 10:05:46 2025 +0100
+
+    cambiadas etiq de artistas
+
+[33mcommit 9a9520b03775860133e8f3a0946f174a85b63f1b[m
+Author: Celtia <celtiacastelo@gmail.com>
+Date:   Sat Feb 15 23:09:00 2025 +0100
+
+    solucionado etiquetas figuras
+
+[33mcommit 87cd0efd3e2c178a3478c3c0c2d8566548b004b1[m
+Author: Celtia <celtiacastelo@gmail.com>
+Date:   Sat Feb 15 22:54:15 2025 +0100
+
+    cambios en foot y header
+
+[33mcommit b4654114b5f679683292a942b3ce0153d265804e[m
+Author: Carolina Alba García <carolina.alba@rai.usc.es>
+Date:   Sat Feb 15 14:11:07 2025 +0100
+
+    noticias.html creado
+
+[33mcommit ae8e368c0c5d454b2cb729f3fb3ea230497044ac[m
+Author: Carolina Alba García <carolina.alba@rai.usc.es>
+Date:   Sat Feb 15 13:54:42 2025 +0100
+
+    Contacto.html creado
+
+[33mcommit d0790ab34207a67db9c6f3321ee52bfebf365c20[m
+Author: Celtia <celtiacastelo@gmail.com>
+Date:   Sat Feb 15 09:53:13 2025 +0100
+
+    artistas y sus fichas en html
+
+[33mcommit ef39eab07f1d663f6aa6cb3b1721371e07b45afe[m
+Author: Celtia <celtiacastelo@gmail.com>
+Date:   Fri Feb 14 22:25:10 2025 +0100
+
+    Eventos continuada
+
+[33mcommit 46c03dc0e50084c118e9506e8e01349ae3e44854[m
+Author: Celtia <celtiacastelo@gmail.com>
+Date:   Fri Feb 14 20:11:04 2025 +0100
+
+    footer header
+
+[33mcommit f42b3fc7e5324998e6cd607f569c7e1a2ff16718[m
+Merge: 6693a9b aeada42
+Author: Celtia <celtiacastelo@gmail.com>
+Date:   Thu Feb 13 18:42:06 2025 +0100
+
+    cambios dia 1
+
+[33mcommit 6693a9bd54837b8b8285c340b3b5165ec1c610de[m
+Author: Celtia <celtiacastelo@gmail.com>
+Date:   Thu Feb 13 18:40:28 2025 +0100
+
+    dia 1: clase etiquetas
+
+[33mcommit aeada42f55dfd710f63a197d6be89be4505d4f7d[m
+Author: Carolina Alba García <carolina.alba@rai.usc.es>
+Date:   Thu Feb 6 18:16:47 2025 +0100
+
+    resubido el sketch
+
+[33mcommit 6bf2d692438b3960bf232c1f9ee497e5ded38b04[m
+Author: Carolina Alba García <carolina.alba@rai.usc.es>
+Date:   Thu Feb 6 17:20:42 2025 +0100
+
+    Create sketch.jpg
+
+[33mcommit fb5d7a5deb8f95ccfaf5256f6dc3629642cbc322[m
+Author: Celtia <celtiacastelo@gmail.com>
+Date:   Tue Feb 4 22:28:48 2025 +0100
+
+    logo y paleta
