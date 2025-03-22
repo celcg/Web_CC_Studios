@@ -56,7 +56,7 @@ body {
 #headerPrincipal figure {
     flex-basis: 5%; /* La imagen ocupa menos espacio (aproximadamente 1/20 del ancho total del header) */
     padding: 0.2rem; /* Añade padding alrededor de la imagen */
-    width: 20%; /* La figura ocupa el 100% del ancho de su contenedor */
+    width: 20%; /* La figura ocupa el 20% del ancho de su contenedor */
     aspect-ratio: 1 / 1; /* Mantiene la relación de aspecto 1:1 (cuadrada) */
     position: relative; /* Necesario para que la imagen se ajuste dentro del contenedor */
 }
