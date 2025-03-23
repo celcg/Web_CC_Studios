@@ -2,6 +2,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Obtener elementos del DOM
     const filtroNoticias = document.getElementById("filtroNoticias");
+    //Usamos nodeList
     const noticias = document.querySelectorAll(".noticias");
     const mensajeSinNoticias = document.getElementById("mensajeSinNoticias");
 
@@ -24,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Si no hay resultados, añadimos el atributo "display: none;", si hay, añadimos los atributos de la frase
         if (hayResultados) {
             mensajeSinNoticias.setAttribute("style", "display: none;");
+
         } else {
             mensajeSinNoticias.setAttribute("style", "display: block; text-align: center; color: var(--color-azul1); font-size: 1.5rem; margin-top: 2rem;");
         }

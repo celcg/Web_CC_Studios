@@ -12,8 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
         formulario.reset();
     });
 
-    function mostrarMensaje(tipo) {
-        let mensaje;
+    function mostrarMensaje() {
         
         mensajeExito = document.createElement("div");
         mensajeExito.id = "mensajeExito";
