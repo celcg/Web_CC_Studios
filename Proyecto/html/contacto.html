@@ -59,9 +59,8 @@
                     <form id="formularioContacto">
                         <div class="mb-3">
                             <label for="motivo" class="form-label">Motivo de contacto:</label>
-                            <select class="form-select" >
-                            <!--<label for="motivo">Motivo de contacto:</label>-->
-                                <option value="colaboracion">Quiero trabajar con vosotros</option>
+                            <select id="motivo" class="form-select" >
+                                <option selected value="colaboracion">Quiero trabajar con vosotros</option>
                                 <option value="musica">Quiero enviar mi música</option>
                                 <option value="info">Quiero obtener más información</option>
                                 <option value="problema">Ha surgido un problema</option>
@@ -71,17 +70,17 @@
 
                         <div class="mb-3">
                             <label for="nombre" class="form-label">Nombre y apellidos</label>
-                            <input type="text" class="form-control" id="nombre" placeholder="" required>
+                            <input type="text" class="form-control" id="nombre" placeholder="" required autocomplete="name">
                         </div>
 
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="email@ejemplo.com" required>
+                            <input type="email" class="form-control" id="email" placeholder="email@ejemplo.com" required autocomplete="email">
                         </div>
 
                         <div class="mb-3">
                             <label for="telefono" class="form-label">Teléfono de contacto</label>
-                            <input type="tel" class="form-control" id="telefono" placeholder="" required>
+                            <input type="tel" class="form-control" id="telefono" placeholder="" required autocomplete="tel">
                         </div>
 
                         <div class="mb-3">

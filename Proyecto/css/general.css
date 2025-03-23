@@ -56,7 +56,8 @@ body {
 
 #headerPrincipal figure {
     padding: 0.2rem; /* Añade padding alrededor de la imagen */
-    }
+    width: 20%; /* La figura ocupa el 20% del ancho de su contenedor */
+}
 
 
     #headerPrincipal figure img {
@@ -179,6 +180,13 @@ footer ul li figcaption {
         gap: 3vw; /* Ajusta el espacio entre los elementos de la lista */
         align-items: center; /* Centra los elementos en el eje horizontal */
     }
+    #headerPrincipal figure{
+        display: flex;          /* Habilita Flexbox */
+        justify-content: center;
+        align-items: center;
+    }
+    
+
 
     footer {
         flex-direction: column; /* Cambia la dirección del flex a columna */
