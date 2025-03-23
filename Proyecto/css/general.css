@@ -45,6 +45,7 @@ body {
     color: var(--color-blanco); /* Establece el color del texto dentro del header */
     text-transform: uppercase; /* Convierte el texto a mayúsculas */
     display: flex; /* Utiliza el modelo de caja flexible para el layout del header */
+    gap:1vw; /* Aumenta la separación entre los elementos del header */
     justify-content: space-between; /* Distribuye el espacio entre los elementos hijos, con espacio igual entre ellos */
     position: static; /* Establece la posición del header como estática (valor por defecto) */
     border-bottom: 0.1rem solid var(--color-blanco); /* Añade un borde inferior de 1px (0.1rem) de color blanco */
@@ -54,23 +55,15 @@ body {
 }
 
 #headerPrincipal figure {
-    flex-basis: 5%; /* La imagen ocupa menos espacio (aproximadamente 1/20 del ancho total del header) */
     padding: 0.2rem; /* Añade padding alrededor de la imagen */
-    width: 100%; /* La figura ocupa el 100% del ancho de su contenedor */
-    aspect-ratio: 1 / 1; /* Mantiene la relación de aspecto 1:1 (cuadrada) */
-    position: relative; /* Necesario para que la imagen se ajuste dentro del contenedor */
-}
+    }
 
-#headerPrincipal figure img {
-    position: absolute; /* Coloca la imagen dentro del contenedor */
-    top: 0;
-    left: 0;
-    width: 100%; /* La imagen ocupa el 100% del ancho de su contenedor */
-    height: 100%; /* La altura se ajusta para mantener la relación de aspecto 1:1 */
-    object-fit: cover; /* Ajusta la imagen dentro del contenedor sin deformarla */
-    transition: transform 1s linear; /* Transición suave */
-    padding: 0.2rem; /* Añade padding alrededor de la imagen */
-}
+
+    #headerPrincipal figure img {
+        height: 70px;
+        width: 70px;
+        transition: transform 1s linear; /* Transición suave */
+    }
 
 
 #headerPrincipal figure img:hover {
@@ -87,11 +80,12 @@ body {
 #headerPrincipal nav ul {
     list-style: none; /* Elimina los puntos de la lista */
     display: flex; /* Convierte la lista en un contenedor flexible */
-    gap: 6vw; /* Aumenta más la separación entre los elementos de la lista */
+    gap: 3vw; /* Aumenta más la separación entre los elementos de la lista */
 }
 
 #headerPrincipal nav ul li {
     display: inline; /* Asegura que los elementos de la lista estén en línea */
+    text-align: center;
 }
 
 #headerPrincipal nav ul li a {
@@ -172,7 +166,7 @@ footer ul li figcaption {
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     #headerPrincipal {
         flex-direction: column; /* Cambia la dirección del flex a columna */
         align-items: center; /* Centra los elementos en el eje horizontal */

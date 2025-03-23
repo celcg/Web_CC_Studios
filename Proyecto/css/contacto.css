@@ -118,6 +118,6 @@ dl, ol, ul {
 }
 #headerPrincipal figure img{
     width: 100%; /* La imagen ocupa el 100% del ancho de su contenedor (figure) */
-    height: auto; /* Mantiene la proporción original de la imagen */
+    height: 0; /* Mantiene la proporción original de la imagen */
 }
 

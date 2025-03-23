@@ -1,10 +1,9 @@
 /* ------------------------------ Contenedor del artista ------------------------------ */
 #ficha {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: flex-start;
-    gap: 0;
-    padding: 0;
+    justify-content: center;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 0.9375rem;
     height: auto;
@@ -13,7 +12,7 @@
     margin-top: 3%;
     backdrop-filter: blur(0.75rem);
     box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.3);
-    min-width: 300px;
+    gap:1vw;
 }
 
 /* ------------------------------ Carrusel de fotos ------------------------------ */
@@ -21,10 +20,11 @@
     position: relative;
     height: auto;
     display: flex;
-    width: 40%;
+    width: 450px;
     justify-content: center;
     margin: 0;
     padding: 0 1.5rem;
+    flex-shrink: 0;
 }
 
 #ficha>figure img {
@@ -40,30 +40,16 @@
 
 
 /* ------------------------------ Ajustes en pantallas pequeñas ------------------------------ */
-@media (max-width: 1000px) {
-    #ficha {
-        flex-direction: column;
-        /* Pone la imagen encima del texto */
-        align-items: center;
-        /* Centra los elementos horizontalmente */
-        width: 100%;
-        /* Asegura que ocupe el 100% del ancho disponible */
-        margin-left: 0;
-        margin-right: 0;
-        padding-left: 8.33%;
-        padding-right: 8.33%;
-    }
 
-    #artista-info {
-        padding-left: 0;
-        padding-right: 0;
-        text-align: center;
-        /* Centra el texto cuando la imagen esté arriba */
+
+@media (max-width: 700px) {
+    #ficha {
+        margin-left: 2%;
+        margin-right: 2%;
+        min-width: 300px;
     }
 
     #ficha>figure {
-        margin-bottom: 1rem;
-        /* Agrega un pequeño espacio entre la imagen y el texto */
         margin-top: 20px;
         width: 300px;
         height: 300px;
@@ -78,12 +64,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 10%;
-    padding-right: 10%;
-    overflow: hidden;
-    /* Evita el desbordamiento del texto */
+    padding-left: 5%;
+    padding-right: 5%;
     word-wrap: break-word;
-    /* Asegura que las palabras largas se rompan correctamente */
+    flex-shrink: 2;
 }
 
 /* ------------------------------ Títulos y estilo de encabezados ------------------------------ */
