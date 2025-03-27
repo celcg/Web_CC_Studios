@@ -15,23 +15,18 @@
     gap:1vw;
 }
 
-/* ------------------------------ Carrusel de fotos ------------------------------ */
+/* ------------------------------ Imagen  ------------------------------ */
 #ficha>figure {
     position: relative;
     height: auto;
     display: flex;
-    width: 450px;
     justify-content: center;
-    margin: 0;
-    padding: 0 1.5rem;
+    padding: 1 1.5rem;
     flex-shrink: 0;
 }
 
 #ficha>figure img {
-    width: 100%;
-    height: 100%;
-    /* Limita la altura al 100% del contenedor */
-    object-fit: cover;
+    width: 400px;
     /* Mantiene el recorte sin deformar */
     border-radius: 0.9375rem;
     box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.3);
@@ -51,8 +46,10 @@
 
     #ficha>figure {
         margin-top: 20px;
+    }
+
+    #ficha>figure img {
         width: 300px;
-        height: 300px;
     }
 }
 
@@ -130,9 +127,7 @@ p {
     width: 4rem;
     height: 4rem;
     border-radius: 0.625rem;
-    /* 10px a rem */
     box-shadow: 0.125rem 0.125rem 0.625rem rgba(0, 0, 0, 0.2);
-    /* 2px 2px 10px a rem */
     flex-shrink: 0;
 }
 

@@ -166,52 +166,6 @@ footer ul li figcaption {
     margin-top: 0.3125rem; 
 }
 
-/* Responsive Styles */
-@media (max-width: 800px) {
-    #headerPrincipal {
-        flex-direction: column; /* Cambia la dirección del flex a columna */
-        align-items: center; /* Centra los elementos en el eje horizontal */
-        padding: 1rem; /* Ajusta el padding para dispositivos móviles */
-        width: 100%; /* Asegura que el header ocupe todo el ancho de la pantalla */
-    }
-
-    #headerPrincipal nav ul {
-        flex-direction: column; /* Cambia la dirección del flex a columna */
-        gap: 3vw; /* Ajusta el espacio entre los elementos de la lista */
-        align-items: center; /* Centra los elementos en el eje horizontal */
-    }
-    #headerPrincipal figure{
-        display: flex;          /* Habilita Flexbox */
-        justify-content: center;
-        align-items: center;
-    }
-    
-
-
-    footer {
-        flex-direction: column; /* Cambia la dirección del flex a columna */
-        align-items: center; /* Centra los elementos en el eje horizontal */
-        padding: 1rem; /* Ajusta el padding para dispositivos móviles */
-        width: 100%; /* Asegura que el footer ocupe todo el ancho de la pantalla */
-    }
-
-    #footer-follow {
-        flex-direction: column; /* Cambia la dirección del flex a columna */
-        align-items: center; /* Centra los elementos en el eje horizontal */
-        margin-left: 0; /* Elimina el margen izquierdo */
-        margin-top: 1rem; /* Añade margen superior para separación */
-    }
-
-    footer ul {
-        flex-direction: column; /* Cambia la dirección del flex a columna */
-        gap: 3vw; /* Ajusta el espacio entre los elementos de la lista */
-        align-items: center; /* Centra los elementos en el eje horizontal */
-    }
-
-    footer ul li img {
-        width: 2rem; /* Ajusta el tamaño de los iconos para pantallas pequeñas */
-    }
-}
 
 /* Estilos Generales */
 main {
@@ -300,3 +254,81 @@ button:hover {
 .fade-in {
     animation: fadeIn 1s ease-in-out;
 }
+
+.hamburguesa {
+    display: none;
+    padding: 10px 20px;
+    color: var(--color-blanco);
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.hamburguesa:hover {
+    background-color: var(--color-morado); /* Azul más oscuro */
+}
+
+/* Responsive Styles */
+@media (max-width: 800px) {
+    #headerPrincipal {
+        flex-direction: column; /* Cambia la dirección del flex a columna */
+        align-items: center; /* Centra los elementos en el eje horizontal */
+        padding: 1rem; /* Ajusta el padding para dispositivos móviles */
+        width: 100%; /* Asegura que el header ocupe todo el ancho de la pantalla */
+    }
+
+    #headerPrincipal nav ul {
+        flex-direction: column; /* Cambia la dirección del flex a columna */
+        gap: 3vw; /* Ajusta el espacio entre los elementos de la lista */
+        align-items: center; /* Centra los elementos en el eje horizontal */
+    }
+    #headerPrincipal figure{
+        display: flex;          /* Habilita Flexbox */
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .hamburguesa {
+        display: inline; /* Muestra el botón de hamburguesa */
+        margin-bottom: 1rem; /* Añade margen inferior para separación */
+    }
+
+    footer {
+        flex-direction: column; /* Cambia la dirección del flex a columna */
+        align-items: center; /* Centra los elementos en el eje horizontal */
+        padding: 1rem; /* Ajusta el padding para dispositivos móviles */
+        width: 100%; /* Asegura que el footer ocupe todo el ancho de la pantalla */
+    }
+
+    #footer-follow {
+        flex-direction: column; /* Cambia la dirección del flex a columna */
+        align-items: center; /* Centra los elementos en el eje horizontal */
+        margin-left: 0; /* Elimina el margen izquierdo */
+        margin-top: 1rem; /* Añade margen superior para separación */
+    }
+
+    footer ul {
+        flex-direction: column; /* Cambia la dirección del flex a columna */
+        gap: 3vw; /* Ajusta el espacio entre los elementos de la lista */
+        align-items: center; /* Centra los elementos en el eje horizontal */
+    }
+
+    footer ul li img {
+        width: 2rem; /* Ajusta el tamaño de los iconos para pantallas pequeñas */
+    }
+}
+
+
+/*Añadir menu toggle*/
+/* Menú oculto por defecto en pantallas pequeñas */
+#menuToggle {
+    display: none; /* Oculta las tres rayas en pantallas grandes */
+}
+
+
+@media (max-width: 769px) {
+    #menuToggle {
+        display: block; 
+    }
+}
+

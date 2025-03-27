@@ -12,25 +12,7 @@ main {
     column-gap: 8%; /* Ajusta solo el espacio entre columnas */
 }
 
-/* -------------------------------------------
-   Estilos para Pantallas Pequeñas (Responsividad)
-------------------------------------------- */
-@media (max-width: 768px) {
-    main {
-        grid-template-columns: minmax(200px, 1fr);; /* Una sola columna en pantallas pequeñas */
-        grid-template-areas: 
-            "titulo"
-            "calendario"
-            "filtro"
-            "eventos"; /* Disposición de los elementos en columna */
-    }
 
-
-    /* Espaciado en el filtro para evitar que se pegue al calendario */
-    .filtro {
-        margin-top: 20px;
-    }
-}
 
 /* -------------------------------------------
    Estilos para el Título
@@ -224,4 +206,24 @@ label[for="selectEventos"] {
     cursor: pointer;
     color:var(--color-morado);
     background: rgba(0, 0, 0, 0.45);
+}
+
+/* -------------------------------------------
+   Estilos para Pantallas Pequeñas (Responsividad)
+------------------------------------------- */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: minmax(200px, 1fr);; /* Una sola columna en pantallas pequeñas */
+        grid-template-areas: 
+            "titulo"
+            "calendario"
+            "filtro"
+            "eventos"; /* Disposición de los elementos en columna */
+    }
+
+
+    .filtro {
+        margin-top: 20px;
+    }
+
 }
