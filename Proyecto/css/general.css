@@ -144,11 +144,6 @@ footer ul {
     gap: 3vw; /* Ajusta el espacio entre los elementos de la lista */
 }
 
-footer ul li {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 footer ul li img {
     width: 1.875rem; /* 30px to rem */
@@ -262,10 +257,11 @@ button:hover {
     text-decoration: none;
     border-radius: 5px;
     text-align: center;
+    border-radius: 50px;
 }
 
 .hamburguesa:hover {
-    background-color: var(--color-morado); /* Azul más oscuro */
+    background-color: var(--color-azul1); /* Azul más oscuro */
 }
 
 /* Responsive Styles */
@@ -328,7 +324,7 @@ button:hover {
 
 @media (max-width: 769px) {
     #menuToggle {
-        display: block; 
+        display: block; /* Oculta las tres rayas en pantallas grandes */
     }
 }
 

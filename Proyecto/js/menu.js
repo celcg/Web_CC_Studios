@@ -5,7 +5,7 @@ document.getElementById("menuToggle").addEventListener("click", function(event) 
     // Si el menú está visible, lo ocultamos, y si está oculto, lo mostramos
   
         if (nav.style.display === "none") {
-            nav.style.display = "block";
+            nav.style.display = "inline-block";
         } else {
             nav.style.display = "none";
        }
@@ -16,7 +16,7 @@ document.getElementById("menuToggle").addEventListener("click", function(event) 
 window.addEventListener("resize", function() {
     const nav = document.getElementById("NavPrincipal");
     if (window.innerWidth > 769) {
-        nav.style.display = "block";  // El menú debe estar siempre visible en pantallas grandes
+        nav.style.display = "flex";  // El menú debe estar siempre visible en pantallas grandes
     } else {
         nav.style.display = "none";   // El menú se oculta en pantallas pequeñas por defecto
     }
