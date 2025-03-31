@@ -9,10 +9,10 @@ $(document).ready(function() {
     $playIcon.click(function() {
         if ($audio.paused) {
             $audio.play();
-            $playIcon.attr("src", "../imagenes/reproductor/Pause.svg"); // Cambia a icono de pausa
+            $playIcon.attr("src", "imagenes/reproductor/Pause.svg"); // Cambia a icono de pausa
         } else {
             $audio.pause();
-            $playIcon.attr("src", "../imagenes/reproductor/Play.svg"); // Vuelve a icono de play
+            $playIcon.attr("src", "imagenes/reproductor/Play.svg"); // Vuelve a icono de play
         }
     });
 

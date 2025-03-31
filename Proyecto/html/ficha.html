@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Carolina Alba García, Celtia Castelo Gajino">
+    <meta name="description" content="Empresa CC Studios: su historia, logros musicales y equipo.">
+    <meta name="keywords" content="CC Studios, música, artistas, conciertos, discográfica">
+    <title>Ficha del Artista</title>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/ficha.css">
+</head>
+
+<body>
+    <header id="headerPrincipal">
+        <figure>
+            <img src="imagenes/logos/logoblanco.svg" alt="Logo del sitio web">
+        </figure>
+        <p id="menuToggle"><a href="#" class="hamburguesa"> &#x2630; </a></p>
+        <nav id="NavPrincipal">
+            <ul>
+                <li><a href="index.html">ABOUT US</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+                <li><a href="artistas.html">ARTISTAS</a></li>
+                <li><a href="eventos.html">EVENTOS</a></li>
+                <li><a href="noticias.html">NOTICIAS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <header>
+            <h1>Artistas</h1>
+        </header>
+
+        <article id="ficha">
+            <nav id="cross">
+                <a href="artistas.html" style="cursor: pointer;">&#x2715;</a>
+            </nav>
+            <figure id="foto-artista">
+                <img src="" alt="">
+            </figure>
+            <section id="artista-info">
+                <header>
+                    <h2 id="artistas-title"></h2>
+                </header>
+                <section id="trayectoria">
+                    <h3>TRAYECTORIA</h3>
+                    <p id="descripcion-trayectoria"></p>
+                </section>
+                <section id="cancion">
+                    <figure>
+                        <img id="portada" src="" alt="Carátula de la canción">
+                    </figure>
+                    <p><a id="tituloCancion" href="#" target="_blank"></a></p>
+                    <div id="reproductor">
+                        <img id="playIcon" class="icono" src="imagenes/reproductor/Play.svg" alt="Reproducir canción">
+                        <img id="speakerIcon" class="icono" src="imagenes/reproductor/Speaker.svg" alt="Ajustar volumen">
+                        <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1" style="display: none;">
+                        <audio id="audio" src="audio/Sustancia.mp3" preload="auto"></audio>
+                    </div>
+                </section>
+                <section id="proximosEventos">
+                    <h3>PRÓXIMOS EVENTOS</h3>
+                    <ul></ul>
+                    <p><a id="ver-mas" href="eventos.html">Ver más eventos...</a></p>
+                </section>
+            </section>
+        </article>
+    </main>
+
+    <footer id="footerPrincipal">
+        <h2 id="footer-title">CC STUDIOS</h2>
+        <div id="footer-follow">
+            <p>Síguenos:</p>
+            <ul>
+                <li><figure><a href="https://www.spotify.com" target="_blank"><img src="imagenes/logos/Spotify.svg" alt="Spotify"></a></figure></li>
+                <li><figure><a href="https://www.facebook.com" target="_blank"><img src="imagenes/logos/Facebook.svg" alt="Facebook"></a></figure></li>
+                <li><figure><a href="https://www.instagram.com" target="_blank"><img src="imagenes/logos/Instagram.svg" alt="Instagram"></a></figure></li>
+                <li><figure><a href="https://www.twitter.com" target="_blank"><img src="imagenes/logos/Twitter.svg" alt="Twitter"></a></figure></li>
+                <li><figure><a href="https://www.youtube.com" target="_blank"><img src="imagenes/logos/Youtube.svg" alt="YouTube"></a></figure></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../js/reproductor.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/cargarFichas.js"></script>
+</body>
+
+</html>

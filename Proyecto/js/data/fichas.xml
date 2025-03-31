@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<artistas>
+    <artista id="Judeline">
+        <nombre>Judeline</nombre>
+        <imagenLista>./imagenes/artistas//general/judeline.jpg</imagenLista>
+        <imagenFicha>./imagenes/artistas/fichaJudeline/judeline1.jpg</imagenFicha>
+        <trayectoria>
+            Cantante y compositora española, fusiona pop y electrónica con influencias flamencas.
+            Desde su debut con "De la luz" en 2021, ha crecido en la escena alternativa, colaborando con
+            artistas como Ralphie Choo y consolidando su estilo único.
+        </trayectoria>
+        <cancion>
+            <titulo>Sustancia - Judeline, Mayo</titulo>
+            <enlace>https://open.spotify.com/intl-es/track/4EF1UDALNWdyJDWindWBqg</enlace>
+            <imagen>./imagenes/artistas/fichaJudeline/cancion.jpg</imagen>
+            <audio>./audio/Sustancia.mp3</audio>
+        </cancion>
+    </artista>
+
+    <artista id="Aitana">
+        <nombre>Aitana</nombre>
+        <imagenLista>./imagenes/artistas/listaAitana.jpg</imagenLista>
+        <imagenFicha>./imagenes/artistas/fichaAitana/aitana1.jpg</imagenFicha>
+        <trayectoria>
+            Aitana es una de las cantantes pop más influyentes en España, ganando fama tras su participación en OT.
+            Ha lanzado múltiples álbumes de éxito y ha colaborado con artistas internacionales.
+        </trayectoria>
+        <cancion>
+            <titulo>En el coche - Aitana</titulo>
+            <enlace>https://open.spotify.com/track/5d2w8KfMZyJAz36XxZRX2r</enlace>
+            <imagen>./imagenes/artistas/fichaAitana/cancion.jpg</imagen>
+            <audio>./audio/EnElCoche.mp3</audio>
+        </cancion>
+    </artista>
+</artistas>

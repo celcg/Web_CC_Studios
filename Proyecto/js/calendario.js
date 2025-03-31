@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Tini": "#ff69b4" // Rosa brillante
     };
 
+    //CELTIA CUANDO LEAS ESTO ACUERDATE DE QUE UNA VEZ PASADO ESTO AL LATEX PUEDES PONER AWAIt
     function cargarEventosDesdeJSON(month, year, tipoFiltro = "") {
         return fetch("../js/data/eventos.json")
             .then(response => response.json())
