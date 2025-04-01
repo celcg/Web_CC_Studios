@@ -2,7 +2,7 @@
 <artistas>
     <artista id="Judeline">
         <nombre>Judeline</nombre>
-        <imagenLista>./imagenes/artistas//general/judeline.jpg</imagenLista>
+        <imagenLista>./imagenes/artistas/general/judeline.jpg</imagenLista>
         <imagenFicha>./imagenes/artistas/fichaJudeline/judeline1.jpg</imagenFicha>
         <trayectoria>
             Cantante y compositora española, fusiona pop y electrónica con influencias flamencas.
