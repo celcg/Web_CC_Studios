@@ -31,8 +31,14 @@
 
 /* Ajuste para que las imágenes tengan bordes redondeados */
 #historia img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    object-fit: cover;
     border-radius: 15px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+    display: block;
 }
 
 /* Mejor alineación del texto */
@@ -57,12 +63,20 @@
 
 /* Tabla de estadísticas */
 /* Sección de estadísticas mejorada */
+#estadisticas {
+    background: rgba(20, 20, 30, 0.4);
+    padding: 60px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 2rem;
+}
+
 .stats-grid {
     display: grid; /*Usamos CSS grid*/
     grid-template-columns: repeat(4, 1fr); /* 4 columnas */
     grid-template-rows: repeat(2, auto);  /* 2 filas */
     gap: 20px;
-    padding: 40px;
+    padding: 0;
     text-align: center;
 }
 
@@ -138,6 +152,15 @@
     margin-bottom: 3rem;
 }
 
+.typing {
+    border-right: 2px solid var(--color-blanco);
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    min-height: 1.5em;
+}
+  
+
 
 /* Equipo en carrusel */
 /* Contenedor de tarjetas de equipo */
@@ -190,13 +213,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 70px; /* Ajusta este valor para alinear los títulos */
 }
 
 /* Imagen dentro de cada tarjeta */
 .team-card img {
-    width: 150px;
-    height: 150px;
+    width: 310;
+    height: 250px;
     border-radius: 50%;
     object-fit: cover;
     margin: 10px 0;
@@ -205,7 +227,7 @@
 /* Nombre y rol */
 .team-card h3 {
     font-size: 1.5rem;
-    margin: 10px 0;
+    margin: 10px;
 }
 
 .team-card h4 {
@@ -213,7 +235,7 @@
     font-weight: normal;
     color: var(--color-azul2);
     margin-bottom: 10px;
-    min-height: 50px; /* Asegura que todos los títulos de cargo ocupen el mismo espacio */
+    min-height: 10px;
 }
 
 /* Texto descriptivo dentro de la tarjeta */
@@ -225,6 +247,7 @@
     width: 90%; /* Asegura que el texto no se desborde */
     margin: 0 auto; /* Centra el texto dentro de la tarjeta */
     min-height: 60px; /* Fuerza un alto mínimo para evitar diferencias */
+    margin-top: 10px;
 }
 
 /* Asegurar que el último elemento (email) no afecte la altura */
@@ -254,28 +277,78 @@
 }
 
 
-/* Tabla de estadísticas en grid */
+/* Seccion de premios */
+#premios {
+    background: rgba(20, 20, 30, 0.4);
+    padding: 60px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 2rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--color-blanco);
+    margin-bottom: 2rem;
+}
+
 .premios-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    display: grid; /*Usamos CSS grid*/
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    grid-template-rows: repeat(2, auto);  /* 2 filas */
     gap: 20px;
     padding: 40px;
     text-align: center;
 }
 
-.premios-grid div {
-    background: rgba(255, 255, 255, 0.1);
+.premio-card {
+    background: rgba(255, 255, 255, 0.08);
     padding: 20px;
-    border-radius: 10px;
-    font-size: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.premio-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.2);
+}
+
+.premio-card i {
+    font-size: 2.5rem;
+    color: var(--color-azul1);
+    margin-bottom: 10px;
+}
+
+.premio-card strong {
+    display: block;
+    font-size: 2rem;
     color: var(--color-azul2);
 }
 
+.premio-card p {
+    color: var(--color-blanco);
+    font-size: 1rem;
+    margin-top: 10px;
+}
 
-/* 🌐 Responsividad */
+
+
+/* Responsividad */
+/* En pantallas grandes (escritorio) */
+@media (min-width: 1024px) {
+    #historia .carousel-item .col-md-6:first-child {
+        display: flex;
+        justify-content: center;
+        align-items: center; /* solo imagen */
+    }
+}
+
 /* En pantallas medianas (máx 1024px), 2 columnas y 4 filas */
 @media (max-width: 1024px) {
-    .stats-grid {
+    .stats-grid, .premios-grid {
         grid-template-columns: repeat(2, 1fr); /* 2 columnas */
         grid-template-rows: repeat(4, auto); /* 4 filas */
     }
@@ -283,7 +356,7 @@
 
 /* En móviles (máx 768px), 1 columna y 8 filas */
 @media (max-width: 768px) {
-    .stats-grid {
+    .stats-grid, .premios-grid {
         grid-template-columns: 1fr; /* 1 columna */
         grid-template-rows: repeat(8, auto); /* 8 filas */
     }

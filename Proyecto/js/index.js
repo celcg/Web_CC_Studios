@@ -1,5 +1,6 @@
 
 //REVISAR QUE NO USE ES6
+//Para gestionar el carrousel
 document.addEventListener("DOMContentLoaded", function () {
     const contenedorEquipo = document.querySelector(".team-container");
     const botonMostrarMas = document.getElementById("mostrarMas");
@@ -8,19 +9,26 @@ document.addEventListener("DOMContentLoaded", function () {
     // Datos de los miembros adicionales (siempre en el mismo orden)
     const miembrosIniciales = [
         {
-            nombre: "María Acebo",
-            cargo: "A&R",
-            imagen: "imagenes/index/maria.jpg",
-            descripcion: "Apasionada por descubrir nuevos talentos...",
-            email: "mariaacebo@ccstudios.com"
+            nombre: "Mar Arriscado",
+            cargo: "Community Manager",
+            imagen: "imagenes/index/mar.jpg",
+            descripcion: "Mar lidera el equipo de comunicación con una creatividad vibrante y un enfoque estratégico. Es la encargada de conectar a CC Studios con el público a través de campañas innovadoras y redes sociales, manteniendo la identidad de la marca y generando impacto en cada lanzamiento.",
+            email: "marCM@ccstudios.com"
         },
         {
-            nombre: "Julio Vega",
-            cargo: "Director Creativo",
-            imagen: "imagenes/index/julio.jpg",
-            descripcion: "Apasionado por la innovación visual...",
-            email: "juliov@ccstudios.com"
-        }
+            nombre: "Celtia Castelo",
+            cargo: "CEO y Cofundadora",
+            imagen: "imagenes/index/celtia.jpg",
+            descripcion: "Visionaria y apasionada de la producción musical, su objetivo es transformar el panorama musical en España. Su liderazgo ha sido clave para consolidar la identidad de la discográfica y expandir su proyección internacional. Actualmente, dirige la estrategia global del estudio, explorando nuevos mercados.",
+            email: "ccastelo@ccstudios.com"
+        },
+        {
+            nombre: "Carolina Alba",
+            cargo: "CEO y Cofundadora",
+            imagen: "imagenes/index/carolina.jpg",
+            descripcion: "Sin duda, el alma creativa detrás de todos los grandes éxitos del estudio. Su enfoque artístico y compromiso con la excelencia han sido pilares fundamentales desde nuestros inicios. Hoy, lidera los proyectos de innovación y desarrollo artístico encarrilando nuestra compañia hacia la excelencia.", 
+            email: "calba@ccstudios.com"
+        },
     ];
 
     let nuevosMiembros = [...miembrosIniciales]; // Clon del array original
@@ -122,6 +130,39 @@ document.addEventListener("DOMContentLoaded", () => {
         card.addEventListener("mouseenter", restartCounter);
     });
 });
+
+
+//Para añadir el efecto escritura a la parte de vision y valores
+document.addEventListener("DOMContentLoaded", () => {
+    const target = document.querySelector('.typing');
+    if (target) {
+        const text = target.dataset.text;
+        let index = 0;
+        target.textContent = ''; // Asegura que empiece vacío
+
+        const typeWriter = () => {
+            if (index < text.length) {
+                target.textContent += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, 80); // velocidad de tecleo
+            }
+        };
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    typeWriter();
+                    observer.unobserve(entry.target); // solo lo escribe una vez
+                }
+            });
+        }, {
+            threshold: 0.7 // se activa cuando el 70% del h4 es visible
+        });
+
+        observer.observe(target);
+    }
+});
+
 
 
 
