@@ -19,17 +19,116 @@
 
     <artista id="Aitana">
         <nombre>Aitana</nombre>
-        <imagenLista>./imagenes/artistas/listaAitana.jpg</imagenLista>
+        <imagenLista>./imagenes/artistas/general/aitana.jpg</imagenLista>
         <imagenFicha>./imagenes/artistas/fichaAitana/aitana1.jpg</imagenFicha>
         <trayectoria>
             Aitana es una de las cantantes pop más influyentes en España, ganando fama tras su participación en OT.
-            Ha lanzado múltiples álbumes de éxito y ha colaborado con artistas internacionales.
+            Desde 2017, ha lanzado múltiples álbumes de éxito y ha colaborado con artistas internacionales.
         </trayectoria>
         <cancion>
-            <titulo>En el coche - Aitana</titulo>
-            <enlace>https://open.spotify.com/track/5d2w8KfMZyJAz36XxZRX2r</enlace>
+            <titulo>Segundo Intento - Aitana</titulo>
+            <enlace>https://open.spotify.com/intl-es/track/7KmRozNJiNX1WUwrmNYKbJ?si=bb44291d540e4f7d</enlace>
             <imagen>./imagenes/artistas/fichaAitana/cancion.jpg</imagen>
-            <audio>./audio/EnElCoche.mp3</audio>
+            <audio>./audio/segundointento.mp3</audio>
+        </cancion>
+    </artista>
+      <artista id="Sen Senra">
+        <nombre>Sen Senra</nombre>
+        <imagenLista>./imagenes/artistas/general/sensenra.jpg</imagenLista>
+        <imagenFicha>./imagenes/artistas/fichaSenSenra/sensenra1.jpg</imagenFicha>
+        <trayectoria>
+            Cantante y compositor gallego que ha redefinido el pop en español con un estilo personal y envolvente. 
+            Su evolución artística lo ha llevado del indie rock a un sonido más experimental y vanguardista, combinando soul y pop. 
+            Con discos como Sensaciones y PO2054AZ, ha logrado consolidarse en la escena alternativa.
+        </trayectoria>
+        <cancion>
+            <titulo> Un Cielo Azul - Sen Senra </titulo>
+            <enlace>https://open.spotify.com/intl-es/track/7KmRozNJiNX1WUwrmNYKbJ?si=bb44291d540e4f7d</enlace>
+            <imagen>./imagenes/artistas/fichaSenSenra/cancion.jpg</imagen>
+            <audio>./audio/uncieloazul.mp3</audio>
+        </cancion>
+    </artista>
+     <artista id="Bad Bunny">
+        <nombre>Bad Bunny</nombre>
+        <imagenLista>./imagenes/artistas/general/badbunny.jpg</imagenLista>
+        <imagenFicha>./imagenes/artistas/fichaBadBunny/badbunny1.jpg</imagenFicha>
+        <trayectoria>
+            Bad Bunny es un cantante y compositor puertorriqueño de trap y reguetón, conocido por su impacto global
+            en la música urbana. Ha sido uno de los artistas más escuchados del mundo en plataformas digitales.
+        </trayectoria>
+        <cancion>
+            <titulo>DTMF- Bad Bunny</titulo>
+            <enlace>https://open.spotify.com/intl-es/album/5K79FLRUCSysQnVESLcTdb</enlace>
+            <imagen>./imagenes/artistas/fichaBadBunny/cancion.jpg</imagen>
+            <audio>./audio/dtmf.mp3</audio>
+        </cancion>
+    </artista>
+
+    <artista id="Natalia Lacunza">
+        <nombre>Natalia Lacunza</nombre>
+        <imagenLista>./imagenes/artistas/general/natalialacunza.jpg</imagenLista>
+        <imagenFicha>./imagenes/artistas/fichaNatalia/natalialacunza1.jpg</imagenFicha>
+        <trayectoria>
+            Natalia Lacunza es una cantante y compositora española que se hizo conocida tras su participación en OT.
+            Su música se caracteriza por un sonido alternativo y una fuerte personalidad artística.
+        </trayectoria>
+        <cancion>
+            <titulo>Cuestion de Suerte - Natalia Lacunza</titulo>
+            <enlace>https://open.spotify.com/intl-es/track/6yDz6zWwdAVIp76PqucsuJ?si=7dd085d8b35d4fb9</enlace>
+            <imagen>./imagenes/artistas/fichaNatalia/cancion.jpg</imagen>
+            <audio>./audio/misitio.mp3</audio>
+        </cancion>
+    </artista>
+
+    <artista id="Pitbull">
+        <nombre>Pitbull</nombre>
+        <imagenLista>./imagenes/artistas/general/pitbull.jpg</imagenLista>
+        <imagenFicha>./imagenes/artistas/fichaPitbull/pitbull1.jpg</imagenFicha>
+        <trayectoria>
+            Pitbull es un rapero, cantante y productor musical estadounidense de origen cubano, conocido por su estilo
+            único y colaboraciones con grandes artistas internacionales. Sus éxitos lo han convertido en una figura
+            clave en la música latina y pop.
+        </trayectoria>
+        <cancion>
+            <titulo>Give Me Everything - Pitbull, Ne-Yo, Afrojack, Nayer</titulo>
+            <enlace>https://open.spotify.com/track/4QNpBfC0zvjKqPJcyqBy9W</enlace>
+            <imagen>./imagenes/artistas/fichaPitbull/cancion.jpg</imagen>
+            <audio>./audio/pitbull.mp3</audio>
+        </cancion>
+    </artista>
+    
+     <artista id="Tini">
+        <nombre>Tini</nombre>
+        <imagenLista>./imagenes/artistas/general/tini.jpg</imagenLista>
+        <imagenFicha>./imagenes/artistas/fichaTini/tini1.jpg</imagenFicha>
+        <trayectoria>
+            Cantante, actriz y compositora argentina que se hizo famosa gracias a la serie Violetta de Disney Channel. 
+            Su carrera musical ha evolucionado hacia un pop urbano con influencias latinas, 
+            consolidándose como una de las artistas más importantes del género. Con éxitos como Miénteme y Cupido, Tini ha trabajado con figuras como Sebastián Yatra,
+            Becky G y María Becerra.
+        </trayectoria>
+        <cancion>
+            <titulo>Cupido - Tini</titulo>
+            <enlace>https://open.spotify.com/intl-es/track/2xVcCDRgG3TrH69TatsUxp?si=29137ebd23344428</enlace>
+            <imagen>./imagenes/artistas/fichaTini/cancion.jpg</imagen>
+            <audio>./audio/cupido.mp3</audio>
+        </cancion>
+    </artista>
+     <artista id="C.Tangana">
+        <nombre>C. Tangana</nombre>
+        <imagenLista>./imagenes/artistas/general/ctangana.jpg</imagenLista>
+        <imagenFicha>./imagenes/artistas/fichaCTangana/ctangana1.jpg</imagenFicha>
+        <trayectoria>
+             Rapero, cantante y productor español que ha revolucionado la música urbana con su versatilidad y 
+             su capacidad para mezclar géneros como el trap, el flamenco y la música latina. 
+             Con el álbum El Madrileño, exploró sonidos más tradicionales,
+             colaborando con artistas de la talla de Jorge Drexler, La Húngara y José Feliciano.
+        </trayectoria>
+        <cancion>
+            <titulo>Nunca Estoy - C. Tangana</titulo>
+            <enlace>https://open.spotify.com/intl-es/track/6N4ioa3XSbvjmwdVEERl8F?si=e94d35026445475d</enlace>
+            <imagen>./imagenes/artistas/fichaCTangana/cancion.jpg</imagen>
+            <audio>./audio/nuncaestoy.mp3</audio>
         </cancion>
     </artista>
 </artistas>

@@ -123,12 +123,18 @@ p {
     border-radius: 0.625rem;
 }
 
+#cancion > figure {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+}
+
 #portada {
+    margin: auto;
     width: 4rem;
     height: 4rem;
     border-radius: 0.625rem;
     box-shadow: 0.125rem 0.125rem 0.625rem rgba(0, 0, 0, 0.2);
-    flex-shrink: 0;
 }
 
 #cancion a img,

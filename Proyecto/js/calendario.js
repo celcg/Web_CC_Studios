@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Bad Bunny": "#8a2be2", // Azul violeta
         "Natalia Lacunza": "#006400", // Verde oscuro
         "Pitbull": "#00bfff", // Azul profundo
-        "C. Tangana": "#8b0000", // Rojo oscuro
+        "C.Tangana": "#8b0000", // Rojo oscuro
         "Tini": "#ff69b4" // Rosa brillante
     };
 

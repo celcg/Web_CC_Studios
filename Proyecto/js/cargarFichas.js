@@ -55,24 +55,28 @@ function cargarJSON(url) {
 
 function procesarJSON(eventos) {
     let params = new URLSearchParams(window.location.search);
-    let idArtista = params.get("artista");  // Obtiene el parámetro "artista" de la URL
+    let idArtista = params.get("artista"); // Obtiene el parámetro "artista" de la URL
     let listaEventos = document.querySelector("#proximosEventos ul");
-    
+
     // Filtrar los eventos por el artista
-    let eventosFiltrados = eventos.filter(evento => evento.artista.toLowerCase() === idArtista.toLowerCase());
-    
+    let eventosFiltrados = eventos.filter(evento => 
+        evento.artista.toLowerCase() === idArtista.toLowerCase()
+    );
+
     // Ordenar los eventos por fecha (asegurándote de que la fecha esté en formato YYYY-MM-DD)
-    eventosFiltrados.sort((a, b) => {
-        let fechaA = new Date(a.dia);  // Convertir la fecha de evento A en un objeto Date
-        let fechaB = new Date(b.dia);  // Convertir la fecha de evento B en un objeto Date
-        return fechaA - fechaB;  // Ordenar en orden ascendente (más cercano al futuro primero)
-    });
-    
-    // Agregar los eventos ordenados a la lista
+    eventosFiltrados.sort((a, b) => new Date(a.dia) - new Date(b.dia));
+
+    // Agregar los eventos ordenados a la lista con el formato solicitado
     eventosFiltrados.forEach(evento => {
+        let fecha = new Date(evento.dia);
+        let dia = fecha.getDate();
+        let mes = fecha.toLocaleString('es-ES', { month: 'short' }).toUpperCase();
+        let formatoEvento = `${dia} ${mes} | ${evento.tipo} en ${evento.lugar}`;
+
         let li = document.createElement("li");
-        li.textContent = `${evento.tipo} - ${evento.dia} en ${evento.lugar}`;
+        li.textContent = formatoEvento;
         listaEventos.appendChild(li);
     });
 }
+
 
