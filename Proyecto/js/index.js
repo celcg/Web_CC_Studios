@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (index < text.length) {
                 target.textContent += text.charAt(index);
                 index++;
-                setTimeout(typeWriter, 80); // velocidad de tecleo
+                setTimeout(typeWriter, 70); // velocidad de tecleo
             }
         };
 

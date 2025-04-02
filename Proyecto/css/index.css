@@ -185,9 +185,17 @@
     min-height: 1.5em;
     word-wrap: break-word;
     white-space: normal;
+    color: var(--color-azul2);
+    animation: blinkCursor 0.7s steps(1) infinite;
+}
+
+/* Animación del cursor */
+@keyframes blinkCursor {
+    0% { border-color: var(--color-blanco); }
+    50% { border-color: transparent; }
+    100% { border-color: var(--color-blanco); }
 }
   
-
 
 /* Equipo en carrusel */
 /* Contenedor de tarjetas de equipo */
@@ -244,7 +252,7 @@
 
 /* Imagen dentro de cada tarjeta */
 .team-card img {
-    width: 310;
+    width: 250px;
     height: 250px;
     border-radius: 50%;
     object-fit: cover;
