@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    cargarXML("../js/data/fichas.xml");
-    cargarJSON("../js/data/eventos.json");
+    cargarXML("js/data/fichas.xml");
+    cargarJSON("js/data/eventos.json");
 });
 
 function cargarXML(url) {

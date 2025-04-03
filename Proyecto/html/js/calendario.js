@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //CELTIA CUANDO LEAS ESTO ACUERDATE DE QUE UNA VEZ PASADO ESTO AL LATEX PUEDES PONER AWAIt
     function cargarEventosDesdeJSON(month, year, tipoFiltro = "") {
-        return fetch("../js/data/eventos.json")
+        return fetch("js/data/eventos.json")
             .then(response => response.json())
             .then(eventos => {
                 const eventosFiltrados = eventos.filter(evento => {
