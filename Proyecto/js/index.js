@@ -115,6 +115,23 @@ document.addEventListener("DOMContentLoaded", () => {
         updateCounter();
     };
 
+    // Observer para iniciar cuando el usuario llega a los contadores
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                animateCounter(counter);
+                observer.unobserve(counter); // Solo una vez
+            }
+        });
+    }, {
+        threshold: 0.4 // Se activa cuando el 60% del elemento es visible
+    });
+
+    counters.forEach(counter => {
+        observer.observe(counter);
+    });
+
     // Función para reiniciar contador al hacer hover
     const restartCounter = (event) => {
         const counter = event.currentTarget.querySelector(".counter");
@@ -122,8 +139,6 @@ document.addEventListener("DOMContentLoaded", () => {
         animateCounter(counter);
     };
 
-    // Añadir efecto al cargar la página
-    counters.forEach(counter => animateCounter(counter));
 
     // Añadir evento "mouseenter" para reiniciar cada vez que pase el cursor
     document.querySelectorAll(".stat-card").forEach(card => {
@@ -144,7 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (index < text.length) {
                 target.textContent += text.charAt(index);
                 index++;
-                setTimeout(typeWriter, 70); // velocidad de tecleo
+                setTimeout(typeWriter, 60); // velocidad de tecleo
             }
         };
 
