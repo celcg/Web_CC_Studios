@@ -10,7 +10,6 @@ article img {
 }
 
 #fichas {
-    width: 100%;
     margin-top: 2rem;
 }
 
@@ -30,8 +29,6 @@ article img[alt="Pitbull"] {
 article:hover {
     transform: scale(1.1); /* Escala la imagen al pasar el ratón */
 }
-
-
 
 
 /* Estilo para el figcaption */

@@ -17,15 +17,13 @@
 
 /* ------------------------------ Imagen  ------------------------------ */
 #ficha>figure {
-    position: relative;
-    height: auto;
-    display: flex;
-    justify-content: center;
     flex-shrink: 0;
 }
 
 #ficha>figure img {
     width: 400px;
+    height:600px;
+    object-fit: cover;
     margin: 1rem 1.5rem;
     /* Mantiene el recorte sin deformar */
     border-radius: 0.9375rem;
@@ -50,6 +48,7 @@
 
     #ficha>figure img {
         width: 300px;
+        height:500px;
     }
 }
 
@@ -58,9 +57,6 @@
     flex: 1;
     color: var(--color-blanco);
     padding: 3.125rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     padding-left: 5%;
     padding-right: 5%;
     word-wrap: break-word;
@@ -124,7 +120,7 @@ p {
 }
 
 #cancion > figure {
-    flex-shrink: 0;
+    flex: 0;
     display: flex;
     align-items: center; /* Centra verticalmente */
 }
@@ -222,35 +218,5 @@ p {
     color: var(--color-morado);
 }
 
-/* ------------------------------ Carrusel ------------------------------ */
-#flechasCarrusel {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    padding: 10%;
-    justify-content: space-between;
-    transform: translateY(-50%);
-}
 
-/* ------------------------------ Botones de Carrusel ------------------------------ */
-.anterior,
-.siguiente {
-    color: var(--color-blanco);
-    font-size: 2rem;
-    font-weight: bold;
-    padding: 0.625rem;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 3rem;
-    height: 3rem;
-}
 
-.anterior:hover,
-.siguiente:hover {
-    background: var(--color-morado);
-}

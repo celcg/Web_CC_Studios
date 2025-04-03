@@ -165,6 +165,7 @@ footer ul li figcaption {
 /* Estilos Generales */
 main {
     padding: 3rem 3rem; 
+    min-height:80vh;
 }
 /* Secciones */
 main h1 {
