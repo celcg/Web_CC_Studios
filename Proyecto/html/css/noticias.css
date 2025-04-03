@@ -84,7 +84,7 @@ section label {
     flex-shrink: 0;    /* 👈 Evita que se reduzca */
 }
 
-.noticias figure figcaption {
+.noticias figcaption {
     display: inline-block; /* Para que el fondo solo cubra el texto */
     padding: 6px 12px; /* Espaciado interno */
     font-size: 0.9rem; /* Tamaño de texto más compacto */
