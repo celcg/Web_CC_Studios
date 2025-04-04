@@ -34,14 +34,13 @@
     <main class="container mt-5">
         <h1 class="text-center mb-4">Contacto</h1>
 
-        <div class="container">
+        <div class="container-fluid">
             <div class="row gx-5">            
                 <!-- Mapa -->
                 <!--Usamos contenedor md para que asi a partir de pantallas medianas (>=768px) haya 2 columnas de seis -->
-                <!--Con order, lo que hacemos es seleccionar en que posicion va.
-                En este caso, con 2 coumnas va a la izquierda (1) y con pantallas pequeñas a la abajo (2)-->
-                <div class="col-12 col-md-6 mb-4 order-2 order-md-1">
-                    <h2>Puedes encontrarnos aquí</h2>
+                <!--Con order, lo que hacemos es seleccionar en que posicion va.-->
+                <div class="col-md-6 order-2 order-md-1">
+                    <h2 id="titulo2">Puedes encontrarnos aquí</h2>
                     <iframe 
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3038.0559779224855!2d-3.6824743169593845!3d40.40761068257311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42261944bf35cf%3A0xb9d58d328d9e7e22!2sAv.%20del%20Mediterr%C3%A1neo%2C%203%2C%20Retiro%2C%2028007%20Madrid!5e0!3m2!1ses!2ses!4v1739622903594!5m2!1ses!2ses"
                         style="width: 100%; height: 300px; border: 0;" 
@@ -57,9 +56,8 @@
                 </div>
         
                 <!-- Formulario -->
-                 <!--Con order, lo que hacemos es seleccionar en que posicion va.
-                En este caso, con 2 coumnas va a la derecha (2) y con pantallas pequeñas va arriba (1)-->
-                <div class="col-12 col-md-6 mb-4 order-1 order-md-2">
+                 <!--Con order, lo que hacemos es seleccionar en que posicion va.-->
+                <div class="col-md-6 order-1 order-md-2">
                     <h2>Motivo de la consulta</h2>
                     <form id="formularioContacto">
                         <div class="mb-3">
@@ -70,7 +68,7 @@
                                 <option value="info">Quiero obtener más información</option>
                                 <option value="problema">Ha surgido un problema</option>
                                 <option value="otro">Otro</option>
-                        </select>
+                            </select>
                         </div>
 
                         <div class="mb-3">
@@ -94,7 +92,6 @@
                         </div>
 
                         <button type="submit" class="btn btn-primary w-100">Enviar</button>
-
                     </form>
                 </div>
             </div>

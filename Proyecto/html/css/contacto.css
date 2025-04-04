@@ -3,6 +3,7 @@
 
 h2 {
     margin-bottom: 2rem;
+    margin-top: 1rem;
 }
 
 /* Personalización del formulario */
@@ -71,13 +72,6 @@ textarea.form-control {
     transform: scale(1.05);
 }
 
-/* Ajustes para el contenedor del formulario */
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-}
-
 /* Mensaje de éxito */
 #mensajeExito {
     background-color: var(--color-azul1);
@@ -105,8 +99,8 @@ textarea.form-control {
 
 /* Asegurar que en móviles los elementos se apilen en orden correcto */
 @media (max-width: 768px) {
-    .row {
-        flex-direction: column-reverse; /* Hace que el formulario esté primero */
+    #titulo2 {
+        margin-top: 4rem;
     }
 }
 
