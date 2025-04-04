@@ -17,7 +17,7 @@
 
 /* ------------------------------ Imagen  ------------------------------ */
 #ficha>figure {
-    flex-shrink: 0;
+    flex: 0;
 }
 
 #ficha>figure img {
@@ -31,15 +31,14 @@
 }
 
 
-
 /* ------------------------------ Ajustes en pantallas pequeñas ------------------------------ */
 
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
     #ficha {
         margin-left: 2%;
         margin-right: 2%;
-        min-width: 300px;
+        min-width: 160px;
     }
 
     #ficha>figure {
@@ -47,8 +46,8 @@
     }
 
     #ficha>figure img {
-        width: 300px;
-        height:500px;
+        width: 200px;
+        height:350px;
     }
 }
 
@@ -60,7 +59,6 @@
     padding-left: 5%;
     padding-right: 5%;
     word-wrap: break-word;
-    flex-shrink: 2;
 }
 
 /* ------------------------------ Títulos y estilo de encabezados ------------------------------ */
@@ -72,6 +70,8 @@ h1 {
 
 p {
     text-align: justify;
+    word-break: break-word;  /* Corta palabras largas */
+
 }
 
 #artista-info header {
@@ -110,7 +110,8 @@ p {
 #cancion {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
     gap: 1vw;
     margin: 1rem 0;
     background: var(--color-azul1);
@@ -119,8 +120,8 @@ p {
     border-radius: 0.625rem;
 }
 
+
 #cancion > figure {
-    flex: 0;
     display: flex;
     align-items: center; /* Centra verticalmente */
 }
@@ -147,7 +148,7 @@ p {
     align-items: center;
     gap: 1vw;
     margin-bottom: 0rem;
-    align-items: stretch;
+    align-items: center;
     /* Hace que los elementos tengan la misma altura */
 
 }

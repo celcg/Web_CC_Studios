@@ -3,10 +3,7 @@
 ------------------------------------------- */
 main {  
     display: grid;
-    grid-template-columns: 2fr 1fr; /* Divide el espacio en 2 columnas */
-    grid-template-areas: 
-        "titulo  filtro"
-        "calendario  eventos"; /* Áreas definidas para título, filtro, calendario y lista de eventos */
+    grid-template-columns: 2fr 1fr; /* Dos columnas, la izquierda 2x ancha que la derecha */
     row-gap: 20px; /* Espacio entre los elementos */
     padding: 4% 8%; /* Espaciado alrededor del contenedor */
     column-gap: 8%; /* Ajusta solo el espacio entre columnas */
@@ -17,8 +14,7 @@ main {
 /* -------------------------------------------
    Estilos para el Título
 ------------------------------------------- */
-#eventos-header {
-    grid-area: titulo;
+.eventos-header {
     padding-bottom: 10px; /* Espaciado debajo del título */
 }
 
@@ -26,7 +22,6 @@ main {
    Estilos para el Filtro de Eventos
 ------------------------------------------- */
 .filtro {
-    grid-area: filtro; 
     text-align: left;
     color: var(--color-azul1); 
 }
@@ -60,7 +55,6 @@ label[for="selectEventos"] {
    Estilos para el Calendario
 ------------------------------------------- */
 .calendario {
-    grid-area: calendario; /* El calendario ocupa el área "calendario" */
     align-self: center; /* Centra solo en la dirección vertical */
     padding: 5%;
     border-radius: 5px;
@@ -73,9 +67,6 @@ label[for="selectEventos"] {
    Estilos para la Lista de Eventos
 ------------------------------------------- */
 .eventos-lista {
-    grid-area: eventos; 
-    display: grid; /* Usamos grid para la lista de eventos */
-    grid-template-rows: repeat(4, auto); /* Definimos 4 filas para los eventos */
     gap: 5%; /* Espacio entre las filas de los eventos */
     max-height: 800px;
     overflow-y: auto; /* Habilita el desplazamiento vertical si el contenido excede el tamaño */
@@ -88,6 +79,7 @@ label[for="selectEventos"] {
 .evento-card {
     background: rgba(105, 105, 105, 0.4);
     padding: 5% 8%;
+    margin-bottom: 20px;
     border-radius: 10px;
     border: 2px solid transparent; /* Se puede definir un color por defecto */
     transition: background 0.3s ease, border-color 0.3s ease;
@@ -139,28 +131,24 @@ label[for="selectEventos"] {
     font-size: 1.5rem;
 }
 
-
+.days-grid{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    row-gap: 1.5rem; /* Aumenta solo el espacio entre filas */
+    list-style: none;
+    text-align: center;
+}
 
 /* Días de la semana */
 .weekdays {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    text-align: center;
     font-weight: bold;
     padding: 0;
-    list-style: none;
     color: gray;
 }
 
 /* Días del mes */
 .days {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-auto-rows: 1fr;
-    row-gap: 1.5rem; /* Aumenta solo el espacio entre filas */
     padding: 0;
-    list-style: none;
-    text-align: center;
 }
 
 /* Cada día */
@@ -208,22 +196,8 @@ label[for="selectEventos"] {
     background: rgba(0, 0, 0, 0.45);
 }
 
-/* -------------------------------------------
-   Estilos para Pantallas Pequeñas (Responsividad)
-------------------------------------------- */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     main {
-        grid-template-columns: minmax(200px, 1fr);; /* Una sola columna en pantallas pequeñas */
-        grid-template-areas: 
-            "titulo"
-            "calendario"
-            "filtro"
-            "eventos"; /* Disposición de los elementos en columna */
+      grid-template-columns: 1fr; /* En pantallas pequeñas, todo en una sola columna */
     }
-
-
-    .filtro {
-        margin-top: 20px;
-    }
-
-}
+  }
