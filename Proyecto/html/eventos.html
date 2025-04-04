@@ -14,7 +14,6 @@
     <header id="headerPrincipal">
         <figure>
             <img src="imagenes/logos/logoblanco.svg" alt="Logo del sitio web">
-
         </figure>
         <p id="menuToggle"><a href="#" class="hamburguesa"> &#x2630; </a></p>
         <nav id="NavPrincipal">
@@ -28,34 +27,9 @@
         </nav>
     </header>
     <main>
-        <header id="eventos-header">
+        <header class="eventos-header">
             <h1>Eventos</h1>
         </header>
-        <section class="calendario">
-            <!-- Controles para cambiar de mes -->
-            <nav class="calendar-month">
-                <p><a id="prevMonth">&lt;</a></p>
-                <p id="monthName"></p>
-            <p><a id="nextMonth">&gt;</a></p>
-            </nav>
-        
-            <!-- Días de la semana -->
-            <ul class="weekdays">
-                <li>Lun</li>
-                <li>Mar</li>
-                <li>Mié</li>
-                <li>Jue</li>
-                <li>Vie</li>
-                <li>Sáb</li>
-                <li>Dom</li>
-            </ul>
-        
-            <!-- Días del mes (serán generados dinámicamente) -->
-            <ul class="days"></ul>
-        </section>
-        
-        
-        
         <section class="filtro">
             <label for="selectEventos">Filtra los eventos</label>
             <select id="selectEventos">
@@ -64,8 +38,30 @@
                 <option value="firma">Firma de discos</option>
             </select>
         </section>
+        <section class="calendario">
+            <!-- Controles para cambiar de mes -->
+            <nav class="calendar-month">
+                <p><a id="prevMonth">&lt;</a></p>
+                <p id="monthName"></p>
+                <p><a id="nextMonth">&gt;</a></p>
+            </nav>
+
+            <!-- Días de la semana -->
+            <ul class="weekdays days-grid">
+                <li>Lun</li>
+                <li>Mar</li>
+                <li>Mié</li>
+                <li>Jue</li>
+                <li>Vie</li>
+                <li>Sáb</li>
+                <li>Dom</li>
+            </ul>
+
+            <!-- Días del mes (serán generados dinámicamente) -->
+            <ul class="days days-grid"></ul>
+        </section>
         <section class="eventos-lista">
-           <!--Se carga con js-->
+            <!--Se carga con js-->
         </section>
     </main>
     <footer id="footerPrincipal">

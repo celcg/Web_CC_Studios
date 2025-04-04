@@ -20,10 +20,8 @@ $(document).ready(function() {
     $speakerIcon.click(function() {
         if ($volumeControl.css("display") === "none") {
             $volumeControl.css("display", "block");
-            $tituloCancion.prop("hidden", true); // Ocultar el título cuando el volumen esté visible
         } else {
             $volumeControl.css("display", "none");
-            $tituloCancion.prop("hidden", false); // Mostrar el título cuando el volumen no esté visible
         }
     });
 

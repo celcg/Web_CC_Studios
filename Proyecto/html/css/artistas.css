@@ -32,7 +32,7 @@ article:hover {
 
 
 /* Estilo para el figcaption */
-.artista figcaption {
+figcaption {
     font-size: 1.75rem;
     color: var(--color-blanco);
     font-weight: 300; /* Establece el peso de la fuente a delgado */

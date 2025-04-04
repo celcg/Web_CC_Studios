@@ -272,6 +272,7 @@ button:hover {
         align-items: center; /* Centra los elementos en el eje horizontal */
         padding: 1rem; /* Ajusta el padding para dispositivos móviles */
         width: 100%; /* Asegura que el header ocupe todo el ancho de la pantalla */
+        min-width: 250px;
     }
 
     #headerPrincipal nav ul {
@@ -291,6 +292,7 @@ button:hover {
     }
 
     footer {
+        min-width: 250px;
         flex-direction: column; /* Cambia la dirección del flex a columna */
         align-items: center; /* Centra los elementos en el eje horizontal */
         padding: 1rem; /* Ajusta el padding para dispositivos móviles */
@@ -298,6 +300,7 @@ button:hover {
     }
 
     #footer-follow {
+
         flex-direction: column; /* Cambia la dirección del flex a columna */
         align-items: center; /* Centra los elementos en el eje horizontal */
         margin-left: 0; /* Elimina el margen izquierdo */
