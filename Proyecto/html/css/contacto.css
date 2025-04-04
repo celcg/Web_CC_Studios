@@ -108,6 +108,10 @@ textarea.form-control {
     .row {
         flex-direction: column-reverse; /* Hace que el formulario esté primero */
     }
+
+    #titulo2 {
+        margin-top: 4rem;
+    }
 }
 
 
