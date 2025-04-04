@@ -1,20 +1,25 @@
+// Espera a que el DOM esté completamente cargado antes de ejecutar el código
 document.addEventListener("DOMContentLoaded", () => {
-    const monthNameElement = document.getElementById("monthName");
-    const daysContainer = document.querySelector(".days");
-    const prevMonthBtn = document.getElementById("prevMonth");
-    const nextMonthBtn = document.getElementById("nextMonth");
-    const eventosContainer = document.querySelector(".eventos-lista");
-    const selectEventos = document.getElementById("selectEventos");
+    // Elementos del DOM que se utilizarán
+    const monthNameElement = document.getElementById("monthName"); // Elemento que muestra el nombre del mes
+    const daysContainer = document.querySelector(".days"); // Contenedor de los días del calendario
+    const prevMonthBtn = document.getElementById("prevMonth"); // Botón para ir al mes anterior
+    const nextMonthBtn = document.getElementById("nextMonth"); // Botón para ir al mes siguiente
+    const eventosContainer = document.querySelector(".eventos-lista"); // Contenedor de las tarjetas de eventos
+    const selectEventos = document.getElementById("selectEventos"); // Selector para filtrar eventos por tipo
 
+    // Fecha actual
     let today = new Date();
-    let currentMonth = today.getMonth();
-    let currentYear = today.getFullYear();
+    let currentMonth = today.getMonth(); // Mes actual
+    let currentYear = today.getFullYear(); // Año actual
 
+    // Nombres de los meses
     const monthNames = [
         "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
         "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
     ];
 
+    // Colores asociados a cada artista
     const coloresArtistas = {
         "Judeline": "#ff6347", // Tomate
         "Sen Senra": "#4682b4", // Azul acero
@@ -26,19 +31,22 @@ document.addEventListener("DOMContentLoaded", () => {
         "Tini": "#ff69b4" // Rosa brillante
     };
 
-    //CELTIA CUANDO LEAS ESTO ACUERDATE DE QUE UNA VEZ PASADO ESTO AL LATEX PUEDES PONER AWAIt
+    // Carga los eventos desde un archivo JSON y los filtra por mes, año y tipo
     function cargarEventosDesdeJSON(month, year, tipoFiltro = "") {
-        return fetch("js/data/eventos.json")
-            .then(response => response.json())
+        return fetch("js/data/eventos.json") // Carga el archivo JSON
+            .then(response => response.json()) // Convierte la respuesta a JSON
             .then(eventos => {
+                // Filtra los eventos por mes, año y tipo
                 const eventosFiltrados = eventos.filter(evento => {
-                    const fecha = new Date(evento.dia);
+                    const fecha = new Date(evento.dia); // Convierte la fecha del evento a un objeto Date
                     const tipoCoincide = tipoFiltro ? evento.tipo.toLowerCase() === tipoFiltro.toLowerCase() : true;
                     return fecha.getMonth() === month && fecha.getFullYear() === year && tipoCoincide;
                 });
 
+                // Limpia el contenedor de eventos
                 eventosContainer.innerHTML = "";
 
+                // Si no hay eventos, muestra un mensaje
                 if (eventosFiltrados.length === 0) {
                     const noEventCard = document.createElement("article");
                     noEventCard.classList.add("evento-card", "sin-eventos");
@@ -49,19 +57,22 @@ document.addEventListener("DOMContentLoaded", () => {
                     eventosContainer.appendChild(noEventCard);
                 }
 
+                // Agrupa los eventos por día
                 const eventosPorDia = new Map();
                 eventosFiltrados.forEach(evento => {
-                    const diaEvento = new Date(evento.dia).getDate();
-                    const colorArtista = coloresArtistas[evento.artista] || "#cccccc";
+                    const diaEvento = new Date(evento.dia).getDate(); // Obtiene el día del evento
+                    const colorArtista = coloresArtistas[evento.artista] || "#cccccc"; // Color asociado al artista
 
                     if (!eventosPorDia.has(diaEvento)) {
                         eventosPorDia.set(diaEvento, []);
                     }
-                    eventosPorDia.get(diaEvento).push(colorArtista);
+                    eventosPorDia.get(diaEvento).push(colorArtista); // Añade el color al día correspondiente
                 });
 
+                // Genera el calendario con los eventos
                 generateCalendar(month, year, eventosPorDia);
 
+                // Crea las tarjetas de eventos
                 eventosFiltrados.forEach(evento => {
                     const eventCard = document.createElement("article");
                     eventCard.classList.add("evento-card");

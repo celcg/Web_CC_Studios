@@ -1,40 +1,66 @@
-document.addEventListener("DOMContentLoaded", function () {
-    cargarXML("js/data/fichas.xml");
-    cargarJSON("js/data/eventos.json");
+document.addEventListener("DOMContentLoaded", async function () {
+    try {
+        // Cargar XML y JSON de manera paralela
+        const results = await Promise.allSettled([
+            cargarXML("js/data/fichas.xml"),
+            cargarJSON("jss/data/eventos.json")
+        ]);
+
+        // Verificar los resultados de cada promesa
+        const xmlResult = results[0];
+        const jsonResult = results[1];
+
+        if (xmlResult.status === "fulfilled") {
+            procesarXML(xmlResult.value);
+        } else {
+            console.error("Fallo al cargar el XML:", xmlResult.reason);
+        }
+
+        if (jsonResult.status === "fulfilled") {
+            procesarJSON(jsonResult.value);
+        } else {
+            console.error("Fallo al cargar el JSON:", jsonResult.reason);
+        }
+
+    } catch (error) {
+        console.error("Fallo durante la carga de datos:", error);
+    }
 });
 
+
 function cargarXML(url) {
-    let xhr = new XMLHttpRequest();
-    xhr.open("GET", url, true);
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            procesarXML(xhr.responseXML);
-        }
-    };
-    xhr.send();
+    return new Promise((resolve, reject) => {
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", url, true);
+        
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                resolve(xhr.responseXML);  // Resolvemos la Promesa y pasamos el XML
+            } else {
+                reject(`Error al cargar el archivo XML. Estado: ${xhr.status}, Texto de respuesta: ${xhr.statusText}`);
+            }
+        };
+
+        xhr.onerror = function () {
+            reject("Hubo un error de red al intentar cargar el archivo XML.");
+        };
+        
+        xhr.send();
+    });
 }
 
 function procesarXML(xml) {
     let params = new URLSearchParams(window.location.search);
     let idArtista = params.get("artista");  // Se sigue usando "artista" como parámetro en la URL
-    console.log("ID Artista desde la URL:", idArtista);  // Verificar el idArtista que llega desde la URL
-
-    let artistas = xml.getElementsByTagName("artista");
-    console.log("Artistas encontrados en el XML:", artistas);  // Verificar los artistas en el XML
-    
-    for (let i = 0; i < artistas.length; i++) {
-        console.log("Comparando con artista ID:", artistas[i].getAttribute("id"));  // Mostrar el id del artista actual
-        
-        if (artistas[i].getAttribute("id") === idArtista) {  // Compara con el atributo "id"
-            console.log("Artista encontrado:", artistas[i].getElementsByTagName("nombre")[0].textContent);  // Verificar nombre del artista encontrado
-            
+    let artistas = xml.getElementsByTagName("artista");    
+    for (let i = 0; i < artistas.length; i++) {        
+        if (artistas[i].getAttribute("id") === idArtista) {  // Compara con el atributo "id"            
             let nombre = artistas[i].getElementsByTagName("nombre")[0].textContent;
             document.getElementById("artistas-title").textContent = nombre;
             document.getElementById("foto-artista").querySelector("img").src = artistas[i].getElementsByTagName("imagenFicha")[0].textContent;
             document.getElementById("descripcion-trayectoria").textContent = artistas[i].getElementsByTagName("trayectoria")[0].textContent;
             
             let cancion = artistas[i].getElementsByTagName("cancion")[0];
-            console.log("Canción encontrada:", cancion);  // Verificar los detalles de la canción
             
             document.getElementById("tituloCancion").textContent = cancion.getElementsByTagName("titulo")[0].textContent;
             document.getElementById("tituloCancion").href = cancion.getElementsByTagName("enlace")[0].textContent;
@@ -45,12 +71,12 @@ function procesarXML(xml) {
     }
 }
 
-
 function cargarJSON(url) {
-    fetch(url)
+    return fetch(url)
         .then(response => response.json())
-        .then(data => procesarJSON(data))
-        .catch(error => console.error("Error cargando JSON:", error));
+        .catch(error => {
+            throw new Error("Error cargando JSON: " + error);
+        });
 }
 
 function procesarJSON(eventos) {
@@ -78,5 +104,3 @@ function procesarJSON(eventos) {
         listaEventos.appendChild(li);
     });
 }
-
-
