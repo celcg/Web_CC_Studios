@@ -1,12 +1,11 @@
 
-//REVISAR QUE NO USE ES6
 //Para gestionar el carrousel
 document.addEventListener("DOMContentLoaded", function () {
     const contenedorEquipo = document.querySelector(".team-container");
     const botonMostrarMas = document.getElementById("mostrarMas");
     const botonMostrarMenos = document.getElementById("mostrarMenos");
 
-    // Datos de los miembros adicionales (siempre en el mismo orden)
+    //Datos de las neuvas tarjetas
     const miembrosIniciales = [
         {
             nombre: "Mar Arriscado",
@@ -31,15 +30,16 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     ];
 
-    let nuevosMiembros = [...miembrosIniciales]; // Clon del array original
+    //Copia del array original
+    let nuevosMiembros = [...miembrosIniciales];
     let miembrosMostrados = [];
 
-    // Función para añadir un miembro al carrusel
+    //Función para añadir un miembro al carrusel
     botonMostrarMas.addEventListener("click", function () {
         if (nuevosMiembros.length > 0) {
             const miembro = nuevosMiembros.shift(); // Extrae el primer miembro
 
-            // Crear tarjeta de equipo
+            //Creamos la nueva tarjeta de equipo
             const tarjeta = document.createElement("article");
             tarjeta.classList.add("team-card");
 
@@ -54,40 +54,41 @@ document.addEventListener("DOMContentLoaded", function () {
             contenedorEquipo.appendChild(tarjeta);
             miembrosMostrados.push({ elemento: tarjeta, datos: miembro });
 
-            // Mostrar el botón "Mostrar Menos" si hay miembros visibles
+            //Mostramos el botón "Mostrar Menos" si hay miembros visibles
             if (miembrosMostrados.length > 0) {
                 botonMostrarMenos.style.display = "inline-block";
             }
 
-            // Ocultar "Mostrar Más" si ya no hay más miembros por agregar
+            //Ocultamos "Mostrar Más" si ya no hay más miembros por agregar
             if (nuevosMiembros.length === 0) {
                 botonMostrarMas.style.display = "none";
             }
         }
     });
 
-    // Función para eliminar un miembro del carrusel
+    //Función para eliminar un miembro del carrusel
     botonMostrarMenos.addEventListener("click", function () {
         if (miembrosMostrados.length > 0) {
-            const miembroAEliminar = miembrosMostrados.pop(); // Saca el último miembro agregado
+            //Quitamos el último miembro agregado
+            const miembroAEliminar = miembrosMostrados.pop();
             contenedorEquipo.removeChild(miembroAEliminar.elemento);
 
-            // Volver a agregarlo a la lista de miembros disponibles en la primera posición
+            //Volvemos a añadirlo a la lista de miembros disponibles en la primera posición
             nuevosMiembros.unshift(miembroAEliminar.datos);
 
-            // Mostrar el botón "Mostrar Más" ya que hay miembros ocultos disponibles
+            //Mostramos el botón "Mostrar Más" ya que hay miembros ocultos disponibles
             if (nuevosMiembros.length > 0) {
                 botonMostrarMas.style.display = "inline-block";
             }
 
-            // Ocultar "Mostrar Menos" si ya no hay más miembros visibles
+            //Ocultamos "Mostrar Menos" si ya no hay más miembros visibles
             if (miembrosMostrados.length === 0) {
                 botonMostrarMenos.style.display = "none";
             }
         }
     });
 
-    // Ocultar "Mostrar Menos" al inicio, ya que no hay miembros extra al cargar la página
+    //Ocultamos "Mostrar Menos" al principio, ya que no hay miembros extra al cargar la página
     botonMostrarMenos.style.display = "none";
 });
 
@@ -96,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const counters = document.querySelectorAll(".counter");
     const speed = 200; // Velocidad de la animación
 
-    // Función para animar los contadores
+    //Función para animar los contadores
     const animateCounter = (counter) => {
         const target = +counter.getAttribute("data-target");
         const increment = target / speed;
@@ -115,32 +116,33 @@ document.addEventListener("DOMContentLoaded", () => {
         updateCounter();
     };
 
-    // Observer para iniciar cuando el usuario llega a los contadores
+    //Observer para iniciar cuando el usuario llega a los contadores
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const counter = entry.target;
                 animateCounter(counter);
-                observer.unobserve(counter); // Solo una vez
+                //Solo una vez
+                observer.unobserve(counter);
             }
         });
     }, {
-        threshold: 0.4 // Se activa cuando el 60% del elemento es visible
+        //Se activa cuando el 50% del elemento es visible
+        threshold: 0.5
     });
 
     counters.forEach(counter => {
         observer.observe(counter);
     });
 
-    // Función para reiniciar contador al hacer hover
+    //Función para reiniciar contador
     const restartCounter = (event) => {
         const counter = event.currentTarget.querySelector(".counter");
         counter.innerText = "0"; // Resetea a 0
         animateCounter(counter);
     };
 
-
-    // Añadir evento "mouseenter" para reiniciar cada vez que pase el cursor
+    //Añadimos evento "mouseenter" para reiniciar cada vez que pase el cursor
     document.querySelectorAll(".stat-card").forEach(card => {
         card.addEventListener("mouseenter", restartCounter);
     });
@@ -153,25 +155,30 @@ document.addEventListener("DOMContentLoaded", () => {
     if (target) {
         const text = target.dataset.text;
         let index = 0;
-        target.textContent = ''; // Asegura que empiece vacío
+        //Nos aseguramos de que empiece vacío
+        target.textContent = '';
 
         const typeWriter = () => {
             if (index < text.length) {
                 target.textContent += text.charAt(index);
                 index++;
-                setTimeout(typeWriter, 60); // velocidad de tecleo
+                //Velocidad del contador
+                setTimeout(typeWriter, 60);
             }
         };
 
+        //Para que comience cuando el usuario llegue a es parte de la página
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     typeWriter();
-                    observer.unobserve(entry.target); // solo lo escribe una vez
+                    //Solo lo escribe una vez
+                    observer.unobserve(entry.target);
                 }
             });
         }, {
-            threshold: 0.7 // se activa cuando el 70% del h4 es visible
+            //Se activa cuando el 70% del h4 es visible
+            threshold: 0.7
         });
 
         observer.observe(target);
