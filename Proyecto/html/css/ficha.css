@@ -222,3 +222,34 @@ p {
 
 
 
+/* ------------------------------ Carrusel ------------------------------ */
+#foto-artista {
+    position: relative;
+
+}
+#foto-artista img {
+    display: none;
+}
+
+#foto-artista img.activa {
+    display: block;
+}
+.flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.1); /* Fondo semitransparente */
+    color: white;
+    font-size: 2rem;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+#anterior {
+    left: 30px;
+}
+
+#siguiente {
+    right: 30px;
+}

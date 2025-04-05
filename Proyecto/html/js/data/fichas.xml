@@ -4,6 +4,8 @@
         <nombre>Judeline</nombre>
         <imagenLista>./imagenes/artistas/general/judeline.jpg</imagenLista>
         <imagenFicha>./imagenes/artistas/fichaJudeline/judeline1.jpg</imagenFicha>
+        <imagenFicha>./imagenes/artistas/fichaJudeline/judeline2.jpg</imagenFicha>
+        <imagenFicha>./imagenes/artistas/fichaJudeline/judeline3.jpg</imagenFicha>
         <trayectoria>
             Cantante y compositora española, fusiona pop y electrónica con influencias flamencas.
             Desde su debut con "De la luz" en 2021, ha crecido en la escena alternativa, colaborando con
@@ -21,6 +23,7 @@
         <nombre>Aitana</nombre>
         <imagenLista>./imagenes/artistas/general/aitana.jpg</imagenLista>
         <imagenFicha>./imagenes/artistas/fichaAitana/aitana1.jpg</imagenFicha>
+        <imagenFicha>./imagenes/artistas/fichaAitana/aitana2.jpg</imagenFicha>
         <trayectoria>
             Aitana es una de las cantantes pop más influyentes en España, ganando fama tras su participación en OT.
             Desde 2017, ha lanzado múltiples álbumes de éxito y ha colaborado con artistas internacionales.
@@ -32,10 +35,12 @@
             <audio>./audio/segundointento.mp3</audio>
         </cancion>
     </artista>
-      <artista id="Sen Senra">
+
+    <artista id="Sen Senra">
         <nombre>Sen Senra</nombre>
         <imagenLista>./imagenes/artistas/general/sensenra.jpg</imagenLista>
         <imagenFicha>./imagenes/artistas/fichaSenSenra/sensenra1.jpg</imagenFicha>
+        <imagenFicha>./imagenes/artistas/fichaSenSenra/sensenra2.jpg</imagenFicha>
         <trayectoria>
             Cantante y compositor gallego que ha redefinido el pop en español con un estilo personal y envolvente. 
             Su evolución artística lo ha llevado del indie rock a un sonido más experimental y vanguardista, combinando soul y pop. 
@@ -48,10 +53,12 @@
             <audio>./audio/uncieloazul.mp3</audio>
         </cancion>
     </artista>
-     <artista id="Bad Bunny">
+
+    <artista id="Bad Bunny">
         <nombre>Bad Bunny</nombre>
         <imagenLista>./imagenes/artistas/general/badbunny.jpg</imagenLista>
         <imagenFicha>./imagenes/artistas/fichaBadBunny/badbunny1.jpg</imagenFicha>
+        <imagenFicha>./imagenes/artistas/fichaBadBunny/badbunny2.jpg</imagenFicha>
         <trayectoria>
             Bad Bunny es un cantante y compositor puertorriqueño de trap y reguetón, conocido por su impacto global
             en la música urbana. Ha sido uno de los artistas más escuchados del mundo en plataformas digitales.
@@ -68,6 +75,7 @@
         <nombre>Natalia Lacunza</nombre>
         <imagenLista>./imagenes/artistas/general/natalia.jpg</imagenLista>
         <imagenFicha>./imagenes/artistas/fichaNatalia/natalialacunza1.jpg</imagenFicha>
+        <imagenFicha>./imagenes/artistas/fichaNatalia/natalialacunza2.jpg</imagenFicha>
         <trayectoria>
             Natalia Lacunza es una cantante y compositora española que se hizo conocida tras su participación en OT.
             Su música se caracteriza por un sonido alternativo y una fuerte personalidad artística.
@@ -84,6 +92,7 @@
         <nombre>Pitbull</nombre>
         <imagenLista>./imagenes/artistas/general/pitbull.jpg</imagenLista>
         <imagenFicha>./imagenes/artistas/fichaPitbull/pitbull1.jpg</imagenFicha>
+        <imagenFicha>./imagenes/artistas/fichaPitbull/pitbull2.jpg</imagenFicha>
         <trayectoria>
             Pitbull es un rapero, cantante y productor musical estadounidense de origen cubano, conocido por su estilo
             único y colaboraciones con grandes artistas internacionales. Sus éxitos lo han convertido en una figura
@@ -96,11 +105,12 @@
             <audio>./audio/pitbull.mp3</audio>
         </cancion>
     </artista>
-    
-     <artista id="Tini">
+
+    <artista id="Tini">
         <nombre>Tini</nombre>
         <imagenLista>./imagenes/artistas/general/tini.jpg</imagenLista>
         <imagenFicha>./imagenes/artistas/fichaTini/tini1.jpg</imagenFicha>
+        <imagenFicha>./imagenes/artistas/fichaTini/tini2.jpg</imagenFicha>
         <trayectoria>
             Cantante, actriz y compositora argentina que se hizo famosa gracias a la serie Violetta de Disney Channel. 
             Su carrera musical ha evolucionado hacia un pop urbano con influencias latinas, 
@@ -114,10 +124,12 @@
             <audio>./audio/cupido.mp3</audio>
         </cancion>
     </artista>
-     <artista id="C.Tangana">
+
+    <artista id="C.Tangana">
         <nombre>C. Tangana</nombre>
         <imagenLista>./imagenes/artistas/general/ctangana.jpg</imagenLista>
         <imagenFicha>./imagenes/artistas/fichaCTangana/ctangana1.jpg</imagenFicha>
+        <imagenFicha>./imagenes/artistas/fichaCTangana/ctangana2.jpg</imagenFicha>
         <trayectoria>
              Rapero, cantante y productor español que ha revolucionado la música urbana con su versatilidad y 
              su capacidad para mezclar géneros como el trap, el flamenco y la música latina. 
