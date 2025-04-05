@@ -67,13 +67,6 @@ document.addEventListener("DOMContentLoaded", () => {
                         eventosPorDia.set(diaEvento, []);
                     }
                     eventosPorDia.get(diaEvento).push(colorArtista); // Añade el color al día correspondiente
-                });
-
-                // Genera el calendario con los eventos
-                generateCalendar(month, year, eventosPorDia);
-
-                // Crea las tarjetas de eventos
-                eventosFiltrados.forEach(evento => {
                     const eventCard = document.createElement("article");
                     eventCard.classList.add("evento-card");
                     eventCard.style.borderColor = coloresArtistas[evento.artista] || "#cccccc";
@@ -84,9 +77,28 @@ document.addEventListener("DOMContentLoaded", () => {
                     eventosContainer.appendChild(eventCard);
                 });
 
+                // Genera el calendario con los eventos
+                generateCalendar(month, year, eventosPorDia);
                 agregarEventosHover();
             })
-            .catch(error => console.error("Error al cargar eventos:", error));
+            .catch(error => {
+                console.error("Error al cargar eventos:", error);
+            
+                // Limpiar contenedor de eventos
+                eventosContainer.innerHTML = "";
+            
+                // Mostrar mensaje de error al usuario
+                const errorCard = document.createElement("article");
+                errorCard.classList.add("evento-card", "sin-eventos");
+                errorCard.innerHTML = `
+                    <h3>⚠️ Error al cargar los eventos</h3>
+                    <p>No se han podido recuperar los datos. Inténtalo más tarde.</p>
+                `;
+                eventosContainer.appendChild(errorCard);
+            
+                // Llamar a generateCalendar con eventos NULL (vacío o nulo)
+                generateCalendar(month, year, new Map()); // Pasar un mapa vacío para el calendario sin eventos
+            });
     }
 
     function generateCalendar(month, year, eventosPorDia) {

@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         // Cargar XML y JSON de manera paralela
         const results = await Promise.allSettled([
             cargarXML("js/data/fichas.xml"),
-            cargarJSON("jss/data/eventos.json")
+            cargarJSON("js/data/eventos.json")
         ]);
 
         // Verificar los resultados de cada promesa
