@@ -1,9 +1,8 @@
 $(document).ready(function() {
     const $playIcon = $("#playIcon");
     const $speakerIcon = $("#speakerIcon");
-    const $audio = $("#audio")[0]; // El objeto `audio` es un elemento HTML, así que usamos `[0]` para acceder al nodo real
+    const $audio = $("#audio")[0]; 
     const $volumeControl = $("#volumeControl");
-    const $tituloCancion = $("#tituloCancion");
 
     // Reproducir o pausar la canción al hacer clic en Play
     $playIcon.click(function() {

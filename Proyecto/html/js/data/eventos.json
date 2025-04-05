@@ -2,19 +2,19 @@
     {
         "tipo": "Concierto",
         "artista": "Judeline",
-        "dia": "2025-04-09",
+        "dia": "2025-06-09",
         "lugar": "Madrid, Wizink Center"
     },
     {
         "tipo": "Firma",
         "artista": "Sen Senra",
-        "dia": "2025-03-17",
+        "dia": "2025-06-17",
         "lugar": "Santiago, El Corte Inglés"
     },
     {
         "tipo": "Concierto",
         "artista": "Aitana",
-        "dia": "2025-03-21",
+        "dia": "2025-06-21",
         "lugar": "Barcelona, Palau Sant Jordi"
     },
     {
@@ -60,9 +60,9 @@
         "lugar": "Granada, Palacio de Deportes"
     },
     {
-        "tipo": "Concierto",
+        "tipo": "Firma",
         "artista": "Tini",
         "dia": "2025-05-01",
-        "lugar": "A Coruña, Coliseum"
+        "lugar": "A Coruña, fnac"
     }
 ]

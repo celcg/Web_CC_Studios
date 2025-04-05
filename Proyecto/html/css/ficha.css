@@ -180,6 +180,7 @@ p {
     width: 100%; /* Ajusta el ancho al 100% del contenedor */
     max-width: 200px; /* Limita el ancho máximo a 200px */
 }
+
 /* ------------------------------ Próximos Eventos ------------------------------ */
 #proximosEventos ul {
     list-style: disc inside;
