@@ -71,22 +71,6 @@
         </cancion>
     </artista>
 
-    <artista id="Natalia Lacunza">
-        <nombre>Natalia Lacunza</nombre>
-        <imagenLista>./imagenes/artistas/general/natalia.jpg</imagenLista>
-        <imagenFicha>./imagenes/artistas/fichaNatalia/natalialacunza1.jpg</imagenFicha>
-        <imagenFicha>./imagenes/artistas/fichaNatalia/natalialacunza2.jpg</imagenFicha>
-        <trayectoria>
-            Natalia Lacunza es una cantante y compositora española que se hizo conocida tras su participación en OT.
-            Su música se caracteriza por un sonido alternativo y una fuerte personalidad artística.
-        </trayectoria>
-        <cancion>
-            <titulo>Cuestion de Suerte - Natalia Lacunza</titulo>
-            <enlace>https://open.spotify.com/intl-es/track/6yDz6zWwdAVIp76PqucsuJ?si=7dd085d8b35d4fb9</enlace>
-            <imagen>./imagenes/artistas/fichaNatalia/cancion.jpg</imagen>
-            <audio>./audio/misitio.mp3</audio>
-        </cancion>
-    </artista>
 
     <artista id="Pitbull">
         <nombre>Pitbull</nombre>
@@ -141,6 +125,24 @@
             <enlace>https://open.spotify.com/intl-es/track/6N4ioa3XSbvjmwdVEERl8F?si=e94d35026445475d</enlace>
             <imagen>./imagenes/artistas/fichaCTangana/cancion.jpg</imagen>
             <audio>./audio/nuncaestoy.mp3</audio>
+        </cancion>
+    </artista>
+
+    
+    <artista id="Natalia Lacunza">
+        <nombre>Natalia Lacunza</nombre>
+        <imagenLista>./imagenes/artistas/general/natalia.jpg</imagenLista>
+        <imagenFicha>./imagenes/artistas/fichaNatalia/natalialacunza1.jpg</imagenFicha>
+        <imagenFicha>./imagenes/artistas/fichaNatalia/natalialacunza2.jpg</imagenFicha>
+        <trayectoria>
+            Natalia Lacunza es una cantante y compositora española que se hizo conocida tras su participación en OT.
+            Su música se caracteriza por un sonido alternativo y una fuerte personalidad artística.
+        </trayectoria>
+        <cancion>
+            <titulo>Cuestion de Suerte - Natalia Lacunza</titulo>
+            <enlace>https://open.spotify.com/intl-es/track/6yDz6zWwdAVIp76PqucsuJ?si=7dd085d8b35d4fb9</enlace>
+            <imagen>./imagenes/artistas/fichaNatalia/cancion.jpg</imagen>
+            <audio>./audio/misitio.mp3</audio>
         </cancion>
     </artista>
 </artistas>
