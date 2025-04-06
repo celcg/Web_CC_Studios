@@ -36,8 +36,8 @@ textarea {
 
 /* Fondo transparente para las opciones desplegadas */
 .form-select option {
-    background-color: rgba(0, 1, 11, 0.8); /* Negro translúcido */
-    color: var(--color-blanco); /* Texto blanco */
+    background-color: rgba(0, 1, 11, 0.8);
+    color: var(--color-blanco);
 }
 
 /* Fondo transparente para select */

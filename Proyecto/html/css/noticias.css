@@ -86,17 +86,17 @@ section label {
 
 .noticias figcaption {
     display: inline-block; /* Para que el fondo solo cubra el texto */
-    padding: 6px 12px; /* Espaciado interno */
+    padding: 6px 12px;
     font-size: 0.9rem; /* Tamaño de texto más compacto */
-    font-weight: bold; /* Hace el texto más visible */
-    color: var(--color-blanco); /* Texto en blanco */
-    background-color: var(--color-azul1); /* Fondo azul */
-    border-radius: 15px; /* Bordes redondeados */
-    text-transform: uppercase; /* Texto en mayúsculas */
-    letter-spacing: 1px; /* Espaciado entre letras */
-    margin-top: 10px; /* Espacio con la imagen */
-    text-align: center; /* Asegura que el texto se vea centrado */
-    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2); /* Sombra ligera */
+    font-weight: bold;
+    color: var(--color-blanco);
+    background-color: var(--color-azul1);
+    border-radius: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
 }
 
 /* Texto de la noticia */
