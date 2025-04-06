@@ -104,10 +104,10 @@ document.addEventListener("DOMContentLoaded", () => {
     function generateCalendar(month, year, eventosPorDia) {
         daysContainer.innerHTML = "";
         monthNameElement.textContent = `${monthNames[month]} ${year}`;
-
+        
         const firstDay = new Date(year, month, 1).getDay();
         const lastDate = new Date(year, month + 1, 0).getDate();
-        const dayOffset = firstDay === 0 ? 6 : firstDay - 1;
+        const dayOffset = firstDay === 0 ? 6 : firstDay - 1; //cuantos espacios vacíos hay que poner al principio del calendario, antes del día 1 
 
         for (let i = 0; i < dayOffset; i++) {
             daysContainer.appendChild(document.createElement("li"));
@@ -117,15 +117,16 @@ document.addEventListener("DOMContentLoaded", () => {
             const dayLi = document.createElement("li");
             dayLi.textContent = day;
 
-            if (eventosPorDia.has(day)) {
+            if (eventosPorDia.has(day)) { //comprueba si hay eventos para ese día
                 const colores = eventosPorDia.get(day);
                 dayLi.classList.add("evento");
+                //pone el color del borde del día dependiendo del artista que tenga el evento
                 dayLi.style.borderColor = colores.length > 1 ? "transparent" : colores[0];
-                if (colores.length > 1) {
+                if (colores.length > 1) { //por si hay más de un evento en el mismo día
                     dayLi.style.boxShadow = `0 0 0 2px ${colores[0]}, 0 0 0 4px ${colores.slice(1).join(", ")}`;
                 }
             }
-
+            // Añadir clase "hoy" si es el día actual
             if (year === today.getFullYear() && month === today.getMonth() && day === today.getDate()) {
                 dayLi.classList.add("hoy");
             }
@@ -133,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
             daysContainer.appendChild(dayLi);
         }
     }
-
+    // Resalta los eventos al pasar el ratón por encima de los días en el calendario
     function agregarEventosHover() {
         document.querySelectorAll(".days li.evento").forEach(dia => {
             dia.addEventListener("mouseover", () => {
@@ -151,7 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     }
-
+    //Cambiar de mes al hacer clic en los botones
     prevMonthBtn.addEventListener("click", () => {
         currentMonth = currentMonth === 0 ? 11 : currentMonth - 1;
         currentYear = currentMonth === 11 ? currentYear - 1 : currentYear;
@@ -163,7 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
         currentYear = currentMonth === 0 ? currentYear + 1 : currentYear;
         cargarEventosDesdeJSON(currentMonth, currentYear, selectEventos.value);
     });
-
+    // Cambiar los eventos mostrados al seleccionar un tipo en el selector
     selectEventos.addEventListener("change", () => {
         cargarEventosDesdeJSON(currentMonth, currentYear, selectEventos.value);
     });

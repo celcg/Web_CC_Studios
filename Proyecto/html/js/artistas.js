@@ -23,16 +23,18 @@ function cargarXML(url) {
     });
 }
 
+//Muestra los artistas en la página
 function mostrarArtistas(xml) {
     const artistas = xml.getElementsByTagName("artista");
-    const contenedor = document.getElementById("fichas");
+    const contenedor = document.getElementById("articulos");
 
     for (let i = 0; i < artistas.length; i++) {
+        //Para cada artista, obtenemos su id, nombre e imagen
         const artista = artistas[i];
         const id = artista.getAttribute("id");
         const nombre = artista.getElementsByTagName("nombre")[0].textContent;
         const imagen = artista.getElementsByTagName("imagenLista")[0].textContent;
-
+        //Creamos un artículo para cada artista y lo añadimos al contenedor
         const article = document.createElement("article");
         article.innerHTML = `
             <a href="ficha.html?artista=${encodeURIComponent(id)}">

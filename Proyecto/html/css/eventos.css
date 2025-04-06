@@ -4,9 +4,10 @@
 main {  
     display: grid;
     grid-template-columns: 2fr 1fr; /* Dos columnas, la izquierda 2x ancha que la derecha */
-    row-gap: 20px; /* Espacio entre los elementos */
+    row-gap: 30px; /* Espacio entre los elementos */
     padding: 4% 8%; /* Espaciado alrededor del contenedor */
     column-gap: 8%; /* Ajusta solo el espacio entre columnas */
+    align-items: start;
 }
 
 
@@ -55,7 +56,7 @@ label[for="selectEventos"] {
    Estilos para el Calendario
 ------------------------------------------- */
 .calendario {
-    align-self: center; /* Centra solo en la dirección vertical */
+    /*align-self: center; /* Centra solo en la dirección vertical */
     padding: 5%;
     border-radius: 5px;
     box-shadow: 0 2rem 10rem rgba(0, 0, 0, 0.1);
@@ -117,7 +118,9 @@ label[for="selectEventos"] {
     margin-bottom: 1rem;
 
 }
-
+.calendar-month>p{
+display: grid;
+}
 #prevMonth {
     justify-self: start; /* Alinea el enlace a la izquierda */
 }

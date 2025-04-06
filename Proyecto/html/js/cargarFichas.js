@@ -56,11 +56,25 @@ function procesarXML(xml) {
     for (let i = 0; i < artistas.length; i++) {
         if (artistas[i].getAttribute("id") === idArtista) {  // Compara con el atributo "id"            
             let nombre = artistas[i].getElementsByTagName("nombre")[0].textContent;
+            // Aquí actualizamos la meta description dinámicamente
+            let metaDescription = document.querySelector('meta[name="description"]');
+            if (metaDescription) {
+                metaDescription.setAttribute("content", `Conoce ${nombre}, artista de CCSTUDIOS. Descubre su trayectoria, próximos eventos y música.`);
+            }
+             // Actualizamos la meta keywords dinámicamente
+             let metaKeywords = document.querySelector('meta[name="keywords"]');
+             if (metaKeywords) {
+                 let existingKeywords = metaKeywords.getAttribute("content");
+                 let newKeywords = existingKeywords ? `${existingKeywords}, ${nombre}` : `${nombre}`;
+                 metaKeywords.setAttribute("content", newKeywords);
+             }
+            // Actualizamos el título de la ficha
             document.getElementById("artistas-title").textContent = nombre;
             let figura = document.getElementById("foto-artista");
             let imagenesFicha = artistas[i].getElementsByTagName("imagenFicha");
             // Cargar todas las imágenes dentro del <figure>
             for (let j = 0; j < imagenesFicha.length; j++) {
+                // Crear un nuevo elemento <img> para cada imagen del carrusel
                 let img = document.createElement("img");
                 img.src = imagenesFicha[j].textContent;
                 img.alt = `Imagen ${j + 1}`;
@@ -68,17 +82,12 @@ function procesarXML(xml) {
                 figura.appendChild(img);
             }
             document.getElementById("descripcion-trayectoria").textContent = artistas[i].getElementsByTagName("trayectoria")[0].textContent;
-
             let cancion = artistas[i].getElementsByTagName("cancion")[0];
-
             document.getElementById("tituloCancion").textContent = cancion.getElementsByTagName("titulo")[0].textContent;
             document.getElementById("tituloCancion").href = cancion.getElementsByTagName("enlace")[0].textContent;
             document.getElementById("portada").src = cancion.getElementsByTagName("imagen")[0].textContent;
             document.getElementById("audio").src = cancion.getElementsByTagName("audio")[0].textContent;
 
-            if (!cancion) {
-                console.warn("No se encontró la canción para el artista.");
-            }
             manejarCarruselDeImagenes();  // Llamar a la función para manejar el carrusel de imágenes
             break;
         }
